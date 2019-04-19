@@ -1,3 +1,5 @@
+/* Header on desktop */
+
 header[role=navigation] {
     position: fixed;
     top: 0;
@@ -15,6 +17,28 @@ header {
     z-index: 1;
     margin-bottom: 40px;
 }
+
+/* header on mobile */
+
+@media only screen and (max-device-width:980px) {
+
+    header[role=navigation] {
+        left: inherit;
+    }
+    
+    body, header[role=navigation] {
+        max-width: 680px;
+        margin: 0 auto;
+    }
+    
+
+}
+
+
+
+
+
+
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
