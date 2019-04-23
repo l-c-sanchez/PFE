@@ -191,6 +191,11 @@ section article .small>iframe, section article .small>p iframe, section article 
     width: 100%;
 }
 
+article {
+    margin: 2em !important;
+}
+
+
 p {
     margin: 30px 0;
 }

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width" />
   <title>Titre de la page</title>
   <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet'>
-  <link rel="stylesheet" href="static/css/style.css">
   
-  <script src="static/js/main.js"></script>
+  <link rel="stylesheet" href="static/css/style.css">
+
 </head>
 <body>
         <header role="navigation">
@@ -24,12 +24,26 @@
                     <h1>Représentation des femmes dans le jeu vidéo : une amélioration en demi-teinte</h1>
                 </header>
 
-                <article class="no-separator">
-                    <div class="small">
-                        <p><span class="first-letter">C</span>ed fruatur sane hoc solacio atque hanc insignem ignominiam, quoniam uni praeter se inusta sit, putet esse leviorem, dum modo, cuius exemplo se consolatur, eius exitum expectet, praesertim cum in Albucio nec Pisonis libidines nec audacia Gabini fuerit ac tamen hac una plaga conciderit, ignominia senatus.
-                        </p></div>
-                </article>
+                <div  id="example-1">
+                    <article class="no-separator" v-for="(para, ct) in paras">
+                        <div class="small">
+                            <p  v-if="ct == 0"><span class="first-letter">{{ para.message.substring(0,1) }}</span>{{ para.message.substring(1) }}
+                            </p>
+                            <p  v-if="ct != 0">{{ para.message }}
+                            </p>
+                        </div>
+                    </article>
+                </div>
+        
+
+                <!-- <ul id="example-1">
+                    <li v-for="item in items">
+                      {{ item.message }}
+                    </li>
+                  </ul> -->
         </section>
- 
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <script src="static/js/main.js"></script>
 </body>
 </html>
