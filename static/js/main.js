@@ -84,6 +84,35 @@ var example1 = new Vue({
         { message: 'Les raisons d’un tel changement ? Fanny Lignon veut croire en une prise de conscience de l’industrie. Elle le met notamment sur le compte du GamerGate qui, en 2014, a considérablement marqué l’univers du jeu vidéo. Plusieurs développeuses ou militantes féministes sont alors attaquées pendant des mois par des gamers masculinistes. Un déferlement d’agressivité qui permet de rendre visible les créatrices de jeu, celles qui en parlent, mais aussi les problèmes qui traversent l’industrie. '},
         { message: 'En outre, selon Fanny Lignon, “les entreprises perçoivent que le marché est demandeur de plus de mixité”. Nombreuses sont les joueuses à s’interroger, lors de l’annonce d’un jeu, sur la présence d’un personnage féminin. Et certains hommes ne sont pas en reste. “Cela me permet de me projeter dans un autre corps”, indique Maxence, 21 ans.' }
       ],
+
+      parasfourthpart: [
+        { message: 'L’écran de l \'ordinateur montre une jeune femme en armure, un arc accroché dans le dos. <i>“C’est l’un de mes personnages de jeu vidéo préférés”</i>, confie Laurette en faisant pivoter, d’un geste sur son clavier, la guerrière juchée sur un promontoire rocheux. Etudiante en informatique de 20 ans, Laurette est passionnée par la populaire série de jeux vidéo d \'action et d’aventure Assassin’s Creed. Dans son dernier opus, les joueurs ont eu pour la première fois la possibilité d’incarner une héroïne - Kassandra.',
+          img: [{
+            src: "static/img/laurette1.jpg",
+            id: "laurette1",
+            alt: "testalt",
+            title:"testitle",
+            height:"1900px",
+            width:"1306px",
+            legend:"",
+          },
+          {
+            src: "static/img/laurette2.jpg",
+            id: "laurette2",
+            alt: "testalt",
+            title:"testitle",
+            height:"1900px",
+            width:"1306px",
+            legend:"",
+          },
+        ]
+        },
+        { message: 'Le jeu a été présenté l’année dernière à l’E3, salon annuel de jeux vidéo très réputé. Que ce soit dans les jeux de tirs, comme Battlefield V où les joueurs peuvent désormais incarner une femme dans l’univers de la seconde guerre mondiale, ou même chez les Pokemon, puisqu’on peut désormais jouer une version femelle de Pikachu dans Super Smash Bros, jamais les personnages féminins n’ont semblé aussi présents. De quoi réjouir de nombreux observateurs, notamment dans la presse généraliste.' },
+        { message: 'Mais, selon plusieurs associations féministes, cette amélioration de la représentativité des femmes dans les jeux vidéo est à nuancer. “Certes, plusieurs “gros” jeux proposent pour la première fois des femmes comme personnages principaux, et c’est un premier pas”, admet Julien Jacquet, président de Game’Her, une association visant à promouvoir la mixité dans le secteur. Selon lui, il reste néanmoins “beaucoup de travail à faire pour qu’il y ait autant de personnages féminins que masculins”. Et ce, alors que les femmes représentent la moitié des joueuses de jeux vidéo (préciser nuance du calcul ?) et ne se contentent pas de jeux “softs” ou sur mobile (voir l’enquête d’une entreprise spécialisée publiée en 2017).'},
+        { inter: 'Peu de jeux sont centrés sur des personnages féminins',
+          message: 'Peu d’études universitaires récentes se sont intéressées au pourcentage de personnages féminins jouables par les amateurs de jeux vidéo. La dernière a été publiée il y a sept ans. Elle conclut que, sur un ensemble de 669 jeux d’action, de tir ou de rôle, seuls 4% ont comme personnage principal une femme. Depuis, que s’est-il passé ? Les personnages féminins sont-ils devenues aussi communs que leurs homologues masculins ?'},
+        { message: 'Pour répondre à ces questions, nous avons décidé de faire notre propre décompte en nous inspirant de la méthodologie de l’association américaine Feminist Frequency, qui publie chaque année sur son site Internet un rapport dédié au prestigieux salon de jeu vidéo l’E3 - sans mettre en ligne sa base de données détaillée. Selon l’organisation féministe, “comme en 2015 et en 2017, les jeux présentés à l’E3 proposent trois fois plus de personnages masculins que féminins”. Comme elle, nous avons collecté des informations sur les jeux présents à l’E3 chaque année. A-t-on la possibilité d’y jouer une femme, un homme ? Les deux ?'}
+      ],
     }
   })
 
