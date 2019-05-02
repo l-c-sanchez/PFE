@@ -24,7 +24,7 @@ header .logo a {
     border-bottom: 0;
     float: left;
     text-indent: -9999px;
-    height: 50rem;
+    height: 2rem;
     width: 148px;
 }
 
@@ -149,7 +149,7 @@ header h1 {
         -moz-box-box-sizing: border-box;
         -webkit-box-box-sizing: border-box;
         box-sizing: border-box;
-        padding: 0 10px!important;
+        /* padding: 0 10px!important; */
     }
 
 }
@@ -192,7 +192,7 @@ section article .small>iframe, section article .small>p iframe, section article 
 }
 
 article {
-    margin: 2em !important;
+    margin: 1.5em !important;
 }
 
 
@@ -268,4 +268,465 @@ body, figure figcaption {
     font-family: Sanchez,Times,serif;
     font-size: 16px;
     line-height: 24px;
+}
+
+
+/* CHAPO  */
+
+.chapo {
+    font-weight: bold;
+}
+
+section .points-before:before {
+  background-image: url(../img/arrowsmall.png);
+  background-position: -96px -104px;
+  width: 46px;
+  height: 11px;
+  content: "";
+  display: block;
+  margin: 60px auto;
+}
+
+section .points:after {
+    background-image: url(../img/arrowsmall.png);
+    background-position: -96px -104px;
+    width: 46px;
+    height: 11px;
+    content: "";
+    display: block;
+    margin: 60px auto;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+i {
+    font-style:italic;
+}
+
+.small {
+    margin: 0 auto;
+}
+
+article>h2 {
+    color: #171b1e;
+    font: normal 30px/34px Sanchez,Times,serif;
+    margin: 60px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* @media only screen and (max-device-width:980px) {
+    #laurette2{
+        display: none;
+    }
+
+
+} */
+
+circle {
+    stroke: black;
+    stroke-width: 1px;
+    opacity: .8;
+}
+
+
+.tooltip {
+    position: absolute;
+    z-index: 1030;
+    display: block;
+    visibility: visible;
+    background-color: #000;
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  .tooltip.in {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+  }
+  .tooltip.top {
+    margin-top: -3px;
+    padding: 5px 0;
+  }
+  .tooltip.right {
+    margin-left: 3px;
+    padding: 0 5px;
+  }
+  .tooltip.bottom {
+    margin-top: 3px;
+    padding: 5px 0;
+  }
+  .tooltip.left {
+    margin-left: -3px;
+    padding: 0 5px;
+  }
+  .tooltip-inner {
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #000000;
+    border-radius: 4px;
+  }
+  .tooltip-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+  .tooltip.top .tooltip-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px 5px 0;
+    border-top-color: #000000;
+  }
+  .tooltip.top-left .tooltip-arrow {
+    bottom: 0;
+    left: 5px;
+    border-width: 5px 5px 0;
+    border-top-color: #000000;
+  }
+  .tooltip.top-right .tooltip-arrow {
+    bottom: 0;
+    right: 5px;
+    border-width: 5px 5px 0;
+    border-top-color: #000000;
+  }
+  .tooltip.right .tooltip-arrow {
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+    border-width: 5px 5px 5px 0;
+    border-right-color: #000000;
+  }
+  .tooltip.left .tooltip-arrow {
+    top: 50%;
+    right: 0;
+    margin-top: -5px;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #000000;
+  }
+  .tooltip.bottom .tooltip-arrow {
+    top: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 0 5px 5px;
+    border-bottom-color: #000000;
+  }
+  .tooltip.bottom-left .tooltip-arrow {
+    top: 0;
+    left: 5px;
+    border-width: 0 5px 5px;
+    border-bottom-color: #000000;
+  }
+  .tooltip.bottom-right .tooltip-arrow {
+    top: 0;
+    right: 5px;
+    border-width: 0 5px 5px;
+    border-bottom-color: #000000;
+  }
+
+  .popover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    display: none;
+    max-width: 276px;
+    padding: 1px;
+    text-align: left;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+  }
+  .popover strong {
+    font-weight: bold;
+  }
+  .popover.top {
+    margin-top: -10px;
+  }
+  .popover.right {
+    margin-left: 10px;
+  }
+  .popover.bottom {
+    margin-top: 10px;
+  }
+  .popover.left {
+    margin-left: -10px;
+  }
+  .popover-title {
+    margin: 0;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 18px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ebebeb;
+    border-radius: 5px 5px 0 0;
+  }
+  .popover-content {
+    padding: 9px 14px;
+  }
+  .popover .arrow,
+  .popover .arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+  .popover .arrow {
+    border-width: 11px;
+  }
+  .popover .arrow:after {
+    border-width: 10px;
+    content: "";
+  }
+  .popover.top .arrow {
+    left: 50%;
+    margin-left: -11px;
+    border-bottom-width: 0;
+    border-top-color: #999999;
+    border-top-color: rgba(0, 0, 0, 0.25);
+    bottom: -11px;
+  }
+  .popover.top .arrow:after {
+    content: " ";
+    bottom: 1px;
+    margin-left: -10px;
+    border-bottom-width: 0;
+    border-top-color: #ffffff;
+  }
+  .popover.right .arrow {
+    top: 50%;
+    left: -11px;
+    margin-top: -11px;
+    border-left-width: 0;
+    border-right-color: #999999;
+    border-right-color: rgba(0, 0, 0, 0.25);
+  }
+  .popover.right .arrow:after {
+    content: " ";
+    left: 1px;
+    bottom: -10px;
+    border-left-width: 0;
+    border-right-color: #ffffff;
+  }
+  .popover.bottom .arrow {
+    left: 50%;
+    margin-left: -11px;
+    border-top-width: 0;
+    border-bottom-color: #999999;
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+    top: -11px;
+  }
+  .popover.bottom .arrow:after {
+    content: " ";
+    top: 1px;
+    margin-left: -10px;
+    border-top-width: 0;
+    border-bottom-color: #ffffff;
+  }
+  .popover.left .arrow {
+    top: 50%;
+    right: -11px;
+    margin-top: -11px;
+    border-right-width: 0;
+    border-left-color: #999999;
+    border-left-color: rgba(0, 0, 0, 0.25);
+  }
+  .popover.left .arrow:after {
+    content: " ";
+    right: 1px;
+    border-right-width: 0;
+    border-left-color: #ffffff;
+    bottom: -10px;
+  }
+
+  svg {
+    margin: 0 auto;
+
+    display: block;
+  }
+  #dataviz h2 {
+    font-weight: bold;
+    color: #171b1e;
+    /* font: normal 30px/34px Sanchez,Times,serif; */
+    margin: 60px 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 3EM;
+    margin-right: 3em;
+  }
+
+  #dataviz .description {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 570px;
+    margin-bottom: 3em;
+    width: 100%;
+  }
+
+@media only screen and (min-device-width:980px) {
+  #dataviz h2 {
+    font: normal 30px/34px Sanchez,Times,serif;
+    margin: 60px 0;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+
+}
+
+article p.bullet {
+  position: relative;
+  margin: 30px 0;
+  padding: 0 0 0 37px;
+}
+
+article p.bullet, article p.number, article p.subheader {
+  font: normal 15px/14px Sanchez,Times,serif !important;
+  color: #000;
+  letter-spacing: -.3px;
+}
+
+article p.bullet:before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: #ffc300;
+  border-radius: 50%;
+  margin: 0 12px 5px 0;
+  position: absolute;
+  left: 0;
+  color: #000;
+  vertical-align: middle;
+}
+
+.methodo {
+  align-content: center;
+  /* margin: auto;
+  width: 50%; */
+  font: normal 15px/14px Sanchez,Times,serif !important;
+}
+
+.methodo-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn-primary {
+  color: #000;
+  background-color: #ffc500;
+  border-color: #4cae4c;
+  display: inline-block;
+  padding: 6px 12px;
+  margin:5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.learn-more {
+  margin-top:3em !important;
+}
+
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 33%;
+  height: 330px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+@media only screen and (max-device-width:750px) {
+  .flip-card {
+    width: 100%;
+    height: 380px;
+  }
+}
+
+@media only screen and (min-device-width:750px) and (max-device-width:900px) {
+  .flip-card {
+    height: 410px;
+  }
+}
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.players {
+  margin-top: 3em;
+}
+
+.flip-card-inner p {
+  padding: 10px;
+}
+
+.text-card {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }

@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width" />
   <title>Titre de la page</title>
-  <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet'>
-  
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/gh/dmhendricks/bootstrap-grid-css@4.1.3/dist/css/bootstrap-grid.min.css">
+ 
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  -->
+  <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet'> 
   <link rel="stylesheet" href="static/css/style.css">
 
 </head>
@@ -15,6 +17,7 @@
                 <a href="https://www.francetvinfo.fr/">franceinfo</a>
             </h3>
         </header>
+
         <section>
                 <header>
                     <figure id="image_2529214">
@@ -24,26 +27,181 @@
                     <h1>Représentation des femmes dans le jeu vidéo : une amélioration en demi-teinte</h1>
                 </header>
 
-                <div  id="example-1">
-                    <article class="no-separator" v-for="(para, ct) in paras">
-                        <div class="small">
-                            <p  v-if="ct == 0"><span class="first-letter">{{ para.message.substring(0,1) }}</span>{{ para.message.substring(1) }}
-                            </p>
-                            <p  v-if="ct != 0">{{ para.message }}
-                            </p>
-                        </div>
+                <div id="example-1" class="bootstrap-wrapper">
+                    <article class="no-separator chapo points">
+                            <div class="small">
+                                <p><span class="first-letter">{{ chapo.substring(0,1) }}</span>{{ chapo.substring(1) }}
+                                </p>
+                            </div>
                     </article>
-                </div>
-        
+                    <div v-for="(para, ct) in parasfirstpart" class="container">
+                        <article class="no-separator row d-flex justify-content-center">
+                            <h2 v-if="para.inter" v-html="para.inter"></h2>
+                            <div class="small">
+                                <p v-html="para.message"></p>
+                            </div>
+                        </article>
+                        <div class="row" v-if="para.img">
+                            <div class="col-md-6 col-sm-6" v-for="(img, ct) in para.img"> 
+                                 <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
+                            </div>
+                        </div>                       
+                    </div>
+                    <!-- <div class="container">
+                        <div class="btn-group row d-flex justify-content-center" data-toggle="buttons">
+                                <label class="btn btn-primary active" id="gender">
+                                <input type="radio" name="options"> gender
+                                </label>
+                                <label class="btn btn-primary" id="editor">
+                                <input type="radio" name="options"> editor
+                                </label>
+                                <label class="btn btn-primary" id="trans">
+                                <input type="radio" name="options"> Transmission
+                                </label>
+                        </div>
+                    </div> -->
+                    <div id="dataviz" class="points-before">
+                        <h2><p v-html="dataviz.title"></p></h2>
+                        <article class="no-separator">
+                            <div class="small">
+                                <p v-html="dataviz.description" class="description"></p>
+                            </div>
+                        </article>
+                    </div>
 
-                <!-- <ul id="example-1">
-                    <li v-for="item in items">
-                      {{ item.message }}
-                    </li>
-                  </ul> -->
+                    <div class="points">
+                    <div v-for="(methodo, ct) in dataviz.methodo" id="methodo" class="container">
+                            <article class="no-separator"><div class="small methodo">
+                                    <p class="bullet methodo-link" v-html="methodo.title" :title="methodo.id"></p></div>
+                                    <div class="small methodo-explanation" :id="methodo.id">
+                                        <p v-html="methodo.explanation"></p>
+                                    </div>
+                            </article>  
+                    </div>
+                    </div>
+
+                    <div v-for="(para, ct) in parassecondpart" class="container">
+                            <article class="no-separator row d-flex justify-content-center">
+                                <h2 v-if="para.inter" v-html="para.inter"></h2>
+                                <div class="small">
+                                    <p v-html="para.message"></p>
+                                </div>
+                                
+                            </article>
+                            <div class="row" v-if="para.img">
+                                <div class="col-md-6 col-sm-6" v-for="(img, ct) in para.img"> 
+                                     <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
+                                </div>
+                            </div>                       
+                    </div>
+
+                    <div class="container learn-more">
+                            <article class="no-separator row d-flex justify-content-center">    
+                                <div class="small">
+                                    <div v-for="(btn, ct) in learn_more" class="btn btn-primary btn-link" :title="btn.id"><p v-html="btn.title"></p></div>
+                                </div>
+                                
+                            </article>
+                            <article class="no-separator row d-flex justify-content-center">
+                                    <div class="small">
+                                            <div v-for="(btn, ct) in learn_more" :id="btn.id" class="btn-learn"><p v-html="btn.message"></p></div>
+                                    </div>
+                            </article>
+               
+                    </div>
+                    <div v-for="(para, ct) in parasthirdpart" class="container">
+                            <article class="no-separator row d-flex justify-content-center">
+                                <h2 v-if="para.inter" v-html="para.inter"></h2>
+                                <div class="small">
+                                    <p v-html="para.message"></p>
+                                </div>
+                                
+                            </article>
+                            <div class="row" v-if="para.img">
+                                <div class="col-md-6 col-sm-6" v-for="(img, ct) in para.img"> 
+                                     <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
+                                </div>
+                            </div>                       
+                    </div>
+
+
+                    <div class="container players">
+                        <div class="row d-flex justify-content-center">
+                            <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                          <div class="text-card">
+                                            <p>Coralie, 31 ans.</p>                                                     
+                                            <p>Streameuse de jeu vidéo.</p> 
+                                            <p>Spécialité : jeux de combat</p> 
+                                            <p>“Dès que j’ai le choix, je joue avec un personnage féminin”.</p>
+                                        </div>
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <p class="text-card">“Pouvoir jouer une femme, c’est très important pour moi. Par exemple, dans le jeu de combat Streetfighter, je vais toujours incarner Ornika, qui est une catcheuse.<br><br>Dès que j’ai le choix, je prends un personnage féminin. C’est plus facile pour moi de me mettre dans la peau du personnage. Du coup, la qualité de jeu n’est pas la même.” </p> 
+                                      </div>
+                                    </div>
+                            </div>
+
+                            <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                            
+                                      <div class="flip-card-front">
+                                          <div class="text-card">
+                                            <p>Violette, 25 ans.</p> 
+                                            <p>Joueuse régulière</p> 
+                                            <p>Spécialité : jeux d'aventure</p> 
+                                            <p>“Ecouter Lara Croft gémir, ça m’a sortie du jeu”</p></div>
+                                        <!-- <img src="static/img/laurette1.jpg" alt="Avatar" style="width:300px;height:300px;"> -->
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <p class="text-card">“Quand j’étais enfant, Lara Croft c’était un vrai modèle. C’était une fille forte, je voulais être comme elle. Mais maintenant, quand un personnage féminin est trop sexualisé, ça me gêne.<br><br>Dans une des refontes de Lara Croft, à laquelle je jouais en même temps que mon ex, elle était moins sexualisée qu’avant. Mais son petit déhanchement, le fait qu’on l’entende gémir, ça m’a sortie du jeu”.
+                                            </p> 
+                                      </div>
+                                    </div>
+                            </div>
+
+
+                            <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                      <div class="flip-card-front">
+                                            <div class="text-card">
+                                                <p>Hélicia, 23 ans</p> 
+                                                <p>Joueuse occasionnelle</p> 
+                                                <p>Spécialité : jeux de combat</p>
+                                                <p>“Je n’achète pas les jeux stéréotypés”</p>
+                                            </div>
+                                        <!-- <img src="static/img/laurette1.jpg" alt="Avatar" style="width:300px;height:300px;"> -->
+                                      </div>
+                                      <div class="flip-card-back">
+                                        <p class="text-card">“J’admire les personnages féminins qui vont se battre. J’ai beaucoup vécu le racisme, et ça me sert comme catharsis. Mais j’ai du mal à me reconnaître dans les personnages féminins toujours ultra stéréotypés.<br><br>J’adore Life is strange (jeu narratif sorti en 2015), par exemple. Mais ses héroïnes restent des Américaines blanches, jeunes et jolies. ”</p> 
+                                      </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+   
+
+
+                </div>
         </section>
+        <script type="text/javascript" src="http://projects.delimited.io/experiments/force-bubbles/lib/d3.js"></script>
+        <script type="text/javascript" src="http://projects.delimited.io/experiments/force-bubbles/lib/jquery.js"></script>
+        <script type="text/javascript" src="http://projects.delimited.io/experiments/force-bubbles/lib/bootstrap.js"></script>
+        <script type="text/javascript" src="http://projects.delimited.io/experiments/force-bubbles/lib/underscore.js"> </script>
+
+        <!-- <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script> -->
+        <!-- <script src="https://d3js.org/d3-force.v2.min.js"></script> -->
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
         <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
         <script src="static/js/main.js"></script>
+        <script src="static/js/dataviz.js"></script>
+        
+
 </body>
 </html>
