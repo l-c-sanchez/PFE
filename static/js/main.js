@@ -5,10 +5,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   instruction = "Chaque bulle représente un jeu présenté à l'E3. En cliquant sur chacune d'entre elle, vous obtiendrez plus d'informations le jeu associé.";
 }
 
-if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
-{
-  $("#laurette2").hide();
-}
 var example1 = new Vue({
     el: '#example-1',
     data: {
@@ -126,7 +122,7 @@ var example1 = new Vue({
         },
         {
           src: "static/img/heavensvault2.jpg",
-          id: "HeavensVault",
+          id: "HeavensVault2",
           alt: "Heaven's Vault",
           title:"Heaven's Vault",
           height:"1900px",
@@ -144,6 +140,13 @@ var example1 = new Vue({
   })
 
 
+  if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+  {
+    console.log("mobile")
+    $("#laurette2").hide();
+    $("#HeavensVault2").hide();
+  }
+  
 $(".methodo-explanation").hide();
 $( ".methodo-link" ).click(function() {
   console.log(this.title)
