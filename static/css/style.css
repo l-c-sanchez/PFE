@@ -567,8 +567,9 @@ circle {
     margin: 60px 0;
     text-align: center;
     text-transform: uppercase;
-    margin-left: 3EM;
+    margin-left: 3em;
     margin-right: 3em;
+    margin-bottom: 1em;
   }
 
   #dataviz .description {

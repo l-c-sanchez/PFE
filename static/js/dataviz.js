@@ -1,8 +1,8 @@
 var width = Math.min(window.innerWidth, 475),
-    height = window.innerHeight / 1.3,
-    padding = 2.5, // separation between same-color nodes
+    height = window.innerHeight / 1.6,
+    padding = 2, // separation between same-color nodes
     clusterPadding = 0, // separation between different-color nodes
-    maxRadius = 12;
+    maxRadius = 11;
   
   d3.tsv("static/js/data2018.tsv", function(data){
     var svg = d3.select("#dataviz").append("svg")
@@ -14,7 +14,7 @@ var width = Math.min(window.innerWidth, 475),
         if (window.innerWidth < 475)
             data[j].radius = 7;
         else
-            data[j].radius = 11;
+            data[j].radius = 10;
       data[j].x = Math.random() * width;
       data[j].y = Math.random() * height;
     }
