@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width" />
-  <title>Titre de la page</title>
+  <title>GRAND FORMAT - Représentation des femmes dans le jeu vidéo : une amélioration en demi-teinte</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dmhendricks/bootstrap-grid-css@4.1.3/dist/css/bootstrap-grid.min.css">
  
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  -->
@@ -131,10 +131,11 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                           <div class="text-card">
-                                            <p>Coralie, 31 ans.</p>                                                     
+                                            <img class="card-img" src="static/img/temoignage-mido.jpg">
+                                            <h2 class="card-name">Coralie, 31 ans</h2>                                                    
                                             <p>Streameuse de jeu vidéo.</p> 
                                             <p>Spécialité : jeux de combat</p> 
-                                            <p>“Dès que j’ai le choix, je joue avec un personnage féminin”.</p>
+                                            <p class="card-quote">“Dès que j’ai le choix, je joue avec un personnage féminin”.</p>
                                         </div>
                                       </div>
                                       <div class="flip-card-back">
@@ -148,10 +149,11 @@
                                             
                                       <div class="flip-card-front">
                                           <div class="text-card">
-                                            <p>Violette, 25 ans.</p> 
+                                            <img class="card-img" src="static/img/temoignage-violette.jpg">
+                                            <h2 class="card-name">Violette, 25 ans</h2>      
                                             <p>Joueuse régulière</p> 
                                             <p>Spécialité : jeux d'aventure</p> 
-                                            <p>“Ecouter Lara Croft gémir, ça m’a sortie du jeu”</p></div>
+                                            <p class="card-quote">“Ecouter Lara Croft gémir, ça m’a sortie du jeu”</p></div>
                                         <!-- <img src="static/img/laurette1.jpg" alt="Avatar" style="width:300px;height:300px;"> -->
                                       </div>
                                       <div class="flip-card-back">
@@ -166,10 +168,11 @@
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                             <div class="text-card">
-                                                <p>Hélicia, 23 ans</p> 
+                                                <img class="card-img" src="static/img/temoignage-helicia.jpg">
+                                                <h2 class="card-name">Hélicia, 23 ans</h2> 
                                                 <p>Joueuse occasionnelle</p> 
                                                 <p>Spécialité : jeux de combat</p>
-                                                <p>“Je n’achète pas les jeux stéréotypés”</p>
+                                                <p class="card-quote">“Je n’achète pas les jeux stéréotypés”</p>
                                             </div>
                                         <!-- <img src="static/img/laurette1.jpg" alt="Avatar" style="width:300px;height:300px;"> -->
                                       </div>
@@ -184,11 +187,13 @@
                         <div v-for="(para, ct) in parasfourthpart" class="container">
                                 <article class="no-separator row d-flex justify-content-center">
                                     <h2 v-if="para.inter" v-html="para.inter"></h2>
+                                    <blockquote v-if="para.quote"><p v-html="para.quote.text"></p><span v-html="para.quote.author"></span></blockquote>
                                     <div class="small">
                                         <p v-html="para.message"></p>
                                     </div>
                                     
                                 </article>
+                                
                                 <div class="row" v-if="para.img && para.img.length > 1">
                                     <div class="col-md-6 col-sm-6" v-for="(img, ct) in para.img"> 
                                          <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>

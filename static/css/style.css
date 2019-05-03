@@ -652,6 +652,7 @@ article p.bullet:before {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+  
 }
 
 .learn-more {
@@ -673,6 +674,7 @@ article p.bullet:before {
     width: 100%;
     height: 300px;
   }
+
 }
 
 
@@ -713,14 +715,20 @@ article p.bullet:before {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
-  color: black;
+  /* background-color: #bbb;
+  color: black; */
+
+  background-color: #ffc500;
+  color: #222;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  /* background-color: dodgerblue; */
   color: white;
+  /* background-color: #222;
+  color:#ffc500; */
+  background-color: #999;
   transform: rotateY(180deg);
 }
 
@@ -729,7 +737,26 @@ article p.bullet:before {
 }
 
 .flip-card-inner p {
+  text-align: center;
+}
+
+.card-img {
+  width:50%;
+  margin: 0 auto;
+  display: block;
+  overflow:hidden;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  border-radius:50%;
+  margin-bottom: 2rem;
+  border: 2px white;
+  box-shadow: 5px black;
+}
+
+.card-quote {
   padding: 10px;
+  margin-top: 2rem;
+  font-style: italic;
 }
 
 .text-card {
@@ -738,4 +765,84 @@ article p.bullet:before {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.card-name {
+  font-size: 22px;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+@media only screen and (max-device-width:600px) {
+
+  .card-img {
+    width:30%;
+    margin-bottom: 0.8rem;
+
+  }
+
+  .card-quote {
+    margin-top: 0.2rem;
+
+}
+}
+
+/* citation */
+
+blockquote, cite {
+  position: relative;
+  color: #222;
+  display: block;
+  font-size: 21px;
+  font-style: italic;
+  line-height: 25px;
+  padding-left: 30px;
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, cite:before {
+  background-image: url(../img/arrowsmall.png);
+  background-position: -96px -117px;
+  width: 15px;
+  height: 17px;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  content: "";
+  display: inline-block;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  blockquote:before, cite:before {
+      background-image: url(../img/arrow.png);
+      background-size: 157px 151px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  blockquote p:last-of-type:after, cite p:last-of-type:after {
+      background-image: url(../img/arrow.png);
+      background-size: 157px 151px;
+  }
+}
+blockquote p:last-of-type:after, cite p:last-of-type:after {
+    background-image: url(../img/arrowsmall.png);
+    background-position: -113px -117px;
+    width: 15px;
+    height: 17px;
+    content: "";
+    display: inline-block;
+    margin-left: 15px;
+}
+
+blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
+  color: #999;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 20px;
+  margin-top: 10px;
 }

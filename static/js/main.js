@@ -85,7 +85,8 @@ var example1 = new Vue({
       ],
 
       parasfourthpart: [
-        { message: 'L’évolution des créateurs de jeu vidéo reste cependant mesurée. Pour Pascale Thiérault, jeune chercheuse canadienne qui analyse le jeu vidéo par le prisme du genre à l’université de Montréal, les personnages féminins restent beaucoup moins diversifiés que leurs homologues masculins. "Les héroïnes sont encore jeunes, jolies et blanches". Les studios ne s’autorisent pas à faire des personnages féminins moins "sexy" - alors qu’ils le font davantage pour les personnages masculins. "Regardez Mario, il ne correspond pas aux standards de beauté masculins", abonde la chercheuse du CNRS Fanny Lignon. ',
+        {
+          message: 'L’évolution des créateurs de jeu vidéo reste cependant mesurée. Pour Pascale Thiérault, jeune chercheuse canadienne qui analyse le jeu vidéo par le prisme du genre à l’université de Montréal, les personnages féminins restent beaucoup moins diversifiés que leurs homologues masculins. "Les héroïnes sont encore jeunes, jolies et blanches". Les studios ne s’autorisent pas à faire des personnages féminins moins "sexy" - alors qu’ils le font davantage pour les personnages masculins. "Regardez Mario, il ne correspond pas aux standards de beauté masculins", abonde la chercheuse du CNRS Fanny Lignon. ',
         },
         { message: 'Il faut aussi composer avec le milieu du gaming. Une partie d’entre eux est très attachée à ses "standards" de masculinité. En témoigne l’indignation de certains joueurs quand Electronic Arts a présenté l’an passé son dernier Battlefield, qui propose d’incarner une femme dans l’univers de la seconde guerre mondiale. Un choix assumé par le directeur créatif de l’éditeur américain : "On se bat pour la cause. Ces gens ont deux choix : soit ils l\'acceptent... ou alors ils n\'achètent pas le jeu !", a-t-il déclaré dans le média spécialisé Gamasutra.  '},
         { 
