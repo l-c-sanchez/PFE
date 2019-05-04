@@ -147,9 +147,6 @@ var example1 = new Vue({
             legend:"",
           }]
         },
-        { 
-        message: 'Dans les grandes salles lumineuses aménagées pour les studios indépendants, les créateurs sont nombreux à mettre en avant des personnages féminins. Ils sont plusieurs à parler “d’évidence”.'
-        },
         { message: '“Pourquoi on ne l’aurait pas fait ?”, répond, surpris, Joseph Humfrey, cofondateur du studio anglais Inklestudios, quand on lui demande ce qui l’a poussé à imaginer une femme comme personnage principal pour son jeu d’archéologie. Elle s’appelle Aliya Elasra, porte une voile bleu qui laisse apparaître ses cheveux, et des vêtements banals et utilitaires.  Dans ce jeu sorti mi-avril, les joueurs doivent explorer des ruines et lire des inscriptions anciennes.'},
         { message: '“Avec toute notre équipe, nous avons trouvé très inspirant le parcours de l’archéologue égyptienne Monica Hanna, qui s’est illustrée en protégeant le patrimoine de son pays depuis la révolution de 2011”, raconte le programmeur. ',
         img: [{
