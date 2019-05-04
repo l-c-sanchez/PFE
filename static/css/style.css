@@ -288,7 +288,7 @@ section .points-before:before {
   height: 11px;
   content: "";
   display: block;
-  margin: 60px auto;
+  margin: 50px auto;
 }
 
 section .points:after {
@@ -587,7 +587,7 @@ circle {
 @media only screen and (min-device-width:980px) {
   #dataviz h2 {
     font: normal 30px/34px Sanchez,Times,serif;
-    margin: 60px 0;
+    /* margin: 60px 0; */
     margin-left: 20%;
     margin-right: 20%;
   }
@@ -895,7 +895,7 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   font-family: Sanchez,Times,serif;
   margin-bottom: 3rem;
 }
-#d_container_1556898916 .d_graph_title {
+#d_container_1556898916 .d_graph_title, #dataviz .d_graph_title {
   font-size: 17px;
   letter-spacing: 0;
   text-align: left;
@@ -960,4 +960,9 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   /* stroke: #717B8E;
   stroke-width: 1px;
   fill: #717B8E; */
+}
+
+.div-img {
+  display: flex;
+  align-items: center;
 }

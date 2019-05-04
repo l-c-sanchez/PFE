@@ -42,7 +42,7 @@
                             </div>
                         </article>
                         <div class="row" v-if="para.img">
-                            <div class="col-md-6 col-sm-6" v-for="(img, ct) in para.img"> 
+                            <div class="col-md-6 col-sm-6 div-img" v-for="(img, ct) in para.img"> 
                                  <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
                             </div>
                         </div>                       
@@ -61,7 +61,7 @@
                         </div>
                     </div> -->
                     <div id="dataviz" class="points-before">
-                        <h2><p v-html="dataviz.title"></p></h2>
+                        <h2 class="d_graph_title"><p v-html="dataviz.title"></p></h2>
                         <article class="no-separator">
                             <div class="small">
                                 <p v-html="dataviz.description" class="description"></p>
@@ -89,7 +89,7 @@
                                 
                             </article>
                             <div class="row" v-if="para.img">
-                                <div class="col-md-6 col-sm-6" v-for="(img, ct) in para.img"> 
+                                <div class="col-md-6 col-sm-6 div-img" v-for="(img, ct) in para.img"> 
                                      <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
                                 </div>
                             </div>                       
@@ -118,7 +118,7 @@
                                 
                             </article>
                             <div class="row" v-if="para.img">
-                                <div class="col-md-6 col-sm-6" v-for="(img, ct) in para.img"> 
+                                <div class="col-md-6 col-sm-6 div-img" v-for="(img, ct) in para.img"> 
                                      <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
                                 </div>
                             </div>                       
@@ -204,12 +204,12 @@
                                 </div>
                                 
                                 <div class="row" v-if="para.img && para.img.length > 1">
-                                    <div class="col-md-6 col-sm-6" v-for="(img, ct) in para.img"> 
+                                    <div class="col-md-6 col-sm-6 div-img" v-for="(img, ct) in para.img"> 
                                          <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
                                     </div>
                                 </div>
                                 <div class="row" v-if="para.img && para.img.length == 1">
-                                        <div class="col-md-12 col-sm-12" v-for="(img, ct) in para.img"> 
+                                        <div class="col-md-12 col-sm-12 div-img" v-for="(img, ct) in para.img"> 
                                              <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
                                         </div>
                                 </div>

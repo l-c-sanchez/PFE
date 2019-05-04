@@ -90,13 +90,34 @@ var example1 = new Vue({
         },
         { message: 'Il faut aussi composer avec le milieu du gaming. Une partie d’entre eux est très attachée à ses "standards" de masculinité. En témoigne l’indignation de certains joueurs quand Electronic Arts a présenté l’an passé son dernier Battlefield, qui propose d’incarner une femme dans l’univers de la seconde guerre mondiale. Un choix assumé par le directeur créatif de l’éditeur américain : "On se bat pour la cause. Ces gens ont deux choix : soit ils l\'acceptent... ou alors ils n\'achètent pas le jeu !", a-t-il déclaré dans le média spécialisé Gamasutra.  '},
         { 
-          message: 'Une position affirmée que ne partagent pas tous les acteurs du secteur. Valve, l’éditeur de la très populaire plateforme de jeu Steam a réagi très mollement, en mars, au scandale né de Rape day. Ce jeu, dont la sortie était prévue en avril, était centré sur le principe suivant : "Harcelez verbalement, tuez et violez des femmes pour progresser dans l’histoire".'},
+          message: 'Une position affirmée que ne partagent pas tous les acteurs du secteur. Valve, l’éditeur de la très populaire plateforme de jeu Steam a réagi très mollement, en mars, au scandale né de Rape day. Ce jeu, dont la sortie était prévue en avril, était centré sur le principe suivant : "Harcelez verbalement, tuez et violez des femmes pour progresser dans l’histoire".',
+          img: [{
+            src: "static/img/steam-rapeday.jpg",
+            id: "rapeday1",
+            alt: "Rape Day",
+            title:"Rape Day",
+            height:"1900px",
+            width:"1306px",
+            legend:"",
+          },
+          {
+            src: "static/img/steam-rapeday2.jpg",
+            id: "rapeday2",
+            alt: "Rape Day",
+            title:"Rape Day",
+            height:"1900px",
+            width:"1306px",
+            legend:"",
+          },
+          ]
+        },
         { message: 'Face à la polémique, Valve a fini par retirer le jeu du catalogue. "Nous respectons le désir des développeurs [de jeux] de s’exprimer, et la mission de Steam est de [les] aider à trouver un public mais ce développeur a choisi un sujet et une façon de l’illustrer qui rendent cette tâche très difficile pour nous", s’est simplement défendu la société américaine, sans critiquer ouvertement le jeu. '},
         { message: 'En effet, dans l’industrie, la question reste sensible. "On est encore dans une phase de prise de conscience", constate Marie-Lou Dulac. Cette cheffe de projet éditorial travaille depuis presque deux ans chez Ubisoft. L’une de ses missions : faire un travail de recherche, pour amener ses collègues à "faire le constat" des lacunes de l’industrie.'},
         { message: 'Pour cela, elle organise des ateliers de sensibilisation à destination des employés d’Ubisoft. "Ce n’est pas facile tous les jours", confie-t-elle. "Certaines personnes sont réfractaires, elle disent que les filles ne sont pas notre coeur de cible, que ce n’est pas prioritaire, que c’est du travail en plus". '},
         { message: 'Il y a cinq ans, le directeur technique d’Ubisoft avait d’ailleurs utilisé ce dernier argument pour défendre Assassin’s Creed : Unity, critiqué pour n’avoir proposé dans un mode de jeu en ligne que des personnages masculins. "Un personnage féminin, ça aurait voulu dire refaire beaucoup d’animation, beaucoup de costumes", avait-il déclaré au site Video Gamer, avant d’être remis en cause par d’autres employés du studio, dont le directeur d’animation d’Assassin’s Creed III qui avait estimé dans un tweet le charge de travail à "un ou deux jours" seulement.'},
         { message: '"La capacité de se remettre en question, beaucoup de développeurs l’ont. Mais elle est difficile à concrétiser au sein de grosses entreprises", explique Sybil Collas. "De plus, étant donné que le jeu vidéo est une industrie à but de monétisation, les studios et les éditeurs ont tendance à garder toujours la même ‘recette’, pour ne pas prendre de risque", ajoute cette conceptrice de jeu vidéo. Spécialisée dans la narration, elle travaille notamment pour Dontnod.  '},
-        { message: 'Ce studio parisien dit avoir essuyé les refus de nombreux éditeurs pour son jeu d’aventure épisodique Life is Strange, sorti en 2015, avant que la société japonaise Square Enix n’accepte de le soutenir. En cause : son héroïne Max, une étudiante en photographie dotée de la faculté de revenir dans le temps.  "Certains nous on dit : ‘nous ne désirons pas éditer votre jeu parce qu’il ne sera pas un succès. Vous ne pouvez pas avoir d’héroïne dans les jeux vidéo. Ce doit être un héros, c’est aussi simple que ça. Vous ne pouvez pas faire s’embrasser deux hommes dans le jeu, ce serait assez gênant’", a dénoncé, en 2015, Jean-Maxime Morris, le co-fondateur de Dontnod, dans une vidéo présentant le jeu.'},
+        { inter: '"Vous ne pouvez pas avoir d’héroïne dans les jeux vidéo"',
+          message: 'Ce studio parisien dit avoir essuyé les refus de nombreux éditeurs pour son jeu d’aventure épisodique Life is Strange, sorti en 2015, avant que la société japonaise Square Enix n’accepte de le soutenir. En cause : son héroïne Max, une étudiante en photographie dotée de la faculté de revenir dans le temps.  "Certains nous on dit : ‘nous ne désirons pas éditer votre jeu parce qu’il ne sera pas un succès. Vous ne pouvez pas avoir d’héroïne dans les jeux vidéo. Ce doit être un héros, c’est aussi simple que ça. Vous ne pouvez pas faire s’embrasser deux hommes dans le jeu, ce serait assez gênant’", a dénoncé, en 2015, Jean-Maxime Morris, le co-fondateur de Dontnod, dans une vidéo présentant le jeu.'},
         { message: '"Oui c’est une meuf, oui elle a une sexualité, et ils avaient du mal à avaler la pilule, à croire que ça intéresserait les joueurs", s’insurge Sybil Collas. Pour cette professionnelle, comme pour de nombreux spécialistes du secteur interrogés, les studios indépendants sont plus souples et plus enclins à s’affranchir des modèles et des narrations traditionnels que les mastodontes du secteur - qui consacrent souvent plusieurs années et des millions, voire des dizaines de millions de dollars à la production d’un seul jeu. '
         },
         { inter: "Des studios indépendants plus en avance",
@@ -154,7 +175,6 @@ var example1 = new Vue({
   
 $(".methodo-explanation").hide();
 $( ".methodo-link" ).click(function() {
-  console.log(this.title)
   if($("#" + this.title).is(":visible")){
     $("#" + this.title).hide();
   }
@@ -174,6 +194,8 @@ $( ".btn-link" ).click(function() {
     $("#" + this.title).show();
   }
 });
+
+// Cards
 
 
 if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
