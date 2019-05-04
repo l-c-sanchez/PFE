@@ -839,6 +839,8 @@ article p.bullet:before {
   }
 }
 
+
+
 /* citation */
 
 blockquote, cite {
@@ -975,6 +977,7 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
 .div-img {
   display: flex;
   align-items: center;
+  margin: 0 auto;
 }
 
 /* .link {

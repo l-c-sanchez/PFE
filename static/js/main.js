@@ -182,9 +182,10 @@ var example1 = new Vue({
 
   if(isSmallDevice() )
   {
-    console.log("mobile")
-    $("#laurette2, #rapeday2").hide();
-    $("#HeavensVault2").hide();
+    console.log($("#rapeday2"))
+    $("#rapeday2" ).parent().css('display','none');
+    $("#laurette2" ).parent().css('display','none');
+    $("#HeavensVault2").parent().css('display','none');
 
   }
   
