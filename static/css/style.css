@@ -585,6 +585,17 @@ circle {
     max-width: 570px;
     margin-bottom: 3em;
     width: 100%;
+    font-size: 15px;
+    color: #717B8E;
+    letter-spacing: 0;
+    /* text-align: left; */
+    line-height: 23px;
+  }
+
+  #dataviz .d_graph_title{
+    max-width: 570px;
+    /* text-align: center; */
+    margin: 0 auto;
   }
 
 @media only screen and (min-width:980px) {
@@ -985,3 +996,7 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   text-decoration: underline;
   cursor: pointer;
 } */
+
+#yearRange {
+  display: none;
+}

@@ -62,7 +62,7 @@ d3.tsv("static/data/games.tsv", function(data){
   var force = d3.layout.force();
 
   let year = $("#yearRange")[0].value;
-  draw('gender', year);
+  draw('gender', 2018);
 
   $("#yearRange").on('change', function(e){
     let year = e.target.value;
