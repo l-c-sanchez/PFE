@@ -1,9 +1,18 @@
+function isMobile(){
+  return /Android|webOS|iPhone|iPod|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+function isSmallDevice(){
+  return window.innerWidth <= 980
+}
+
 var instruction = "Chaque bulle représente un jeu présenté à l'E3. En survolant avec votre souris chacune d'entre elle, vous obtiendrez plus d'informations le jeu associé.";
 //Version simplifiée regroupant les principaux périphériques et systèmes mobiles
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+if(isMobile())
 {
   instruction = "Chaque bulle représente un jeu présenté à l'E3. En cliquant sur chacune d'entre elle, vous obtiendrez plus d'informations le jeu associé.";
 }
+
 
 var example1 = new Vue({
     el: '#example-1',
@@ -171,7 +180,7 @@ var example1 = new Vue({
     }
   })
 
-  if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+  if(isSmallDevice() )
   {
     console.log("mobile")
     $("#laurette2, #rapeday2").hide();
@@ -204,8 +213,7 @@ $( ".btn-link" ).click(function() {
 // Cards
 
 
-if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
-{
+if(isMobile()) {
   $( ".flip-card" ).click(function() {
     var classToAdd = "reverseCard";
     var child = $(this).children("div:first")[0];
@@ -221,18 +229,20 @@ if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.u
     $( ".flip-card .flip-card-inner" ).removeClass("reverseCard");
   });
 
-}
-else {
+  $("article").on('touchstart', function() {
+    $( ".flip-card .flip-card-inner" ).removeClass("reverseCard");
+  });
 
-$( ".flip-card" ).hover(function() {
-  var classToAdd = "reverseCard";
-  var child = $(this).children("div:first")[0];
-  if (!$(child).hasClass(classToAdd)) {
-    $(child).addClass(classToAdd);
-  } else {
-    $(child).removeClass(classToAdd);
-  }
-});
+} else {
+  $( ".flip-card" ).hover(function() {
+    var classToAdd = "reverseCard";
+    var child = $(this).children("div:first")[0];
+    if (!$(child).hasClass(classToAdd)) {
+      $(child).addClass(classToAdd);
+    } else {
+      $(child).removeClass(classToAdd);
+    }
+  });
 }
 
 
