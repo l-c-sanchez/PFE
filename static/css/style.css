@@ -31,7 +31,7 @@ header .logo a {
 
 /* header on mobile */
 
-@media only screen and (max-device-width:980px) {
+@media only screen and (max-width:980px) {
 
     header[role=navigation] {
         left: inherit;
@@ -109,7 +109,7 @@ body, figure figcaption {
 
 /* cover mobile */
 
-@media only screen and (max-device-width:980px) {
+@media only screen and (max-width:980px) {
 
     figure {
         margin: 0;
@@ -142,7 +142,7 @@ header h1 {
     padding-right: 15%;
 }
 
-@media only screen and (max-device-width:980px) {
+@media only screen and (max-width:980px) {
 
     header h1, section article>h2 {
         font-size: 22px;
@@ -263,8 +263,11 @@ body {
 
 a {
     color: #000;
+    /* border-bottom: 2px solid #195f91;
+    text-decoration: none; */
     border-bottom: 2px solid #195f91;
     text-decoration: none;
+    color: #195f91;
 }
 
 body, figure figcaption {
@@ -321,7 +324,7 @@ article>h2 {
     text-transform: uppercase;
 }
 
-/* @media only screen and (max-device-width:980px) {
+/* @media only screen and (max-width:980px) {
     #laurette2{
         display: none;
     }
@@ -584,7 +587,7 @@ circle {
     width: 100%;
   }
 
-@media only screen and (min-device-width:980px) {
+@media only screen and (min-width:980px) {
   #dataviz h2 {
     font: normal 30px/34px Sanchez,Times,serif;
     /* margin: 60px 0; */
@@ -669,7 +672,7 @@ article p.bullet:before {
 .flip-card {
   background-color: transparent;
   width: 33%;
-  height: 330px;
+  height: 340px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   -webkit-perspective: 1000px;
@@ -677,7 +680,7 @@ article p.bullet:before {
   -o-perspective: 1000px;
   -ms-perspective: 1000px;
 }
-@media only screen and (max-device-width:600px) {
+@media only screen and (max-width:780px) {
   .flip-card {
     width: 100%;
     height: 330px;
@@ -686,14 +689,14 @@ article p.bullet:before {
 }
 
 
-  @media only screen and (min-device-width:600px) and (max-device-width:780px) {
+  /* @media only screen and (min-width:600px) and (max-width:780px) {
     .flip-card {
       width: 100%;
       height: 250px;
     }
-  }
+  } */
 
-@media only screen and (min-device-width:781px) and (max-device-width:1450px) {
+@media only screen and (min-width:781px) and (max-width:1450px) {
   .flip-card {
     height: 440px;
   }
@@ -781,15 +784,18 @@ article p.bullet:before {
   text-align: center;
 }
 
+
 .card-img {
-  width:50%;
+  width: 16vh;
+  /* max-width: 100px; */
+  max-width: 160px;
   margin: 0 auto;
   display: block;
-  overflow:hidden;
-  -webkit-border-radius:50%;
-  -moz-border-radius:50%;
-  border-radius:50%;
-  margin-bottom: 2rem;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin-bottom: 1rem;
   border: 2px white;
   box-shadow: 5px black;
 }
@@ -815,7 +821,7 @@ article p.bullet:before {
   text-align: center;
 }
 
-@media only screen and (max-device-width:600px) {
+@media only screen and (max-width:600px) {
 
   .card-img {
     width:30%;
@@ -825,8 +831,12 @@ article p.bullet:before {
 
   .card-quote {
     margin-top: 0.2rem;
+  }
 
-}
+  .flip-card-inner p {
+    line-height: 1.15;
+    /* font-size: 12px; */
+  }
 }
 
 /* citation */
@@ -966,3 +976,9 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   display: flex;
   align-items: center;
 }
+
+/* .link {
+  color: #87CEFA;
+  text-decoration: underline;
+  cursor: pointer;
+} */
