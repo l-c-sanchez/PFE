@@ -73,6 +73,10 @@ header figure {
 }
 .b-lazy {
     transition: opacity .3s ease-in-out;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    -ms-transition: 0.3s ease-out;
     max-width: 100%;
     opacity: 0;
 }
@@ -184,7 +188,7 @@ header figure:after {
     margin: -5px 10px 5px 0;
 }
 
-section article .small>iframe, section article .small>p iframe, section article .small figure, section article .small p, section article .small twitterwidget, section article>blockquote, section article>h2 {
+section article .small>iframe, section article .small>p iframe, section article .small figure, section article .small p, section article>blockquote, section article>h2, .d_container_grumpy {
     margin-left: auto;
     margin-right: auto;
     max-width: 570px;
@@ -668,11 +672,15 @@ article p.bullet:before {
   height: 330px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  -ms-perspective: 1000px;
 }
 @media only screen and (max-device-width:600px) {
   .flip-card {
     width: 100%;
-    height: 300px;
+    height: 330px;
   }
 
 }
@@ -697,13 +705,38 @@ article p.bullet:before {
   height: 100%;
   text-align: left;
   transition: transform 0.8s;
+  -webkit-transition:  transform 0.8s;
+  -moz-transition:  transform 0.8s;
+  -o-transition:  transform 0.8s;
+  -ms-transition:  transform 0.8s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
+
+.reverseCard {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
 }
+/* .flip-card:hover .flip-card-inner  {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+}
+
+.flip-card:active .flip-card-inner { color: red !important; 
+
+}  */
+
 
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
@@ -711,25 +744,32 @@ article p.bullet:before {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-perspective: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+  visibility:visible;
+  backface-visibility: hidden;
 }
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  /* background-color: #bbb;
-  color: black; */
-
   background-color: #ffc500;
   color: #222;
 }
 
 /* Style the back side */
 .flip-card-back {
-  /* background-color: dodgerblue; */
   color: white;
-  /* background-color: #222;
-  color:#ffc500; */
   background-color: #999;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
 }
 
 .players {
@@ -737,6 +777,7 @@ article p.bullet:before {
 }
 
 .flip-card-inner p {
+  margin: 4px;
   text-align: center;
 }
 
@@ -762,7 +803,8 @@ article p.bullet:before {
 .text-card {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
+  /* -webkit-transform: translateY(-50%); */
+  -webkit-transform: -webkit-translateY (-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
@@ -845,4 +887,78 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   font-style: normal;
   line-height: 20px;
   margin-top: 10px;
+}
+
+#d_container_1556898916{
+  padding:5px 5px 0px 10px;
+  width:100%;
+}
+#d_container_1556898916 .d_graph_title {
+  font-family:  "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+  font-size: 17px;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 26px;
+  padding-bottom:10px;
+  color: #171b1e;
+  font: normal 20px/24px Sanchez,Times,serif;
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+ }
+ #d_container_1556898916 .d_graph_subtitle{
+  display:block;
+  margin: 10px 0;
+  font-size: 15px;
+  font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
+  color: #717B8E;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 23px;
+}
+#d_container_1556898916 hr {
+  height: 1px;
+  color: #E2E4E9;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+#d_container_1556898916 .d_graph_subtitle hr {
+    margin-bottom:0px;
+}
+#d_container_1556898916 .d_graph_credit {
+  font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
+  font-size: 15px;
+  color: #717B8E;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 23px;
+}
+#d_container_1556898916 .d_graph_credit a:link {
+    color:#026B9C;
+ }
+#d_container_1556898916 .d_graph_grumpy .tooltipdiv {
+  margin:0px;
+  z-index: 9999 !important;
+  background-color:#ffffff;
+  font-family:  "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+  font-size: 12px;
+  color: #2A303B;
+  letter-spacing: 0.5px;
+  text-align: left;
+  line-height: 23px;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid rgb(226, 228, 233);
+}
+#d_container_1556898916 .d_graph_grumpy .highcharts-tooltip-box {
+    display:none;
+}
+/* #d_graph_1556898916{
+  height:450px;
+} */
+
+.d_container_grumpy {
+  margin-bottom: 3rem;
 }

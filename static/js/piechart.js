@@ -1,88 +1,13 @@
-<style>
-	#d_container_1556898916{
-		padding:5px 5px 0px 10px;
-		width:100%;
-	}
-	#d_container_1556898916 .d_graph_title {
-		font-family:  "Marr Sans", "Helvetica Neue", Helvetica, Arial;
-		font-size: 17px;
-		color: #2A303B;
-		letter-spacing: 0;
-		text-align: left;
-		line-height: 26px;
-		padding-bottom:10px;
-	 }
-	 #d_container_1556898916 .d_graph_subtitle{
-		display:block;
-		margin: 10px 0;
-		font-size: 15px;
-		font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
-		color: #717B8E;
-		letter-spacing: 0;
-		text-align: left;
-		line-height: 23px;
-	}
-	#d_container_1556898916 hr {
-		height: 1px;
-		color: #E2E4E9;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		border: 0;
-		border-top: 1px solid #eee;
-	}
-	#d_container_1556898916 .d_graph_subtitle hr {
-		  margin-bottom:0px;
-	}
-	#d_container_1556898916 .d_graph_credit {
-		font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
-		font-size: 15px;
-		color: #717B8E;
-		letter-spacing: 0;
-		text-align: left;
-		line-height: 23px;
-	}
-	#d_container_1556898916 .d_graph_credit a:link {
-		  color:#026B9C;
-	 }
-	#d_container_1556898916 .d_graph_grumpy .tooltipdiv {
-		margin:0px;
-		z-index: 9999 !important;
-		background-color:#ffffff;
-		font-family:  "Marr Sans", "Helvetica Neue", Helvetica, Arial;
-		font-size: 12px;
-		color: #2A303B;
-		letter-spacing: 0.5px;
-		text-align: left;
-		line-height: 23px;
-		box-sizing: border-box;
-		padding: 5px;
-		border: 1px solid rgb(226, 228, 233);
-	}
-	#d_container_1556898916 .d_graph_grumpy .highcharts-tooltip-box {
-			display:none;
-	}
-	#d_graph_1556898916{
-		height:450px;
-	}
-</style>
+var height_chart = 375;
+  if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+  {
+    height_chart = 275
+  }
 
-<div id="d_container_1556898916" class="d_container_grumpy">
-	<h2 class="d_graph_title"><b>Les femmes restent minoritaires dans les studios de développement</b></h2>
-	<div class="d_graph_subtitle">Malgré une légère augmentation, la part des femmes dans les studios reste faible : elle est passée de 10,4% des effectifs en 2014 à 14% en 2018. <br></div>
-	<div id="d_graph_1556898916" class="d_graph_grumpy"></div>
-	<div class="d_graph_credit" ><hr>Source : <span>Baromètres annuels du Syndicat National du Jeu Vidéo (SNJV)</span><hr></div>
-</div>
-
-<script>
-
-require(['https://s1.lemde.fr/assets-redaction/grumpycharts/js/highcharts-6-1-1.js', 'https://s1.lemde.fr/assets-redaction/grumpycharts/js/accessibility-6-1-1.js'], function() {
 	Highcharts.setOptions({
 		lang: {
 			decimalPoint: ',',
 			thousandsSep: ' ',
-			months: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',  'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
-			shortMonths: [ 'jan.' , 'fév.' , 'mars' , 'avr.' , 'mai' , 'juin' , 'juil.' , 'août' , 'sept.' , 'oct.' , 'nov.' , 'déc.'],
-			weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
 			noData: 'Pas de données à afficher',
 			numericSymbols: [null, 'M', 'G', 'T', 'P', 'E']
 		}
@@ -118,14 +43,10 @@ require(['https://s1.lemde.fr/assets-redaction/grumpycharts/js/highcharts-6-1-1.
   "chart": {
     "type": "pie",
     "description": "",
-    "typepie": "pie1",
     "backgroundColor": "rgba(255,255,255,0)",
     "borderRadius": 0,
+    "height": height_chart,
     "alignTicks": false,
-    "spacingTop": 20,
-    "spacingBottom": 10,
-    "spacingLeft": 10,
-    "spacingRight": 10,
     "style": {
       "fontFamily": "Marr Sans,Helvetica,Arial!important",
       "fontSize": "13px"
@@ -151,7 +72,7 @@ require(['https://s1.lemde.fr/assets-redaction/grumpycharts/js/highcharts-6-1-1.
         }
       },
       "dataLabels": {
-        "format": "{point.percentage:.0f} %"
+        "format": "{point.name} : {point.percentage:.0f}%"
       },
       "connectNulls": true,
       "fillOpacity": 0.2,
@@ -166,7 +87,7 @@ require(['https://s1.lemde.fr/assets-redaction/grumpycharts/js/highcharts-6-1-1.
     "colorByPoint": true,
     "pie": {
       "dataLabels": {
-        "distance": 40,
+        "distance": 30,
         "filter": {
           "property": "percentage",
           "value": "0",
@@ -194,33 +115,6 @@ require(['https://s1.lemde.fr/assets-redaction/grumpycharts/js/highcharts-6-1-1.
     "endOnTick": true,
     "type": "linear",
     "reversed": "",
-    "plotLines": {
-      "value": "",
-      "label": {
-        "text": "",
-        "align": "left",
-        "rotation": "0"
-      },
-      "color": "#ccc"
-    },
-    "plotBands": [
-      {
-        "from": "",
-        "to": "",
-        "label": {
-          "text": "",
-          "align": "left",
-          "verticalAlign": "top",
-          "rotation": "0",
-          "useHTML": false,
-          "textAlign": "",
-          "x": "",
-          "y": -5
-        },
-        "color": null,
-        "zIndex": -1
-      }
-    ],
     "lineWidth": 0
   },
   "xAxis": {
@@ -237,45 +131,6 @@ require(['https://s1.lemde.fr/assets-redaction/grumpycharts/js/highcharts-6-1-1.
       "padding": 30
     },
     "type": "linear",
-    "plotLines": [
-      {
-        "value": "",
-        "label": {
-          "text": "",
-          "textAlign": "left",
-          "verticalAlign": "top",
-          "rotation": "90",
-          "useHTML": false,
-          "x": 5,
-          "y": 12,
-          "style": {
-            "color": "#ccc"
-          }
-        },
-        "color": "#ccc",
-        "width": "",
-        "zIndex": 5
-      }
-    ],
-    "plotBands": [
-      {
-        "from": "",
-        "to": "",
-        "label": {
-          "text": "",
-          "align": "left",
-          "verticalAlign": "top",
-          "rotation": "90",
-          "useHTML": false,
-          "textAlign": "",
-          "x": "",
-          "y": 10,
-          "zIndex": -1
-        },
-        "color": null,
-        "zIndex": -10
-      }
-    ],
     "lineColor": "#2E3942",
     "tickLength": 7
   },
@@ -316,9 +171,7 @@ require(['https://s1.lemde.fr/assets-redaction/grumpycharts/js/highcharts-6-1-1.
       "font-family": "'Marr Sans',Helvetica,Arial!important",
       "opacity": 1
     },
-    "hideDelay": 200,
-    "headerFormat": "<span style='text-align:left;letter-spacing:0;color:#2A303B;font-size:13px'><b>{point.key}</b></span><br/>",
-    "pointFormat": "<span style='text-align:left;letter-spacing:0.5px;font-size:12px;color:{point.color};'>\u25cf </span>{series.name} : {point.y}<br>",
+    "hideDelay": 100,
     "formatter":  function(tooltip) {
 
 
@@ -415,21 +268,7 @@ function matchInArray(exp, skeleton, index, shared){
 
   },
   "legend": {
-    "enabled": "",
-    "reversed": "",
-    "layout": "horizontal",
-    "verticalAlign": "top",
-    "align": "left",
-    "margin": 40,
-    "y": -30,
-    "x": 0,
-    "itemStyle": {
-      "fontSize": 13,
-      "font-family": "'Marr Sans',Helvetica,arial",
-      "fontWeight": "normal",
-      "color": "#2A303B"
-    },
-    "itemMarginBottom": 10
+    "enabled": ""
   },
   "series": [
     {
@@ -437,12 +276,12 @@ function matchInArray(exp, skeleton, index, shared){
       "showInLegend": true,
       "data": [
         {
-          "name": "Pourcentage d'hommes",
+          "name": "Hommes",
           "y": 86.0,
           "color": "#3d4449"
         },
         {
-          "name": "Pourcentage de femmes",
+          "name": "Femmes",
           "y": 14.0,
           "color": "#ffdd6b"
         }
@@ -460,8 +299,3 @@ function matchInArray(exp, skeleton, index, shared){
     "enabled": false
   }
 } );
-
-
-});
-
-</script>

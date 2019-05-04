@@ -10,7 +10,7 @@ var example1 = new Vue({
     data: {
       chapo: 'Dans quelques semaines se tiendra l’E3, le plus important salon de jeu vidéo au monde. L’année dernière, de nombreuses créations mettant en avant des personnages féminins forts et peu stéréotypés y ont été présentées. Un changement notable, même si l’amélioration de la représentation des femmes reste encore mesurée.',
       parasfirstpart: [
-        { message: 'L’écran de l\'ordinateur montre une jeune femme en armure, un arc accroché dans le dos. "C’est l’un de mes personnages de jeu vidéo préférés", confie Laurette en faisant pivoter, d’un geste sur son clavier, la guerrière juchée sur un promontoire rocheux. Etudiante en informatique de 20 ans, Laurette est passionnée par la populaire série de jeux vidéo d\'action et d’aventure Assassin’s Creed. Dans son dernier opus, les joueurs ont pour la première fois la possibilité d’incarner une héroïne - Kassandra.',
+        { message: 'Une jeune femme en armure, un arc accroché dans le dos, apparaît sur l’écran de l’ordinateur. "C’est l’un de mes personnages de jeu vidéo préférés", confie Laurette en faisant pivoter, d’un geste sur son clavier, la guerrière juchée sur un promontoire rocheux. Etudiante en informatique de 20 ans, Laurette est passionnée par la populaire série de jeux vidéo d\'action et d’aventure Assassin’s Creed. Dans son dernier opus, les joueurs ont pour la première fois la possibilité d\’incarner une héroïne - Kassandra.',
           img: [{
             src: "static/img/laurette1.jpg",
             id: "laurette1",
@@ -46,12 +46,12 @@ var example1 = new Vue({
           {
           title: "Quels jeux ont été sélectionnés ?",
           id:"methodo-which",
-          explanation: "Quels jeux ont été sélectionnés ? Pour établir la liste des jeux à analyser, nous avons utilisé les données de l’IGN, un site américain spécialisé qui répertorie chaque année les jeux présents à l’E3. Pour éviter les phénomènes de doublons, les jeux présents à plusieurs salons ne sont comptabilisés que la première fois où l’IGN les a recensés. Les extensions et les DLC (contenus supplémentaires téléchargeables) n’ont pas été pris en compte."
+          explanation: "Pour établir la liste des jeux à analyser, nous avons utilisé les données de l’IGN, un site américain spécialisé qui répertorie chaque année les jeux présents à l’E3. Pour éviter les phénomènes de doublons, les jeux présents à plusieurs salons ne sont comptabilisés que la première fois où l’IGN les a recensés. Les extensions et les DLC (contenus supplémentaires téléchargeables) n’ont pas été pris en compte."
           },
           {
             title: "Pourquoi prendre en compte les jeux de l’E3 ?",
             id:"methodo-why",
-            explanation: "Pourquoi prendre en compte les jeux de l’E3 ? Conscients que ce salon très connu ne représente pas l’intégralité des jeux vidéo sortis chaque année, nous avons tout de même souhaité reprendre une méthodologie similaire à celle de Feminist Frequency. En effet, comme l’explique l’association féministe, \"l\'E3 est le plus grand événement de jeu vidéo chaque année, la plus grande opportunité pour les éditeurs d’atteindre leur audience, de se définir eux-mêmes et de définir l’industrie comme un ensemble\"."
+            explanation: "Conscients que ce salon très connu ne représente pas l’intégralité des jeux vidéo sortis chaque année, nous avons tout de même souhaité reprendre une méthodologie similaire à celle de Feminist Frequency. En effet, comme l’explique l’association féministe, \"l\'E3 est le plus grand événement de jeu vidéo chaque année, la plus grande opportunité pour les éditeurs d’atteindre leur audience, de se définir eux-mêmes et de définir l’industrie comme un ensemble\"."
           },
           {
             title: "Comment ont-ils été classifiés ?",
@@ -143,12 +143,12 @@ var example1 = new Vue({
     }
   })
 
-
   if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
   {
     console.log("mobile")
     $("#laurette2").hide();
     $("#HeavensVault2").hide();
+
   }
   
 $(".methodo-explanation").hide();
@@ -164,7 +164,6 @@ $( ".methodo-link" ).click(function() {
 
 $(".btn-learn").hide();
 $( ".btn-link" ).click(function() {
-  console.log(this.title)
   if($("#" + this.title).is(":visible")){
     $(".btn-learn").hide();
     $("#" + this.title).hide();
@@ -174,4 +173,37 @@ $( ".btn-link" ).click(function() {
     $("#" + this.title).show();
   }
 });
+
+
+if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+{
+  $( ".flip-card" ).click(function() {
+    var classToAdd = "reverseCard";
+    var child = $(this).children("div:first")[0];
+    if (!$(child).hasClass(classToAdd)) {
+      $( ".flip-card .flip-card-inner" ).removeClass(classToAdd);
+      $(child).addClass(classToAdd);
+    } else {
+      $(child).removeClass(classToAdd);
+    }
+  });
+
+  $("article").click(function() {
+    $( ".flip-card .flip-card-inner" ).removeClass("reverseCard");
+  });
+
+}
+else {
+
+$( ".flip-card" ).hover(function() {
+  var classToAdd = "reverseCard";
+  var child = $(this).children("div:first")[0];
+  if (!$(child).hasClass(classToAdd)) {
+    $(child).addClass(classToAdd);
+  } else {
+    $(child).removeClass(classToAdd);
+  }
+});
+}
+
 
