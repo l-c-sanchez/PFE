@@ -48,8 +48,7 @@ var height_chart = 375;
     "height": height_chart,
     "alignTicks": false,
     "style": {
-      "fontFamily": "Marr Sans,Helvetica,Arial!important",
-      "fontSize": "13px"
+      "fontSize": "11px"
     },
     "renderTo": "d_graph_1556898916"
   },
@@ -168,7 +167,6 @@ var height_chart = 375;
     "shadow": false,
     "style": {
       "color": "#16212c",
-      "font-family": "'Marr Sans',Helvetica,Arial!important",
       "opacity": 1
     },
     "hideDelay": 100,

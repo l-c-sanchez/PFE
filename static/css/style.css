@@ -892,9 +892,10 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
 #d_container_1556898916{
   padding:5px 5px 0px 10px;
   width:100%;
+  font-family: Sanchez,Times,serif;
+  margin-bottom: 3rem;
 }
 #d_container_1556898916 .d_graph_title {
-  font-family:  "Marr Sans", "Helvetica Neue", Helvetica, Arial;
   font-size: 17px;
   letter-spacing: 0;
   text-align: left;
@@ -910,7 +911,6 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   display:block;
   margin: 10px 0;
   font-size: 15px;
-  font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
   color: #717B8E;
   letter-spacing: 0;
   text-align: left;
@@ -928,7 +928,6 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
     margin-bottom:0px;
 }
 #d_container_1556898916 .d_graph_credit {
-  font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
   font-size: 15px;
   color: #717B8E;
   letter-spacing: 0;
@@ -942,7 +941,7 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   margin:0px;
   z-index: 9999 !important;
   background-color:#ffffff;
-  font-family:  "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+  font-family: Sanchez,Times,serif;
   font-size: 12px;
   color: #2A303B;
   letter-spacing: 0.5px;
@@ -955,10 +954,10 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
 #d_container_1556898916 .d_graph_grumpy .highcharts-tooltip-box {
     display:none;
 }
-/* #d_graph_1556898916{
-  height:450px;
-} */
 
-.d_container_grumpy {
-  margin-bottom: 3rem;
+.highcharts-data-label{
+  font-family: Sanchez,Times,serif;
+  /* stroke: #717B8E;
+  stroke-width: 1px;
+  fill: #717B8E; */
 }
