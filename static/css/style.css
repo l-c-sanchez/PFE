@@ -629,7 +629,7 @@ article p.bullet, article p.number, article p.subheader {
 }
 
 article p.bullet:before {
-  /* content: "";
+  content: "";
   height: 20px;
   width: 20px;
   background: #ffc300;
@@ -638,9 +638,9 @@ article p.bullet:before {
   position: absolute;
   left: 0;
   color: #000;
-  vertical-align: middle; */
+  vertical-align: middle;
 
-  height: 25px;
+  /* height: 25px;
   width: 25px;
   background: #ffc300;
   border-radius: 50%;
@@ -649,10 +649,10 @@ article p.bullet:before {
   left: -12px;
   color: #000;
   vertical-align: middle;
-  /* content: " ↓"; */
+  /* content: " ↓"; 
   text-align: center;
   padding: 5px;
-  padding-bottom: 4px;
+  padding-bottom: 4px; */
 }
 
 .arrow-bullet {
@@ -666,7 +666,7 @@ article p.bullet:before {
   left: -12px;
   color: #000;
   vertical-align: middle;
-  content: " ↑";
+  content: " ";
   text-align: center;
   padding: 5px;
   padding-bottom: 4px;
