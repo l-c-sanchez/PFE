@@ -1,56 +1,29 @@
-var width = Math.min(window.innerWidth, 475),
-    height = window.innerHeight / 1.6,
-    padding = 2, // separation between same-color nodes
-    clusterPadding = 0, // separation between different-color nodes
+var width = Math.min(window.innerWidth * 0.95, 475),
+    height = width, // window.innerHeight / 1.6,
+    clusterPadding = 10, // separation between different-color nodes
     maxRadius = 11;
-  
 
-  // static/js/data2018.tsv
 d3.tsv("static/data/games.tsv", function(data){
   var svg = d3.select("#dataviz").append("svg")
       .attr("width", width)
       .attr("height", height);
-
-  for (var j = 0; j < data.length; j++) {
-    if (window.innerWidth < 475)
-      data[j].radius = 7;
-    else
-      data[j].radius = 10;
-    data[j].x = Math.random() * width;
-    data[j].y = Math.random() * height;
+  
+  function getRadius(width, pad, ncol){
+    return (width-clusterPadding) / (2 * (1 + pad) * ncol);
   }
 
-  // Sorting data by gender. It ensures the gender appear in the same order for each year in the chart.
-  // I'm ensuring here that the order on desktop is:
-  // Row 1: M     F
-  // Row 2: Multi Others
-  function genderOrder(gender){
-    switch(gender){
-      case 'm': return 4;
-      case 'f': return 2;
-      case 'multi': return 3;
-      default: return 1;
-    }
+  function getPosition(index, r, pad, ncol) {
+    let d = 2 * r * (1 + pad);
+    let y = d/2 + Math.floor(index/ncol) * d;
+    let x = d/2 + (index % ncol) * d;
+    return {x: x, y: y};
   }
-  data = data.sort(function(x, y){
-    return d3.ascending(genderOrder(x.gender), genderOrder(y.gender));
-  });
 
   var getData = function(data, year) {
     return data.filter(
       function(d){return d.year == year;}
     );
   }
-
-  var getCenters = function(vname, size, data) {
-    var centers, map;
-    centers = _.uniq(_.pluck(data, vname)).map(function (d) {
-      return {name: d, value: 3};
-    });
-    map = d3.layout.treemap().size(size).ratio(1/1);
-    map.nodes({children: centers});
-    return centers;
-  };
   
   let genderColors = {
     f: '#F76425',
@@ -59,85 +32,139 @@ d3.tsv("static/data/games.tsv", function(data){
     other: '#F1EFA5'
   }
 
-  var force = d3.layout.force();
+  function genderLabel(gender) {
+    switch (gender) {
+      case 'm':
+        return 'Masculin';
+      case 'f':
+        return 'Féminin';
+      case 'multi':
+        return 'Multi';
+      default:
+        return 'Autres';
+    }
+  }
 
-  let year = $("#yearRange")[0].value;
-  draw('gender', 2018);
+  let year = $("#yearRange").val();
+  draw(year);  
 
-  $("#yearRange").on('change', function(e){
-    let year = e.target.value;
-    draw('gender', year);
+  $("#yearRange").on("change", function(e){
+    let year =  e.target.value;
+    draw(year);
+    $("#yearSpan").html(year);
+    clearInterval(timer);
+    $("#playButton").html("Lancer l'animation");
   });
 
-function draw(varname, year) {
+  var running = false;
+  var timer;
+
+  $("#playButton").on("click", function() {
+    var duration = 3000,
+      maxstep = $("#yearRange")[0].max,
+      minstep = $("#yearRange")[0].min;
+
+    function toNextYear(){
+      let currentYear = parseInt($("#yearRange").val(), 10);
+      let year;
+      if (currentYear < maxstep){
+        year = currentYear + 1;
+      } else {
+        year = minstep;
+      }
+      $("#yearRange").val(year);
+      $('#yearSpan').html(year);
+      draw(year);
+    }
+    
+    if (running == true) {
+      $("#playButton").html("Lancer l'animation");
+      running = false;
+      clearInterval(timer);
+    } else if (running == false) {
+      $("#playButton").html("Pause");
+      toNextYear();
+      timer = setInterval(toNextYear, duration);
+      running = true;
+    }
+  }); 
+
+
+function draw(year) {
   let yearData = getData(data, year);
 
-  svg.selectAll("circle").remove();
-  var nodes = svg.selectAll("circle")
-    .data(yearData);
-  nodes.enter().append("circle")
-    .attr("class", "node")
-    .attr("cx", function (d) { return d.x; })
-    .attr("cy", function (d) { return d.y; })
-    .attr("r", function (d) { return d.radius; })
-    .style("fill", function (d) { return genderColors[d.gender]; })
-    .on("mouseover", function (d) { showPopover.call(this, d); })
-    .on("mouseout", function (d) { removePopovers(); })
-    .on("click", function (d) { d3.event.stopPropagation(); })
-  
-  var centers = getCenters(varname, [width, height], yearData);
-  force.on("tick", tick(centers, nodes, varname, yearData));
-  labels(centers)
-  force.start();
+  // Group data by gender
+  var groups = d3.nest()
+    .key(function(d) { return d.gender; })
+    .entries(yearData);
+
+  // Positional settings
+  let refPoints = {
+    m: {x: 0, y: 0},
+    f: {x: width/2, y: 0},
+    multi: {x: 0, y: height/2},
+    other: {x: width/2, y: height/2}
+  }
+  let internalWidth = width/2;
+  let titleHeight = 40;
+  let pad = 0.2;
+  let ncol = 10;
+  let r = getRadius(internalWidth, pad, ncol);
+
+  labels(groups, refPoints, internalWidth, titleHeight);
+
+  for (var i=0; i<groups.length; i++){
+    let group = groups[i];
+    let data = group.values;
+    let name = group.key;
+
+    var nodes = svg.selectAll("circle." + name).data(data);
+    
+    // remove unneeded circles
+    nodes.exit()
+      .transition(500)
+      .attr("r", 0)
+      .remove();
+
+    // create any new circles needed
+    nodes.enter().append("circle")
+      .attr("r", 0);
+
+    // Update all circles
+    nodes
+      .attr("class", "node " + name)
+      .attr("cx", function (d, i) { return refPoints[name].x + getPosition(i, r, pad, ncol).x; })
+      .attr("cy", function (d, i) { return refPoints[name].y + titleHeight + getPosition(i, r, pad, ncol).y; })
+      .style("fill", function (d) { return genderColors[d.gender]; })
+      .on("mouseover", null)
+      .on("mouseover", function (d) { showPopover.call(this, d); })
+      .on("mouseout", function (d) { removePopovers(); })
+      .on("click", function (d) { d3.event.stopPropagation(); })
+
+    //update all circles to right radius
+    nodes.transition()
+      .duration(500)
+      .attr("r", function(d) {return r});
+  }
+
 };
+
+function labels(groups, refPoints, internalWidth, titleHeight){
+  svg.selectAll(".label").remove();
+  svg.selectAll(".label")
+    .data(groups).enter().append("text")
+    .attr("class", "label")
+    .text(function (d) { return genderLabel(d.key) })
+    .attr("transform", function (d) {
+      return "translate(" + (refPoints[d.key].x + (internalWidth / 2)) + ", " +
+      (refPoints[d.key].y + (titleHeight / 2)) + ")";
+    });
+}
 
 // Removing the popover on mobile devices
 document.addEventListener('touchstart', function(){ 
   removePopovers(); 
 });
-
-function tick(centers, nodes, varname, data) {
-  var foci = {};
-  for (var i = 0; i < centers.length; i++) {
-    foci[centers[i].name] = centers[i];
-  }
-  return function (e) {
-    for (var i = 0; i < data.length; i++) {
-      var o = data[i];
-      var f = foci[o[varname]];
-      o.y += ((f.y + (f.dy / 2)) - o.y) * e.alpha;
-      o.x += ((f.x + (f.dx / 2)) - o.x) * e.alpha;
-    }
-    nodes.each(collide(.11, data))
-      .attr("cx", function (d) { return d.x; })
-      .attr("cy", function (d) { return d.y; });
-  }
-}
-
-function labels(centers) {
-  svg.selectAll(".label").remove();
-
-  svg.selectAll(".label")
-  .data(centers).enter().append("text")
-  .attr("class", "label")
-  .text(function (d) { return genderLabel(d.name) })
-  .attr("transform", function (d) {
-    return "translate(" + (d.x + (d.dx / 2)) + ", " + (d.y + 20) + ")";
-  });
-}
-
-function genderLabel(gender) {
-  switch (gender) {
-    case 'm':
-      return 'Masculin';
-    case 'f':
-      return 'Féminin';
-    case 'multi':
-      return 'Multi';
-    default:
-      return 'Autres';
-  }
-}
 
 function removePopovers () {
   $('.popover').each(function() {
@@ -146,48 +173,22 @@ function removePopovers () {
 }
 
 function showPopover (d) {
-  $(this).popover({
+  let popoverData = {
     placement: 'auto top',
     container: 'body',
     trigger: 'manual',
     html : true,
-    content: function() {
-      return "<strong>" + d.game + "</strong> (" + d.platforms + ")<br/><br/>Personnage incarné : " + genderLabel(d.gender) +
+    content: "<strong>" + d.game + "</strong> (" + d.platforms + ")<br/><br/>Personnage incarné : " + genderLabel(d.gender) +
               "<br/>Editeur : " + d.editor + "<br/>Studio de développement : " + d.developer +
-              "<br/>Année : " + d.year; 
-    }
-  });
+              "<br/>Année : " + d.year
+  }
+  $(this).popover(popoverData);
+
+  // Hack to ensure popover content is truly updated.
+  var popover = $(this).data('bs.popover');
+  popover.options.content = popoverData.content;
+
   $(this).popover('show')
 }
 
-function collide(alpha, data) {
-  var quadtree = d3.geom.quadtree(data);
-  return function (d) {
-    var r = d.radius + maxRadius + padding,
-        nx1 = d.x - r,
-        nx2 = d.x + r,
-        ny1 = d.y - r,
-        ny2 = d.y + r;
-    quadtree.visit(function(quad, x1, y1, x2, y2) {
-      if (quad.point && (quad.point !== d)) {
-        var x = d.x - quad.point.x,
-            y = d.y - quad.point.y,
-            l = Math.sqrt(x * x + y * y),
-            r = d.radius + quad.point.radius + padding;
-        if (l < r) {
-          l = (l - r) / l * alpha;
-          d.x -= x *= l;
-          d.y -= y *= l;
-          quad.point.x += x;
-          quad.point.y += y;
-        }
-      }
-      return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
-    });
-  };
-}
-
 });
-
-  
-// })
