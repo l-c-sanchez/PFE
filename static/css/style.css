@@ -100,12 +100,18 @@ figure figcaption {
     width: 100%;
     max-width: 570px;
 }
-body, figure figcaption {
-    color: #171b1e;
+/* body, figure figcaption {
+    /* color: #171b1e;
     font-family: Sanchez,Times,serif;
     font-size: 16px;
-    line-height: 24px;
-}
+    line-height: 24px; 
+
+    color: #999;
+    font-size: 13px;
+    font-style: normal;
+    line-height: 20px;
+    margin-top: 5px;
+} */
 
 /* cover mobile */
 
@@ -232,12 +238,6 @@ h3 {
     font-weight: bold;
 }
 
-body, figure figcaption {
-    color: #171b1e;
-    font-family: Sanchez,Times,serif;
-    font-size: 16px;
-    line-height: 24px;
-}
 body {
     line-height: 1;
     min-width: 200px;
@@ -270,13 +270,20 @@ a {
     color: #195f91;
 }
 
-body, figure figcaption {
+body {
     color: #171b1e;
     font-family: Sanchez,Times,serif;
     font-size: 16px;
     line-height: 24px;
 }
 
+figcaption {
+  color: #999;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 20px;
+  margin-top: 5px;
+}
 
 /* CHAPO  */
 
@@ -622,7 +629,7 @@ article p.bullet, article p.number, article p.subheader {
 }
 
 article p.bullet:before {
-  content: "";
+  /* content: "";
   height: 20px;
   width: 20px;
   background: #ffc300;
@@ -631,7 +638,38 @@ article p.bullet:before {
   position: absolute;
   left: 0;
   color: #000;
+  vertical-align: middle; */
+
+  height: 25px;
+  width: 25px;
+  background: #ffc300;
+  border-radius: 50%;
+  margin: 0 12px 5px 0;
+  position: absolute;
+  left: -12px;
+  color: #000;
   vertical-align: middle;
+  /* content: " ↓"; */
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 4px;
+}
+
+.arrow-bullet {
+
+  height: 25px;
+  width: 25px;
+  background: #ffc300;
+  border-radius: 50%;
+  margin: 0 12px 5px 0;
+  position: absolute;
+  left: -12px;
+  color: #000;
+  vertical-align: middle;
+  content: " ↑";
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 4px;
 }
 
 .methodo {

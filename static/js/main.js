@@ -7,9 +7,13 @@ function isSmallDevice(){
 }
 
 var instruction = "Chaque bulle représente un jeu présenté à l'E3. En survolant avec votre souris chacune d'entre elle, vous obtiendrez plus d'informations le jeu associé.";
+var copyright_mobile = "";
+var heavens_vault_mobile = "";
 //Version simplifiée regroupant les principaux périphériques et systèmes mobiles
 if(isMobile())
 {
+  copyright_mobile += " (Léa Sanchez / France Info)"
+  heavens_vault_mobile += " (Heaven's Vault / Inklestudios)"
   instruction = "Chaque bulle représente un jeu présenté à l'E3. En cliquant sur chacune d'entre elle, vous obtiendrez plus d'informations le jeu associé.";
 }
 
@@ -27,7 +31,7 @@ var example1 = new Vue({
             title:"testitle",
             height:"1900px",
             width:"1306px",
-            legend:"",
+            legend:"Laurette aime jouer des personnages féminins." + copyright_mobile,
           },
           {
             src: "static/img/laurette2.jpg",
@@ -36,12 +40,24 @@ var example1 = new Vue({
             title:"testitle",
             height:"1900px",
             width:"1306px",
-            legend:"",
+            legend:"(Léa Sanchez / France Info)",
           },
         ]
         },
         { message: 'Le jeu a été présenté l’année dernière à l’E3. Ce salon californien très réputé dans l’industrie du jeu vidéo est organisé tous les ans, au mois de juin, à Los Angeles. Dans ses rangées ultra climatisées, les studios et les éditeurs les plus importants présentent leurs dernières créations et annoncent leurs prochains projets. ' },
-        { message: 'Son édition 2018 a, selon de nombreux observateurs, marqué un tournant dans la représentativité des femmes : jamais les personnages principaux féminins n’auraient été aussi présents. Dans Battlefield V, jeu de tir dédié à la seconde guerre mondiale, il est désormais possible d’incarner une femme. De même chez les Pokemon. '},
+        { message: 'Son édition 2018 a, selon de nombreux observateurs, marqué un tournant dans la représentativité des femmes : jamais les personnages principaux féminins n’auraient été aussi présents. Dans Battlefield V, jeu de tir dédié à la seconde guerre mondiale, il est désormais possible d’incarner une femme. De même chez les Pokemon. ',
+        img: [{
+          src: "static/img/battlefieldv.png",
+          id: "battlefieldv",
+          alt: "Battlefield V",
+          title:"Battlefield V",
+          height:"",
+          width:"",
+          legend:"Battlefield V propose désormais à la fois un personnage féminin et un personnage masculin. (Electronic Arts / Battlefield V)",
+        }
+      ]
+      },
+
         { 
           message: 'Selon plusieurs organisations féministes, cette évolution reste pourtant nuancée. "Plusieurs “gros” jeux proposent pour la première fois des femmes comme personnages principaux, et c’est un premier pas, admet Julien Jacquet, président de Game’Her, une association visant à promouvoir la mixité dans le secteur. "Mais il reste encore beaucoup de travail à faire pour qu’il y ait autant de personnages féminins que masculins, et qu’ils ne soient plus stéréotypés", ajoute le militant. '},
         { message: 'En France, un rapport du CNC (Centre National du Cinéma et de l’image animée) estime que les femmes représentent 49% des amateurs de jeu vidéo. Une catégorie large, qui englobe les joueurs occasionnels comme les plus réguliers, quelque soit le support - console, téléphone portable... - et le type de jeu. D’après cette enquête, les femmes consomment plus de jeux vidéo familiaux ou de stratégie. Les hommes, eux, sont plus nombreux dans les jeux de tir ou d’action. Un genre dans lesquelles les femmes ont longtemps été peu représentées : il y a sept ans, sur un ensemble de 669 jeux d’action, de tir ou de rôle, une étude concluait que seuls 4% des jeux avaient comme personnage principal une femme. Depuis, que s’est-il passé ? Les personnages féminins sont-ils devenues aussi communs que leurs homologues masculins ?'},
@@ -108,7 +124,7 @@ var example1 = new Vue({
             title:"Rape Day",
             height:"1900px",
             width:"1306px",
-            legend:"",
+            legend:"Capture d'écran du site Steam.",
           },
           {
             src: "static/img/steam-rapeday2.jpg",
@@ -117,7 +133,7 @@ var example1 = new Vue({
             title:"Rape Day",
             height:"1900px",
             width:"1306px",
-            legend:"",
+            legend:"Capture du jeu Rape Day (Desk Plant)",
           },
           ]
         },
@@ -144,7 +160,7 @@ var example1 = new Vue({
             title:"EGX Rezzed",
             height:"1900px",
             width:"1306px",
-            legend:"",
+            legend:"De nombreux jeux indépendants ont été présentés au salon EGX Rezzed, en avril. (Léa Sanchez / France Info)",
           }]
         },
         { message: '“Pourquoi on ne l’aurait pas fait ?”, répond, surpris, Joseph Humfrey, cofondateur du studio anglais Inklestudios, quand on lui demande ce qui l’a poussé à imaginer une femme comme personnage principal pour son jeu d’archéologie. Elle s’appelle Aliya Elasra, porte une voile bleu qui laisse apparaître ses cheveux, et des vêtements banals et utilitaires.  Dans ce jeu sorti mi-avril, les joueurs doivent explorer des ruines et lire des inscriptions anciennes.'},
@@ -156,7 +172,7 @@ var example1 = new Vue({
           title:"Heaven's Vault",
           height:"1900px",
           width:"1306px",
-          legend:"",
+          legend:"Heaven's Vault est basé sur l'histoire d'une égyptologue." + heavens_vault_mobile,
         },
         {
           src: "static/img/heavensvault2.jpg",
@@ -165,7 +181,7 @@ var example1 = new Vue({
           title:"Heaven's Vault",
           height:"1900px",
           width:"1306px",
-          legend:"",
+          legend:"(Heaven's Vault / Inklestudios)",
         }
       ]
         },
@@ -188,6 +204,10 @@ var example1 = new Vue({
   
 $(".methodo-explanation").hide();
 $( ".methodo-link" ).click(function() {
+  console.log(this);
+  var test =  $( this ).before()
+  console.log(test);
+
   if($("#" + this.title).is(":visible")){
     $("#" + this.title).hide();
   }
