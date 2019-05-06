@@ -6,7 +6,7 @@ function isSmallDevice(){
   return window.innerWidth <= 980
 }
 
-var instruction = "Chaque bulle représente un jeu présenté à l'E3. En survolant avec votre souris chacune d'entre elle, vous obtiendrez plus d'informations le jeu associé.";
+var instruction = "Chaque bulle représente un jeu présenté à l'E3. Survolez chacune d'entre elle avec votre souris pour obtenir plus d'informations.";
 var copyright_mobile = "";
 var heavens_vault_mobile = "";
 //Version simplifiée regroupant les principaux périphériques et systèmes mobiles
@@ -14,9 +14,10 @@ if(isMobile())
 {
   copyright_mobile += " (Léa Sanchez / France Info)"
   heavens_vault_mobile += " (Heaven's Vault / Inklestudios)"
-  instruction = "Chaque bulle représente un jeu présenté à l'E3. En cliquant sur chacune d'entre elle, vous obtiendrez plus d'informations le jeu associé.";
+  instruction = "Chaque bulle représente un jeu présenté à l'E3. Cliquez sur chacune d'entre elle pour obtenir plus d'informations.";
 }
 
+instruction += '  Les catégories affichées correspondent au genre du personnage principal du jeu, "multi" étant associé aux jeux permettant de choisir le genre du personnage.';
 
 var example1 = new Vue({
     el: '#example-1',
@@ -47,7 +48,7 @@ var example1 = new Vue({
         { message: 'Le jeu a été présenté l’année dernière à l’E3. Ce salon californien très réputé dans l’industrie du jeu vidéo est organisé tous les ans, au mois de juin, à Los Angeles. Dans ses rangées ultra climatisées, les studios et les éditeurs les plus importants présentent leurs dernières créations et annoncent leurs prochains projets. ' },
         { message: 'Son édition 2018 a, selon de nombreux observateurs, marqué un tournant dans la représentativité des femmes : jamais les personnages principaux féminins n’auraient été aussi présents. Dans Battlefield V, jeu de tir dédié à la seconde guerre mondiale, il est désormais possible d’incarner une femme. De même chez les Pokemon. ',
         img: [{
-          src: "static/img/battlefieldv.png",
+          src: "static/img/battlefieldv.jpg",
           id: "battlefieldv",
           alt: "Battlefield V",
           title:"Battlefield V",
@@ -60,7 +61,8 @@ var example1 = new Vue({
 
         { 
           message: 'Selon plusieurs organisations féministes, cette évolution reste pourtant nuancée. "Plusieurs “gros” jeux proposent pour la première fois des femmes comme personnages principaux, et c’est un premier pas, admet Julien Jacquet, président de Game’Her, une association visant à promouvoir la mixité dans le secteur. "Mais il reste encore beaucoup de travail à faire pour qu’il y ait autant de personnages féminins que masculins, et qu’ils ne soient plus stéréotypés", ajoute le militant. '},
-        { message: 'En France, un rapport du CNC (Centre National du Cinéma et de l’image animée) estime que les femmes représentent 49% des amateurs de jeu vidéo. Une catégorie large, qui englobe les joueurs occasionnels comme les plus réguliers, quelque soit le support - console, téléphone portable... - et le type de jeu. D’après cette enquête, les femmes consomment plus de jeux vidéo familiaux ou de stratégie. Les hommes, eux, sont plus nombreux dans les jeux de tir ou d’action. Un genre dans lesquelles les femmes ont longtemps été peu représentées : il y a sept ans, sur un ensemble de 669 jeux d’action, de tir ou de rôle, une étude concluait que seuls 4% des jeux avaient comme personnage principal une femme. Depuis, que s’est-il passé ? Les personnages féminins sont-ils devenues aussi communs que leurs homologues masculins ?'},
+        { message: 'En France, un rapport publié par le CNC en 2013 (Centre National du Cinéma et de l’image animée) estime que les femmes représentent 49% des amateurs de jeu vidéo. Une catégorie large, qui englobe les joueurs occasionnels comme les plus réguliers, quelque soit le support - console, téléphone portable... - et le type de jeu. D’après cette enquête, les femmes consomment plus de jeux vidéo familiaux ou de stratégie. Les hommes, eux, sont plus nombreux dans les jeux de tir ou d’action. '},
+        { message: 'Un genre dans lequel les femmes ont longtemps été peu représentées : il y a sept ans, sur un ensemble de 669 jeux d’action, de tir ou de rôle répertoriés par une société d’études spécialisée, l\'EEDAR, seuls 4% des jeux avaient comme personnage principal une femme, et 45% offraient la possibilité de choisir un avatar masculin ou féminin. Mais depuis, que s’est-il passé ?'},
         { inter: 'Peu de jeux sont centrés sur des personnages féminins',
           message: 'Pour répondre à ces questions, nous nous sommes inspirés de la méthodologie de l’association américaine Feminist Frequency. Elle publie chaque année sur son site un rapport dédié à l’E3 - sans mettre en ligne sa base de données. Selon cette organisation féministe, en 2018, les jeux présentés au prestigieux salon californien "proposent trois fois plus de personnages masculins que féminins". Comme elle, nous avons collecté des informations sur les créations et les projets présents à l’E3 chaque année depuis 2016. A-t-on la possibilité d’y jouer une femme, un homme ? Les deux ?'}
       ],
@@ -71,7 +73,7 @@ var example1 = new Vue({
           {
           title: "Quels jeux ont été sélectionnés ?",
           id:"methodo-which",
-          explanation: "Pour établir la liste des jeux à analyser, nous avons utilisé les données de l’IGN, un site américain spécialisé qui répertorie chaque année les jeux présents à l’E3. Pour éviter les phénomènes de doublons, les jeux présents à plusieurs salons ne sont comptabilisés que la première fois où l’IGN les a recensés. Les extensions et les DLC (contenus supplémentaires téléchargeables) n’ont pas été pris en compte."
+          explanation: "Résultat : les données obtenues sont similaires à celles de Feminist Frequency. En 2018, la majorité des jeux propose désormais de choisir le genre de son personnage, ou d’alterner entre des personnages féminins et masculins. Les jeux centrés sur un personnage masculin sont trois fois plus nombreux que ceux qui mettent en avant des personnages féminins exclusivement. Ces derniers atteignent 7% du total. Soit le même pourcentage qu’en 2016, trois ans plus tôt."
           },
           {
             title: "Pourquoi prendre en compte les jeux de l’E3 ?",
@@ -86,7 +88,7 @@ var example1 = new Vue({
         ]
       },
       parassecondpart: [
-        { message: 'Résultat : nous avons obtenu des données similaires à celles de Feminist Frequency. En termes quantitatif, l’amélioration de la représentation des personnages féminins dans les jeux vidéo paraît assez réduite : en 2018, seuls 7% des jeux proposaient une femme comme personnage principal… Soit un pourcentage presque similaire à 2016 (à compléter). '},
+        { message: 'Résultat : les données obtenues sont similaires à celles de Feminist Frequency. En 2018, la majorité des jeux propose désormais de choisir le genre de son personnage, ou d’alterner entre des personnages féminins et masculins. Les jeux centrés sur un personnage masculin sont trois fois plus nombreux que ceux qui mettent en avant des personnages féminins exclusivement. Ces derniers atteignent 7% du total. Soit le même pourcentage qu’en 2016, trois ans plus tôt.'},
         { inter: 'Une évolution "à petits pas"',
           message: 'Des résultats qui ne surprennent pas Fanny Lignon. Pour cette chercheuse lyonnaise, directrice de l’ouvrage Genre et jeux vidéo, l’industrie du jeu vidéo est en train de bouger "à petits pas". En effet, pendant de longues années, la représentation des personnages féminins de jeu vidéo a été limitée au "principe de la Schtroumpfette". Autrement dit :"une femme ultra stéréotypée, au milieu de nombreux personnages masculins". C’était, par exemple, les figures de princesses à sauver comme Peach que Super Mario devait venir secourir dans les années 90. Ou encore les personnages très sexualisés, comme les prostituées de Grand Theft Auto (GTA), série de jeu très célèbre née dans les années 2000.' },
         { message: '"De plus en plus d\'héroïnes fortes sont apparues depuis", salue Fanny Lignon. Comptez, par exemple, sur l\'héroïne de la série de jeux vidéo Uncharted, Elena Fisher, qui aide par ses qualités intellectuelle le chasseur de trésors Nathan Drake. Dans Horizon : Zero Dawn, sorti en 2017 sur PS4, on peut désormais incarner Aloy, une jeune femme devenue chasseuse de machines pour sa tribu, dans un univers post-apocalyptique. '},
@@ -148,7 +150,7 @@ var example1 = new Vue({
         { inter: '"Vous ne pouvez pas avoir d’héroïne dans les jeux vidéo"',
           message: '"La capacité de se remettre en question, beaucoup de développeurs l’ont. Mais elle est difficile à concrétiser au sein de grosses entreprises", explique Sybil Collas. "De plus, étant donné que le jeu vidéo est une industrie à but de monétisation, les studios et les éditeurs ont tendance à garder toujours la même ‘recette’, pour ne pas prendre de risque", ajoute cette conceptrice de jeu vidéo. Spécialisée dans la narration, elle travaille notamment pour Dontnod.  '},
         { 
-          message: 'Ce studio parisien dit avoir essuyé les refus de nombreux éditeurs pour son jeu d’aventure épisodique Life is Strange, sorti en 2015, avant que la société japonaise Square Enix n’accepte de le soutenir. En cause : son héroïne Max, une étudiante en photographie dotée de la faculté de revenir dans le temps.  "Certains nous on dit : ‘nous ne désirons pas éditer votre jeu parce qu’il ne sera pas un succès. Vous ne pouvez pas avoir d’héroïne dans les jeux vidéo. Ce doit être un héros, c’est aussi simple que ça. Vous ne pouvez pas faire s’embrasser deux hommes dans le jeu, ce serait assez gênant’", a dénoncé, en 2015, Jean-Maxime Morris, le co-fondateur de Dontnod, dans une vidéo présentant le jeu.'},
+          message: 'Ce studio parisien dit avoir essuyé les refus de nombreux éditeurs pour son jeu d’aventure épisodique Life is Strange, sorti en 2015, avant que la société japonaise Square Enix n’accepte de le soutenir. En cause : son héroïne Max, une étudiante en photographie dotée de la faculté de revenir dans le temps.  "Certains nous ont dit : ‘nous ne désirons pas éditer votre jeu parce qu’il ne sera pas un succès. Vous ne pouvez pas avoir d’héroïne dans les jeux vidéo. Ce doit être un héros, c’est aussi simple que ça. Vous ne pouvez pas faire s’embrasser deux hommes dans le jeu, ce serait assez gênant’", a dénoncé, en 2015, Jean-Maxime Morris, le co-fondateur de Dontnod, dans une vidéo présentant le jeu.'},
         { message: '"Oui c’est une meuf, oui elle a une sexualité, et ils avaient du mal à avaler la pilule, à croire que ça intéresserait les joueurs", s’insurge Sybil Collas. Pour cette professionnelle, comme pour de nombreux spécialistes du secteur interrogés, les studios indépendants sont plus souples et plus enclins à s’affranchir des modèles et des narrations traditionnels que les mastodontes du secteur - qui consacrent souvent plusieurs années et des millions, voire des dizaines de millions de dollars à la production d’un seul jeu. '
         },
         { inter: "Des studios indépendants plus en avance",

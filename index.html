@@ -65,13 +65,16 @@
                         <article class="no-separator">
                             <div class="small">
                                 <p v-html="dataviz.description" class="description"></p>
+                                <div class="seeAnimation">
+                                <div><button name="play" id="playButton">Voir les années précédentes</button></div>	
+                                <input id="yearRange" type="range" min="2016" max="2018" value="2018" step="1" />
+                                
+                                <span id="yearSpan">2018</span>           </div>
+                                
                             </div>
                         </article>
                     </div>
 
-                    <input id="yearRange" type="range" min="2017" max="2018" value="2018" step="1" />	
-                    <span id="yearSpan">2018</span>                
-                    <button name="play" id="playButton">Lancer l'animation</button>
 
                     <div class="points">
                     <div v-for="(methodo, ct) in dataviz.methodo" id="methodo" class="container">
