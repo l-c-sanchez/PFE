@@ -31,7 +31,7 @@ header .logo a {
 
 /* header on mobile */
 
-@media only screen and (max-width:980px) {
+@media only screen and (max-width:992px) {
 
     header[role=navigation] {
         left: inherit;
@@ -115,7 +115,7 @@ figure figcaption {
 
 /* cover mobile */
 
-@media only screen and (max-width:980px) {
+@media only screen and (max-width:992px) {
 
     figure {
         margin: 0;
@@ -148,7 +148,7 @@ header h1 {
     padding-right: 15%;
 }
 
-@media only screen and (max-width:980px) {
+@media only screen and (max-width:992px) {
 
     header h1, section article>h2 {
         font-size: 22px;
@@ -605,7 +605,7 @@ circle {
     margin: 0 auto;
   }
 
-@media only screen and (min-width:980px) {
+@media only screen and (min-width:992px) {
   #dataviz h2 {
     font: normal 30px/34px Sanchez,Times,serif;
     /* margin: 60px 0; */
