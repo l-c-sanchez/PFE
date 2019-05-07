@@ -849,7 +849,7 @@ article p.bullet:before {
 .card-img {
   width: 16vh;
   /* max-width: 100px; */
-  max-width: 160px;
+  max-width: 140px;
   margin: 0 auto;
   display: block;
   overflow: hidden;
