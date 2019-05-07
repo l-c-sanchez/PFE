@@ -618,12 +618,19 @@ circle {
     margin: 0 auto;
   }
 
+
+
 @media only screen and (min-width:992px) {
   #dataviz h2 {
     font: normal 30px/34px Sanchez,Times,serif;
     /* margin: 60px 0; */
     margin-left: 20%;
     margin-right: 20%;
+  }
+  .points {
+  
+    margin: 0 auto !important;
+    
   }
 
 
@@ -640,7 +647,7 @@ article p.bullet {
 }
 
 article p.bullet, article p.number, article p.subheader {
-  font: normal 15px/14px Sanchez,Times,serif !important;
+  font: normal 15px/17px Sanchez,Times,serif !important;
   color: #000;
   letter-spacing: -.3px;
 }
@@ -1131,11 +1138,7 @@ button:active {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.points {
-  max-width: 570px !important;
-  margin: 0 auto !important;
-  
-}
+
 
 .methodo-border {
   /* border: 1px solid #E2E4E9; */

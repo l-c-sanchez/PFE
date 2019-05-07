@@ -46,7 +46,7 @@ var example1 = new Vue({
         ]
         },
         { message: 'Le jeu a été présenté l’année dernière à l’E3. Ce salon californien très réputé dans l\’industrie du jeu vidéo est organisé tous les ans, au mois de juin, à Los Angeles. Les studios et les éditeurs les plus importants y présentent leurs dernières créations et annoncent leurs prochains projets.' },
-        { message: 'Son édition 2018 a, selon de nombreux observateurs, marqué un tournant dans la représentativité des femmes : jamais les personnages principaux féminins n\’auraient été aussi présents. Dans <i>Battlefield V</i>, jeu de tir dédié à la seconde guerre mondiale, il est désormais possible d’incarner une femme. De même dans les <i>Pokemon</i>.',
+        { message: 'Son édition 2018 a, selon de nombreux observateurs, marqué un tournant dans la représentativité des femmes : jamais les personnages principaux féminins n\’auraient été aussi présents. Dans <i>Battlefield V</i>, jeu de tir dédié à la seconde guerre mondiale, il est désormais possible d’incarner, entre autres, une femme. De même dans les <i>Pokemon</i>.',
         img: [{
           src: "static/img/battlefieldv.jpg",
           id: "battlefieldv",
@@ -54,7 +54,7 @@ var example1 = new Vue({
           title:"Battlefield V",
           height:"",
           width:"",
-          legend:"Battlefield V propose désormais à la fois un personnage féminin et un personnage masculin. (Electronic Arts / Battlefield V)",
+          legend:"Des femmes soldats ont fait leur apparition dans Battlefield V. (Electronic Arts / Battlefield V)",
         }
       ]
       },
@@ -99,7 +99,7 @@ var example1 = new Vue({
         {
           title: "Et Lara Croft dans tout ça ?",
           id:"laracroft",
-          message: "A rédiger Lara croft"
+          message: "                          zzz"
         },
         {
           title: "Vous connaissiez Miss Pacman ?",
@@ -121,10 +121,10 @@ var example1 = new Vue({
       parasfourthpart: [
         { message: 'En France, un <a href=”https://www.tns-sofres.com/sites/default/files/2013.12.10-jeux-videos.pdf” target="_blank" >rapport publié par le CNC en 2013</a> (Centre National du Cinéma et de l’image animée) estime que les femmes représentent 49% des amateurs de jeu vidéo. Une catégorie large, qui englobe les joueurs occasionnels comme réguliers, quelque soit le support et le type de produits. D\’après cette enquête, les femmes consomment plus de jeux vidéo familiaux ou de stratégie, les hommes étant plus nombreux à pratiquer les jeux de tir ou d’action. Parmi eux, plusieurs joueurs confient espérer eux aussi pouvoir incarner plus de femmes. <i>"Cela me permet de me projeter dans un autre corps"</i>, indique Maxence, 21 ans.'},
         { message: 'L’évolution des créateurs de jeu vidéo reste cependant mesurée. Pour Pascale Thiérault, jeune chercheuse canadienne de l’université de Montréal, les personnages féminins restent beaucoup moins diversifiés que leurs homologues masculins. <i>"Les héroïnes sont encore jeunes, jolies et blanches"</i>. Les studios ne s’autorisent pas à faire des figures féminines moins <i>"sexy"</i> - alors qu’ils le font davantage pour leurs homologues masculins. <i>"Regardez Mario, il ne correspond pas aux standards de beauté masculins"</i>, abonde la chercheuse lyonnaise Fanny Lignon.' },
-        { message: 'Les studios doivent aussi composer avec une partie des joueurs, très attachée à ses <i>"standards"</i> de masculinité. En témoigne l\’indignation de certains hommes, quand Electronic Arts a présenté l\’an passé son dernier <i>Battlefield</i>, qui propose d’incarner une femme soldat dans l’univers de la seconde guerre mondiale.'},
+        { message: 'Les studios doivent aussi composer avec une partie des joueurs, très attachée à ses <i>"standards"</i> de masculinité. En témoigne l\’indignation de certains hommes, quand Electronic Arts a présenté l\’an passé son dernier <i>Battlefield</i>, qui intègre des femmes soldats.'},
         { quote: {
           author:"@EnnPeeSee, 24 octobre 2018. Twitter.",
-          text: "#NOTMYBATTLEFIELD ON NE PEUT PAS APPUYER CETTE PROPAGANDE FEMINISTE !"
+          text: "ON NE PEUT PAS APPUYER CETTE PROPAGANDE FEMINISTE !"
         },
           message: '<i>"Ces gens ont deux choix : soit ils l\'acceptent... ou alors ils n\'achètent pas le jeu !"</i>, a réagi le directeur créatif de l’éditeur américain dans le média spécialisé <a target="_blank" href=”https://www.gamasutra.com/view/news/319787/This_is_not_okay_EA_minces_no_words_on_backlash_against_women_in_Battlefield.php”>Gamasutra</a>.'},
         { message: 'Une position affirmée que ne partagent pas tous les acteurs du secteur. La très populaire plateforme de jeu Steam a réagi très mollement, en mars, au scandale né de <a  target="_blank" href=”http://www.francesoir.fr/societe-science-tech/rape-day-le-jeu-video-proposant-de-violer-des-femmes-finalement-retire”>Rape day</a>. Ce jeu, dont la sortie était prévue en avril, était centré sur le principe suivant : <i>"Harcelez verbalement, tuez et violez des femmes pour progresser dans l’histoire"</i>.',
