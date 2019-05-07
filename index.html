@@ -35,6 +35,7 @@
                     <div v-for="(para, ct) in parasfirstpart" class="container">
                         <article class="no-separator row d-flex justify-content-center">
                             <h2 v-if="para.inter" v-html="para.inter"></h2>
+                            <blockquote v-if="para.quote"><p v-html="para.quote.text"></p><span v-html="para.quote.author"></span></blockquote>
                             <div class="small">
                                 <p v-html="para.message"></p>
                             </div>
@@ -85,6 +86,7 @@
                     <div v-for="(para, ct) in parassecondpart" class="container">
                             <article class="no-separator row d-flex justify-content-center">
                                 <h2 v-if="para.inter" v-html="para.inter"></h2>
+                                <blockquote v-if="para.quote"><p v-html="para.quote.text"></p><span v-html="para.quote.author"></span></blockquote>
                                 <div class="small">
                                     <p v-html="para.message"></p>
                                 </div>
@@ -114,6 +116,7 @@
                     <div v-for="(para, ct) in parasthirdpart" class="container">
                             <article class="no-separator row d-flex justify-content-center">
                                 <h2 v-if="para.inter" v-html="para.inter"></h2>
+                                <blockquote v-if="para.quote"><p v-html="para.quote.text"></p><span v-html="para.quote.author"></span></blockquote>
                                 <div class="small">
                                     <p v-html="para.message"></p>
                                 </div>
