@@ -25,7 +25,8 @@ header .logo a {
     float: left;
     text-indent: -9999px;
     height: 2rem;
-    width: 148px;
+    width:5rem;
+    max-width: 300px;
 }
 
 
@@ -586,6 +587,17 @@ circle {
     margin-bottom: 1em;
   }
 
+  #dataviz hr {
+    height: 1px;
+    color: #E2E4E9;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+    max-width: 570px;
+    width: 100%;
+  }
+
   #dataviz .description {
     margin-left: auto;
     margin-right: auto;
@@ -1036,21 +1048,16 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
 } */
 
 /* input range for bubble chart */
-input[type='range'] {
+/* input[type='range'] {
   -webkit-appearance: none !important;
   -webkit-border-radius: 5px;
-  /*-webkit-box-shadow: inset 0 0 5px #333;*/
-  /* background-color: rgb(53, 135, 212); */
   background-color: #717B8E;
   height: 10px;
   width: 200px;
   margin: 20px;
-  /*position: relative;
-   left: 10%;*/
+} */
 
-}
-
-input[type='range']::-webkit-slider-thumb {
+/* input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   -webkit-border-radius: 15px;
   background-color: #bbb;
@@ -1058,17 +1065,57 @@ input[type='range']::-webkit-slider-thumb {
   border: 1px solid #000;
   height: 25px;
   width: 25px;
+} */
+
+input[type=range]
+{
+    -webkit-appearance: none;
+    background-color: #777;
+    height: 3px;
+    position: relative;
+    bottom:3px;
+    margin-right: 1.3rem;
+}
+
+input[type="range"]::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    background-color: #ccc;
+    border: 1px solid #888;
+    opacity: 1.0;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+}
+
+input:focus, textarea {
+  outline: none !important;
+}
+button:focus {outline:0;}
+
+button:active {
+  outline: none;
+  border: none;
 }
 
 .seeAnimation {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 3rem;
+  display: flex;
+  /* Cette valeur peut être changée dans l'exemple */
+  justify-content: space-evenly;
+  max-width: 570px;
+  margin: 0 auto;
+  padding-top:2.5rem;
+  padding-bottom:2.5rem;
 }
 
+
 #playButton {
-  margin-bottom: 1rem;
+  /* margin-top: 1rem; */
   background-color: #ffc300;
+  background-color: #f2f2f2;
   font-family: Sanchez,Times,serif;
   padding: 5px;
   color:black

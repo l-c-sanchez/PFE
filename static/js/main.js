@@ -61,8 +61,9 @@ var example1 = new Vue({
 
         { 
           message: 'Une évolution nuancée par plusieurs associations féministes. <i>"Plusieurs grosses productions proposent pour la première fois d’incarner des femmes, et c’est un premier pas</i>, admet Julien Jacquet, fondateur de Game\’Her, une association en faveur de la mixité dans le secteur. <i>Mais il reste encore beaucoup de travail à faire pour qu’il y ait autant d’avatars féminins que masculins"</i>, ajoute le militant.'},
-        { message: 'Il y a sept ans, sur un ensemble de 669 jeux d’action, de tir ou de rôle répertoriés par une <a href=”http://web.archive.org/web/20131031054125/https://www.penny-arcade.com/report/article/games-with-female-heroes-dont-sell-because-publishers-dont-support-them”>société d’études spécialisée</a>, seuls 4% des productions avaient comme protagoniste principal une femme, et 45% offraient la possibilité de choisir un avatar masculin ou féminin. Mais depuis, que s’est-il passé ?'},
         { inter: 'Peu de jeux sont centrés sur des personnages féminins',
+          message: 'Il y a sept ans, sur un ensemble de 669 jeux d’action, de tir ou de rôle répertoriés par une <a href=”http://web.archive.org/web/20131031054125/https://www.penny-arcade.com/report/article/games-with-female-heroes-dont-sell-because-publishers-dont-support-them”>société d’études spécialisée</a>, seuls 4% des productions avaient comme protagoniste principal une femme, et 45% offraient la possibilité de choisir un avatar masculin ou féminin. Mais depuis, que s’est-il passé ?'},
+        { 
           message: 'Selon l’organisation américaine <a href=”https://feministfrequency.com/2018/06/14/gender-breakdown-of-games-featured-at-e3-2018/”>Feminist Frequency</a>, en 2018, les jeux présentés à l\’E3 proposaient toujours <i>"trois fois plus de personnages masculins que féminins"</i>. Chaque année, cette association féministe publie sur son site un rapport dédié au prestigieux salon californien - sans mettre en ligne sa base de données détaillée. Comme elle, nous avons collecté des informations sur les créations et les projets présents à l’E3 chaque année depuis 2016. A-t-on la possibilité d\’y jouer une femme, un homme ? Les deux ?'}
       ],
       dataviz: {
@@ -77,7 +78,7 @@ var example1 = new Vue({
           {
             title: "Pourquoi prendre en compte les jeux de l’E3 ?",
             id:"methodo-why",
-            explanation: "Conscients que ce salon très connu ne représente pas l\’intégralité des jeux vidéo sortis chaque année, nous avons tout de même souhaité reprendre une méthodologie similaire à celle de Feminist Frequency. En effet, comme l’explique l’association féministe, <i>\"l\’E3 est le plus grand événement de jeu vidéo chaque année, la plus grande opportunité pour les éditeurs d’atteindre leur audience, de se définir eux-mêmes et de définir l’industrie comme un ensemble\"</i>"
+            explanation: "Conscients que ce salon très connu ne représente pas l\’intégralité des jeux vidéo sortis chaque année, nous avons tout de même souhaité reprendre une méthodologie similaire à celle de Feminist Frequency. En effet, comme l’explique l’association féministe, <i>\"l\’E3 est le plus grand événement de jeu vidéo chaque année, la plus grande opportunité pour les éditeurs d’atteindre leur audience, de se définir eux-mêmes et de définir l’industrie comme un ensemble\"</i>."
           },
           {
             title: "Comment ont-ils été classifiés ?",

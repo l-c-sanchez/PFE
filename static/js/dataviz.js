@@ -4,7 +4,7 @@ var width = Math.min(window.innerWidth * 0.95, 475),
     maxRadius = 11;
 
 d3.tsv("static/data/games.tsv", function(data){
-  var svg = d3.select("#dataviz").append("svg")
+  var svg = d3.select("#dataviz-data").append("svg")
       .attr("width", width)
       .attr("height", height);
   
@@ -82,7 +82,7 @@ d3.tsv("static/data/games.tsv", function(data){
       running = false;
       clearInterval(timer);
     } else if (running == false) {
-      $("#playButton").html("Pause");
+      $("#playButton").html("Interrompre l'animation");
       toNextYear();
       timer = setInterval(toNextYear, duration);
       running = true;

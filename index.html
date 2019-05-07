@@ -24,7 +24,7 @@
                         <img botag="CMS-IMAGE_2529214" src="static/img/cover.jpg" alt="" title="Léa Sanchez / Projet de fin d'études pour FRANCEINFO" class="b-lazy b-loaded" width="1900px" height="668px">
                         <figcaption> (YANN THOMPSON / FRANCEINFO)</figcaption>
                     </figure>
-                    <h1>Représentation des femmes dans le jeu vidéo : une amélioration en demi-teinte</h1>
+                    <h1>Représentation des femmes dans le jeu vidéo&nbsp;: une amélioration en demi-teinte</h1>
                 </header>
 
                 <div id="example-1" class="bootstrap-wrapper">
@@ -65,14 +65,19 @@
                         <article class="no-separator">
                             <div class="small">
                                 <p v-html="dataviz.description" class="description"></p>
+
                                 <div class="seeAnimation">
-                                <div><button name="play" id="playButton">Voir les années précédentes</button></div>	
-                                <input id="yearRange" type="range" min="2016" max="2018" value="2018" step="1" />
-                                
-                                <span id="yearSpan">2018</span>           </div>
+                                    <div><input id="yearRange" type="range" min="2016" max="2018" value="2018" step="1" /><span id="yearSpan">2018</span></div>
+                                    <button name="play" id="playButton">Voir les années précédentes</button>        
+                                <!-- <div><button name="play" id="playButton">Voir les années précédentes</button></div>	 -->
+                            </div>
                                 
                             </div>
                         </article>
+                        <div id="dataviz-data">
+
+                        </div>
+                       
                     </div>
 
 
