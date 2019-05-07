@@ -165,8 +165,7 @@ var example1 = new Vue({
             legend:"De nombreux jeux indépendants ont été présentés au salon EGX Rezzed, en avril. (Léa Sanchez / France Info)",
           }]
         },
-        { message: '<i>"Pourquoi on ne l’aurait pas fait ?"</i>, répond, surpris, Joseph Humfrey, cofondateur du studio anglais Inklestudios, quand on lui demande ce qui l’a poussé à choisir une femme comme personnage principal de son jeu d’archéologie. Elle s’appelle Aliya Elasra, porte une voile bleu qui laisse apparaître ses cheveux, et des vêtements banals et utilitaires.  Dans ce jeu sorti mi-avril, les joueurs doivent explorer des ruines et lire des inscriptions anciennes.'},
-        { message: '“Avec toute notre équipe, nous avons trouvé très inspirant le parcours de l’archéologue égyptienne Monica Hanna, qui s’est illustrée en protégeant le patrimoine de son pays depuis la révolution de 2011”, raconte le programmeur. ',
+        { message: '<i>"Pourquoi on ne l’aurait pas fait ?"</i>, répond, surpris, Joseph Humfrey, cofondateur du studio anglais Inklestudios, quand on lui demande ce qui l’a poussé à choisir une femme comme personnage principal de son jeu d’archéologie. Elle s’appelle Aliya Elasra, porte une voile bleu qui laisse apparaître ses cheveux, et des vêtements banals et utilitaires.  Dans ce jeu sorti mi-avril, les joueurs doivent explorer des ruines et lire des inscriptions anciennes.',
         img: [{
           src: "static/img/heavensvault1.jpg",
           id: "HeavensVault",
@@ -187,8 +186,9 @@ var example1 = new Vue({
         }
       ]
         },
+        
         { message: 'Un peu plus loin, Hannah Flynn présente <i>Sunless Skies</i>, le dernier-né de son entreprise londonienne. Dans le brouhaha ambiant des jeunes gens venu tester ce jeu de rôle, la trentenaire aux cheveux teintés en bleu indique qu’il était <i>"naturel pour le studio de proposer aux joueurs de choisir leur genre, car nous avons une petite équipe diversifiée dans laquelle chacun peut exprimer ses idées"</i>.'},
-        { message: 'Sybil Collas considère elle aussi que la féminisation des effectifs est essentielle : <i>"il est plus difficile de se projeter sur ce qu’on n’est pas. Les créateurs de contenu écrivent des personnages pour eux-mêmes, qui leur ressemblent" </i>, explique la créatrice de jeux. Elle a rejoint il y a quelques mois l\’organisation  <i>Women In Games France </i>, qui promeut la mixité dans l\'industrie du jeu vidéo, dont les effectifs sont majoritairement masculins.'},
+        { message: 'Sybil Collas considère elle aussi que la féminisation des effectifs est essentielle : <i>"il est plus difficile de se projeter sur ce qu’on n’est pas. Les créateurs de contenu écrivent des personnages pour eux-mêmes, qui leur ressemblent" </i>, explique la créatrice de jeux. Elle a rejoint il y a quelques mois l\’organisation  <i>Women In Games France</i>, qui promeut la mixité dans l\'industrie du jeu vidéo, dont les effectifs sont majoritairement masculins.'},
         { message: 'Du côté des écoles, on se veut optimiste. A Isart digital, école française spécialisée, la proportion de filles dans la filière jeu vidéo a été multipliée par deux en cinq ans. Charlotte Lavergne, directrice pédagogique, constate <i>"une génération beaucoup plus ouverte que les précédentes"</i>. Plusieurs autres écoles ont mis en place des modules visant à sensibiliser leurs étudiants à la représentation des femmes dans leurs jeux. Thomas Planques, directeur créatif et producteur de jeux vidéo, intervient dans plusieurs d’entre elles.'},
         { message: 'CHUTE EN UN PARA ==> REPORTAGE JEUDI MATIN A l’IIM'}
       ],
