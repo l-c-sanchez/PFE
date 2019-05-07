@@ -3,11 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GRAND FORMAT - Représentation des femmes dans le jeu vidéo : une amélioration en demi-teinte</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dmhendricks/bootstrap-grid-css@4.1.3/dist/css/bootstrap-grid.min.css">
- 
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  -->
-  <link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet'> 
+  <title>Jeux vidéo&nbsp;: toujours en manque d'héroïnes ?</title>
+  <link rel="stylesheet" href="static/css/bootstrap-grid.min.css">
+  <link href='static/css/sanchez.css' rel='stylesheet'> 
   <link rel="stylesheet" href="static/css/style.css">
 
 </head>
@@ -24,7 +22,7 @@
                         <img botag="CMS-IMAGE_2529214" src="static/img/cover.jpg" alt="" title="Léa Sanchez / Projet de fin d'études pour FRANCEINFO" class="b-lazy b-loaded" width="1900px" height="668px">
                         <figcaption> (YANN THOMPSON / FRANCEINFO)</figcaption>
                     </figure>
-                    <h1>Représentation des femmes dans le jeu vidéo&nbsp;: une amélioration en demi-teinte</h1>
+                    <h1>Jeux vidéo&nbsp;: toujours en manque d'héroïnes ?</h1>
                 </header>
 
                 <div id="example-1" class="bootstrap-wrapper">
@@ -47,20 +45,9 @@
                             </div>
                         </div>                       
                     </div>
-                    <!-- <div class="container">
-                        <div class="btn-group row d-flex justify-content-center" data-toggle="buttons">
-                                <label class="btn btn-primary active" id="gender">
-                                <input type="radio" name="options"> gender
-                                </label>
-                                <label class="btn btn-primary" id="editor">
-                                <input type="radio" name="options"> editor
-                                </label>
-                                <label class="btn btn-primary" id="trans">
-                                <input type="radio" name="options"> Transmission
-                                </label>
-                        </div>
-                    </div> -->
                     <div id="dataviz" class="points-before">
+
+                        <div id="inner-dataviz">
                         <h2 class="d_graph_title"><p v-html="dataviz.title"></p></h2>
                         <article class="no-separator">
                             <div class="small">
@@ -68,29 +55,32 @@
 
                                 <div class="seeAnimation">
                                     <div><input id="yearRange" type="range" min="2016" max="2018" value="2018" step="1" /><span id="yearSpan">2018</span></div>
-                                    <button name="play" id="playButton">Voir les années précédentes</button>        
-                                <!-- <div><button name="play" id="playButton">Voir les années précédentes</button></div>	 -->
-                            </div>
+                                    <button name="play" id="playButton">Voir les années précédentes</button> 
+                                </div>
                                 
                             </div>
                         </article>
                         <div id="dataviz-data">
 
                         </div>
-                       
+
+                        <div class="container">
+                                <div class="methodo-border">
+                                <div class="methodo-title">Méthodologie</div>
+                                <div v-for="(methodo, ct) in dataviz.methodo">
+                                        <article class="no-separator"><div class="small methodo d_graph_credit">
+                                                <p class="bullet methodo-link" v-html="methodo.title" :title="methodo.id"></p></div>
+                                                <div class="small methodo-explanation" :id="methodo.id">
+                                                    <p v-html="methodo.explanation"></p>
+                                                </div>
+                                        </article>  
+                                </div></div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="points"></div>
 
 
-                    <div class="points">
-                    <div v-for="(methodo, ct) in dataviz.methodo" id="methodo" class="container">
-                            <article class="no-separator"><div class="small methodo">
-                                    <p class="bullet methodo-link" v-html="methodo.title" :title="methodo.id"></p></div>
-                                    <div class="small methodo-explanation" :id="methodo.id">
-                                        <p v-html="methodo.explanation"></p>
-                                    </div>
-                            </article>  
-                    </div>
-                    </div>
 
                     <div v-for="(para, ct) in parassecondpart" class="container">
                             <article class="no-separator row d-flex justify-content-center">
@@ -166,7 +156,6 @@
                                             <p>Joueuse régulière</p> 
                                             <p>Spécialité : jeux d'aventure</p> 
                                             <p class="card-quote">“Ecouter Lara Croft gémir, ça m’a fait sortir du jeu”</p></div>
-                                        <!-- <img src="static/img/laurette1.jpg" alt="Avatar" style="width:300px;height:300px;"> -->
                                       </div>
                                       <div class="flip-card-back">
                                         <p class="text-card">“Quand j’étais enfant, Lara Croft c’était un vrai modèle. C’était une fille forte, je voulais être comme elle. Mais maintenant, quand un personnage féminin est trop sexualisé, ça me gêne.<br><br>Dans une des refontes de Lara Croft, à laquelle je jouais en même temps que mon ex, elle était moins sexualisée qu’avant. Mais son petit déhanchement, le fait qu’on l’entende gémir, ça m’a sortie du jeu”.
@@ -186,7 +175,6 @@
                                                 <p>Spécialité : jeux de combat</p>
                                                 <p class="card-quote">“Je n’achète pas les jeux stéréotypés”</p>
                                             </div>
-                                        <!-- <img src="static/img/laurette1.jpg" alt="Avatar" style="width:300px;height:300px;"> -->
                                       </div>
                                       <div class="flip-card-back">
                                         <p class="text-card">“J’admire les personnages féminins qui vont se battre. J’ai beaucoup vécu le racisme, et ça me sert comme catharsis. Mais j’ai du mal à me reconnaître dans les personnages féminins toujours ultra stéréotypés.<br><br>J’adore Life is strange (jeu narratif sorti en 2015), par exemple. Mais ses héroïnes restent des Américaines blanches, jeunes et jolies. ”</p> 
@@ -222,34 +210,19 @@
                                              <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
                                         </div>
                                 </div>
-                            
                         </div>
                     </div>
-
-
-   
-
-
                 </div>
         </section>
-        <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+        <script type="text/javascript" src="static/js/libs/highcharts.js"></script>
         <script type="text/javascript" src="static/js/libs/d3.js"></script>
         <script type="text/javascript" src="static/js/libs/jquery.js"></script>
         <script type="text/javascript" src="static/js/libs/bootstrap.js"></script>
         <script type="text/javascript" src="static/js/libs/underscore.js"> </script>
-
-        <!-- <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script> -->
-        <!-- <script src="https://d3js.org/d3-force.v2.min.js"></script> -->
-        <script src="https://unpkg.com/vue/dist/vue.js"></script>
-        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+        <script src="static/js/libs/vue.js"></script>
+        <script src="static/js/libs/vue-router.js"></script>
         <script src="static/js/main.js"></script>
         <script src="static/js/dataviz.js"></script>
         <script src="static/js/piechart.js"></script>
-
-        
-
 </body>
 </html>

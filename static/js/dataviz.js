@@ -82,7 +82,7 @@ d3.tsv("static/data/games.tsv", function(data){
       running = false;
       clearInterval(timer);
     } else if (running == false) {
-      $("#playButton").html("Interrompre l'animation");
+      $("#playButton").html("Arrêter l'animation");
       toNextYear();
       timer = setInterval(toNextYear, duration);
       running = true;
