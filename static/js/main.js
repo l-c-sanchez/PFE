@@ -55,7 +55,7 @@ var example1 = new Vue({
         ]
         },
         { message: 'Le jeu a été présenté l’année dernière à l’E3. Ce salon californien très réputé dans l\’industrie du jeu vidéo est organisé tous les ans, au mois de juin, à Los Angeles. Les studios et les éditeurs les plus importants y présentent leurs dernières créations et annoncent leurs prochains projets.' },
-        { message: 'Son édition 2018 a, selon de nombreux observateurs, marqué un tournant dans la représentativité des femmes : jamais les personnages principaux féminins n\’auraient été aussi présents. Dans <i>Battlefield V</i>, jeu de tir dédié à la seconde guerre mondiale, il est désormais possible d’incarner, entre autres, une femme. De même dans les <i>Pokemon</i>.',
+        { message: 'Son édition 2018 a marqué un tournant dans la représentativité des femmes : selon de nombreux observateurs, jamais les personnages principaux féminins n\’auront été aussi présents. Dans <i>Battlefield V</i>, jeu de tir dédié à la seconde guerre mondiale, il est désormais possible d’incarner, entre autres, une femme. De même dans les <i>Pokemon</i>.',
         img: [{
           src: "static/img/battlefieldv.jpg",
           id: "battlefieldv",
