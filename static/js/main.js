@@ -6,6 +6,10 @@ function isSmallDevice(){
   return window.innerWidth < 990
 }
 
+function isSmallDeviceForCover(){
+  return window.innerWidth < 620
+}
+
 var instruction = "Chaque bulle symbolise un jeu présenté à l'E3. Survolez chacune d'entre elles avec votre souris pour obtenir plus d'informations.";
 var copyright_mobile = "";
 var heavens_vault_mobile = "";
@@ -26,6 +30,13 @@ if(isMobile())
 }
 
 instruction += '  Les catégories affichées correspondent au genre du personnage principal du jeu, "multi" étant associé aux productions permettant de choisir le genre de celui-ci.';
+var header = new Vue({
+  el: '#header',
+  data: {
+    isMobile: isMobile(),
+    isSmallDevice: isSmallDeviceForCover()
+  }
+})
 
 var example1 = new Vue({
     el: '#example-1',
