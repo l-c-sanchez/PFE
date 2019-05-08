@@ -10,36 +10,36 @@ function isSmallDeviceForCover(){
   return window.innerWidth < 620
 }
 
-var instruction = "Chaque bulle symbolise un jeu présenté à l'E3. Survolez chacune d'entre elles avec votre souris pour obtenir plus d'informations.";
 var copyright_mobile = "";
 var heavens_vault_mobile = "";
-var width_tweet = 550;
-var height_tweet = 550;
-//Version simplifiée regroupant les principaux périphériques et systèmes mobiles
-if (window.innerWidth < 650){
-  width_tweet = window.innerWidth / 2;
-  height_tweet = window.innerHeight / 1.8;
-}
 if(isMobile())
 {
-  width_tweet = window.innerWidth / 1.3;
-  height_tweet = window.innerHeight / 1.8;
   copyright_mobile += " (Léa Sanchez / France Info)"
   heavens_vault_mobile += " (Heaven's Vault / Inklestudios)"
-  instruction = "Chaque bulle symbolise un jeu présenté à l'E3. Cliquez sur chacune d'entre elles pour obtenir plus d'informations.";
+  
 }
 
-instruction += '  Les catégories affichées correspondent au genre du personnage principal du jeu, "multi" étant associé aux productions permettant de choisir le genre de celui-ci.';
 var header = new Vue({
   el: '#header',
+  mounted() {
+    let _this = this;
+    window.addEventListener('resize', function () {
+      _this.isSmallDevice = isSmallDeviceForCover()
+    });
+  },
   data: {
-    isMobile: isMobile(),
     isSmallDevice: isSmallDeviceForCover()
   }
 })
 
 var example1 = new Vue({
     el: '#example-1',
+    mounted() {
+      let _this = this;
+      window.addEventListener('resize', function () {
+        _this.isMobile = isMobile();        
+      });
+    },
     data: {
       isMobile: isMobile(),
       chapo: 'L’E3, le plus important salon de jeu vidéo au monde, se tiendra le 6 juin. L’année dernière, de nombreuses créations mettant en avant des personnages féminins forts et peu stéréotypés y ont été présentées. Un changement notable, même si l’amélioration de la représentation des femmes reste encore mesurée.',
@@ -66,7 +66,7 @@ var example1 = new Vue({
         ]
         },
         { message: 'Le jeu a été présenté l’année dernière à l’E3. Ce salon californien très réputé dans l\’industrie du jeu vidéo est organisé tous les ans, au mois de juin, à Los Angeles. Les studios et les éditeurs les plus importants y présentent leurs dernières créations et annoncent leurs prochains projets.' },
-        { message: 'Son édition 2018 a marqué un tournant dans la représentativité des femmes : selon de nombreux observateurs, jamais les personnages principaux féminins n\’auront été aussi présents. Dans <i>Battlefield V</i>, jeu de tir dédié à la seconde guerre mondiale, il est désormais possible d’incarner, entre autres, une femme. De même dans les <i>Pokemon</i>.',
+        { message: 'Son édition 2018 a marqué un tournant dans la représentativité des femmes : selon <a target="_blank"   href="https://www.lemonde.fr/pixels/article/2018/06/12/au-salon-du-jeu-video-de-l-e3-la-grande-annee-des-femmes_5313536_4408996.html" >plusieurs observateurs</a>, jamais les personnages principaux féminins n\’ont été aussi mis en avant. Dans <i>Battlefield V</i>, jeu de tir dédié à la seconde guerre mondiale, il est désormais possible d’incarner, entre autres, une femme. De même dans les <i>Pokemon</i>.',
         img: [{
           src: "static/img/battlefieldv.jpg",
           id: "battlefieldv",
@@ -88,7 +88,11 @@ var example1 = new Vue({
       ],
       dataviz: {
         title: "A l'E3 2018, 8 jeux seulement étaient centrés sur un personnage féminin",
-        description: instruction,
+        description: {
+          beginning_desktop:"Chaque bulle symbolise un jeu présenté à l'E3. Survolez chacune d'entre elles avec votre souris pour obtenir plus d'informations.",
+          beginning_mobile:"Chaque bulle symbolise un jeu présenté à l'E3. Cliquez sur chacune d'entre elles pour obtenir plus d'informations.",
+          end: '  Les catégories affichées correspondent au genre du personnage principal du jeu, "multi" étant associé aux productions permettant de choisir le genre de celui-ci.'
+        },
         methodo: [
           {
           title: "Quels jeux ont été sélectionnés ?",
@@ -112,8 +116,7 @@ var example1 = new Vue({
         { inter: 'Une évolution "à petits pas"',
           message: 'Une stabilité qui ne surprend pas Fanny Lignon. Pour cette chercheuse de l’université Lyon 1, directrice de l’ouvrage <i>Genre et jeux vidéo</i>, l’industrie du jeu vidéo est en train de bouger - mais <i>"à petits pas"</i>.' },
         { message: 'Pendant de longues années, la représentation des femmes y a été limitée au <i>"principe de la Schtroumpfette"</i>. Autrement dit : <i>"une femme ultra stéréotypée, au milieu de nombreux protagonistes masculins"</i>. C’était, par exemple, les figures de princesses à sauver comme Peach que Super Mario devait venir secourir. Ou encore des représentations féminines très sexualisées, comme les combattantes de <i>Mortal Kombat</i>, série de jeux née dans les années 90.',
-          tweet: '<blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">[Femme Fatale] Mortal Kombat X : Le retour de Jade possible !<a href="http://t.co/QmHa7PRUaB">http://t.co/QmHa7PRUaB</a> <a href="http://t.co/YxIIg7GVaA">pic.twitter.com/YxIIg7GVaA</a></p>&mdash; Gamer-Network.fr (@Gamer_Network_) <a href="https://twitter.com/Gamer_Network_/status/516476327759605760?ref_src=twsrc%5Etfw">29 septembre 2014</a></blockquote>',
-          // tweet: '<iframe id="tweet_587708335794823168" border=0 frameborder=0 height="' + height_tweet + '" width="' + width_tweet + '" src="https://twitframe.com/show?url=https%3A%2F%2Ftwitter.com%2Fgamesthatiplay1%2Fstatus%2F587708335794823168"></iframe>'
+          tweet: '<blockquote class="twitter-tweet" data-lang="fr"><p lang="fr" dir="ltr">[Femme Fatale] Mortal Kombat X : Le retour de Jade possible !<a href="http://t.co/QmHa7PRUaB">http://t.co/QmHa7PRUaB</a> <a href="http://t.co/YxIIg7GVaA">pic.twitter.com/YxIIg7GVaA</a></p>&mdash; Gamer-Network.fr (@Gamer_Network_) <a href="https://twitter.com/Gamer_Network_/status/516476327759605760?ref_src=twsrc%5Etfw">29 septembre 2014</a></blockquote>'
         },
         { message: 'Depuis, plusieurs studios à l’origine de ces jeux très stéréotypés ont annoncé leur décision de <a target="_blank" href="http://www.gameblog.fr/news/48792-mortal-kombat-x-des-mensurations-plus-realistes-pour-les-fem">"réduire les mensurations"</a> de leurs protagonistes féminines. <i>"Plusieurs héroïnes fortes ont également fait leur apparition"</i>, salue Fanny Lignon. Comptez, par exemple, sur l\'héroïne de la série <i>Uncharted</i>, Elena Fisher, qui aide par ses qualités intellectuelle un chasseur de trésors. Dans <i>Horizon : Zero Dawn</i>, sorti en 2017, on peut désormais incarner Aloy, une jeune femme devenue chasseuse de machines pour sa tribu.'},
 
@@ -229,30 +232,14 @@ var example1 = new Vue({
     }
   })
 
-window.onresize = function(event) {
-  
-  if(isSmallDevice() )
-  {
-    $("#rapeday2" ).parent().css('display','none');
-    $("#laurette2" ).parent().css('display','none');
-    $("#HeavensVault2").parent().css('display','none');
 
-  }
-  else {
-    $("#rapeday2" ).parent().show();
-    $("#laurette2" ).parent().show();
-    $("#HeavensVault2").parent().show();
+if(isSmallDevice() )
+{
+  $("#rapeday2" ).parent().css('display','none');
+  $("#laurette2" ).parent().css('display','none');
+  $("#HeavensVault2").parent().css('display','none');
 
-  }
-};
-
-  if(isSmallDevice() )
-  {
-    $("#rapeday2" ).parent().css('display','none');
-    $("#laurette2" ).parent().css('display','none');
-    $("#HeavensVault2").parent().css('display','none');
-
-  }
+}
   
 $(".methodo-explanation").hide();
 $( ".methodo-link" ).click(function() {
@@ -311,24 +298,51 @@ if(isMobile()) {
   });
 }
 
+window.onresize = function(event) {
+  
+  if(isSmallDevice() )
+  {
+    $("#rapeday2" ).parent().css('display','none');
+    $("#laurette2" ).parent().css('display','none');
+    $("#HeavensVault2").parent().css('display','none');
 
-// $(document).ready(function() {
+  }
+  else {
+    $("#rapeday2" ).parent().show();
+    $("#laurette2" ).parent().show();
+    $("#HeavensVault2").parent().show();
 
-//   /* find all iframes with ids starting with "tweet_" */
-//   $("iframe[id^='tweet_']").load(function() {
-//       this.contentWindow.postMessage({ element: this.id, query: "height" },
-//           "https://twitframe.com");
-//   });
+  }
 
-// });
-
-// /* listen for the return message once the tweet has been loaded */
-// $(window).bind("message", function(e) {
-//   var oe = e.originalEvent;
-//   if (oe.origin != "https://twitframe.com")
-//       return;
-
-//   if (oe.data.height && oe.data.element.match(/^tweet_/))
-//       $("#" + oe.data.element).css("height", parseInt(oe.data.height) + "px");
-//   $("#brand").hide();
-// });
+  if(isMobile()) {
+    $( ".flip-card" ).click(function() {
+      var classToAdd = "reverseCard";
+      var child = $(this).children("div:first")[0];
+      if (!$(child).hasClass(classToAdd)) {
+        $( ".flip-card .flip-card-inner" ).removeClass(classToAdd);
+        $(child).addClass(classToAdd);
+      } else {
+        $(child).removeClass(classToAdd);
+      }
+    });
+  
+    $("article").click(function() {
+      $( ".flip-card .flip-card-inner" ).removeClass("reverseCard");
+    });
+  
+    $("article").on('touchstart', function() {
+      $( ".flip-card .flip-card-inner" ).removeClass("reverseCard");
+    });
+  
+  } else {
+    $( ".flip-card" ).hover(function() {
+      var classToAdd = "reverseCard";
+      var child = $(this).children("div:first")[0];
+      if (!$(child).hasClass(classToAdd)) {
+        $(child).addClass(classToAdd);
+      } else {
+        $(child).removeClass(classToAdd);
+      }
+    });
+  }
+};

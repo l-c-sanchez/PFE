@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Les jeux vidéo toujours en manque d'héroïnes ?</title>
   <link rel="stylesheet" href="static/css/bootstrap-grid.min.css">
-  <link href='static/css/sanchez.css' rel='stylesheet'> 
+  <link href='static/css/sanchez.css' rel='stylesheet'>
   <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/juxtapose.css">
+
 
 </head>
 <body>
@@ -53,7 +55,8 @@
                         <h2 class="d_graph_title"><p v-html="dataviz.title"></p></h2>
                         <article class="no-separator">
                             <div class="small">
-                                <p v-html="dataviz.description" class="description"></p>
+                                <p v-html="dataviz.description.beginning_desktop + dataviz.description.end" v-if="!isMobile" class="description"></p>
+                                <p v-html="dataviz.description.beginning_mobile + dataviz.description.end" v-if="isMobile" class="description"></p>
 
                                 <div class="seeAnimation">
                                     <div><input id="yearRange" type="range" min="2016" max="2018" value="2018" step="1" /><span id="yearSpan">2018</span></div>
@@ -251,14 +254,14 @@
         <script type="text/javascript" src="static/js/libs/d3.js"></script>
         <script type="text/javascript" src="static/js/libs/jquery.js"></script>
         <script type="text/javascript" src="static/js/libs/bootstrap.js"></script>
-        <script type="text/javascript" src="static/js/libs/underscore.js"> </script>
+
         <script src="static/js/libs/vue.js"></script>
         <script src="static/js/libs/vue-router.js"></script>
         <script src="static/js/main.js"></script>
         <script src="static/js/dataviz.js"></script>
         <script src="static/js/piechart.js"></script>
-        <script src="https://cdn.knightlab.com/libs/juxtapose/latest/js/juxtapose.min.js"></script>
+        <script type="text/javascript" src="static/js/libs/juxtapose.js"></script>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<link rel="stylesheet" href="https://cdn.knightlab.com/libs/juxtapose/latest/css/juxtapose.css">
+
 </body>
 </html>

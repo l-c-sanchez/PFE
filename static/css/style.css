@@ -24,8 +24,10 @@ header .logo a {
     border-bottom: 0;
     float: left;
     text-indent: -9999px;
-    height: 2rem;
-    width:5rem;
+    /* height: 2rem;
+    width:5rem; */
+    height: 21px;
+    width: 145px;
     max-width: 300px;
 }
 
@@ -101,18 +103,7 @@ figure figcaption {
     width: 100%;
     max-width: 570px;
 }
-/* body, figure figcaption {
-    /* color: #171b1e;
-    font-family: Sanchez,Times,serif;
-    font-size: 16px;
-    line-height: 24px; 
 
-    color: #999;
-    font-size: 13px;
-    font-style: normal;
-    line-height: 20px;
-    margin-top: 5px;
-} */
 
 /* cover mobile */
 
@@ -332,14 +323,6 @@ article>h2 {
     text-align: center;
     text-transform: uppercase;
 }
-
-/* @media only screen and (max-width:980px) {
-    #laurette2{
-        display: none;
-    }
-
-
-} */
 
 circle {
     stroke: black;
@@ -1014,13 +997,13 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
     margin-bottom:0px;
 }
 
- {
+ /* {
   font-size: 15px;
   color: #717B8E;
   letter-spacing: 0;
   text-align: left;
   line-height: 23px;
-}
+} */
 .d_graph_credit a:link {
     color:#026B9C;
  }
@@ -1044,9 +1027,6 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
 
 .highcharts-data-label{
   font-family: Sanchez,Times,serif;
-  /* stroke: #717B8E;
-  stroke-width: 1px;
-  fill: #717B8E; */
 }
 
 .div-img {
@@ -1054,32 +1034,6 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   align-items: center;
   margin: 0 auto;
 }
-
-/* .link {
-  color: #87CEFA;
-  text-decoration: underline;
-  cursor: pointer;
-} */
-
-/* input range for bubble chart */
-/* input[type='range'] {
-  -webkit-appearance: none !important;
-  -webkit-border-radius: 5px;
-  background-color: #717B8E;
-  height: 10px;
-  width: 200px;
-  margin: 20px;
-} */
-
-/* input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none !important;
-  -webkit-border-radius: 15px;
-  background-color: #bbb;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#bbb), to(#888));
-  border: 1px solid #000;
-  height: 25px;
-  width: 25px;
-} */
 
 input[type=range]
 {
