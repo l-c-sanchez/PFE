@@ -25,8 +25,31 @@ for year in [2016, 2017, 2018]:
     dfs.append(df)
 
 df = pd.concat(dfs)
-print(df[df['game'] == 'Wolfenstein: Cyber Pilot'])
 
+# For bubble visualisation
 df = df[df['to_keep'] == '1']
 df['gender'] = df['gender'].apply(clean_gender)
 df.to_csv('games.tsv', sep='\t', index=False)
+
+# For searchable table
+
+gender_labels = {
+    'f': 'Féminin',
+    'm': 'Masculin',
+    'multi': 'Multi (personnage masculin et/ou féminin)',
+    'other': 'Autres (genre ambigu, personnage non-humain...)'
+}
+table_df = df
+table_df['gender'] = table_df['gender'].apply(lambda x: gender_labels[x])
+
+table_columns = {
+    'game': 'Jeu',
+    'editor': 'Editeur',
+    'developer': 'Studio',
+    'gender': 'Personnage principal',
+    'year': 'Année'
+}
+table_df = df[list(table_columns.keys())]
+table_df = table_df.rename(columns=table_columns)
+
+table_df.to_json ('games.json', orient='split', index=False)

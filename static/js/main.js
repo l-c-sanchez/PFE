@@ -252,8 +252,51 @@ var global = new Vue({
         { message: 'Du côté des écoles, on se veut optimiste. A Isart digital, école française spécialisée, la proportion de filles dans la filière jeu vidéo a été multipliée par deux en cinq ans. Charlotte Lavergne, directrice pédagogique, constate <i>"une génération beaucoup plus ouverte que les précédentes"</i>. Plusieurs autres écoles ont mis en place des modules visant à sensibiliser leurs étudiants à la représentation des femmes dans leurs jeux. Thomas Planques, directeur créatif et producteur de jeux vidéo, intervient dans plusieurs d’entre elles.'},
         { message: 'CHUTE EN UN PARA ==> REPORTAGE JEUDI MATIN A l’IIM'}
       ],
+      gameTable: {
+        title: "Voir les données", 
+        columns: ["Jeu","Editeur","Studio","Personnage principal","Ann\u00e9e"]
+      } 
     }
   })
+
+
+function createTable(data){
+  $('#games_table').dataTable({
+    language: {
+      processing:     "Traitement en cours...",
+      search:         "Rechercher&nbsp;:",
+      lengthMenu:    "Afficher _MENU_ &eacute;l&eacute;ments",
+      info:           "Affichage de l'&eacute;lement _START_ &agrave; _END_ sur _TOTAL_ &eacute;l&eacute;ments",
+      infoEmpty:      "Affichage de l'&eacute;lement 0 &agrave; 0 sur 0 &eacute;l&eacute;ments",
+      infoFiltered:   "(filtr&eacute; de _MAX_ &eacute;l&eacute;ments au total)",
+      infoPostFix:    "",
+      loadingRecords: "Chargement en cours...",
+      zeroRecords:    "Aucun &eacute;l&eacute;ment &agrave; afficher",
+      emptyTable:     "Aucune donnée disponible dans le tableau",
+      paginate: {
+          first:      "Premier",
+          previous:   "Pr&eacute;c&eacute;dent",
+          next:       "Suivant",
+          last:       "Dernier"
+      },
+      aria: {
+          sortAscending:  ": activer pour trier la colonne par ordre croissant",
+          sortDescending: ": activer pour trier la colonne par ordre décroissant"
+      }
+    },    
+    data: data
+  });
+}
+
+$(document).ready(function() {
+
+  $.getJSON('./static/data/games.json', function(data){
+    console.log('data', data.data);
+
+    createTable(data.data);
+  })
+});
+
 
 
 if(isSmallDevice() )
@@ -334,6 +377,16 @@ window.onresize = function(event) {
     $("#rapeday2" ).parent().show();
     $("#laurette2" ).parent().show();
     $("#HeavensVault2").parent().show();
+
+// $(document).ready(function() {
+
+//   /* find all iframes with ids starting with "tweet_" */
+//   $("iframe[id^='tweet_']").load(function() {
+//       this.contentWindow.postMessage({ element: this.id, query: "height" },
+//           "https://twitframe.com");
+//   });
+
+// });
 
   }
 

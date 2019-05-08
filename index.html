@@ -8,6 +8,7 @@
   <link href='static/css/sanchez.css' rel='stylesheet'>
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/juxtapose.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
   <link rel="shortcut icon" href="static/img/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="static/img/favicon/favicon.png" type="image/png">
     <link rel="icon" sizes="32x32" href="static/img/favicon/favicon-32.png" type="image/png">
@@ -22,6 +23,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="static/img/favicon/apple-touch-icon-144x144.png">
     <meta name="msapplication-TileImage" content="static/img/favicon/favicon-144.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
+
 
 
 </head>
@@ -86,15 +88,32 @@
 
                         <div class="container">
                                 <div class="methodo-border">
-                                <div class="methodo-title">Méthodologie</div>
-                                <div v-for="(methodo, ct) in dataviz.methodo">
+                                    <div class="methodo-title">Méthodologie</div>
+                                    <div v-for="(methodo, ct) in dataviz.methodo">
                                         <article class="no-separator"><div class="small methodo d_graph_credit">
                                                 <p class="bullet methodo-link" v-html="methodo.title" :title="methodo.id"></p></div>
                                                 <div class="small methodo-explanation" :id="methodo.id">
                                                     <p v-html="methodo.explanation"></p>
                                                 </div>
                                         </article>  
-                                </div></div>
+                                    </div>
+
+                                    <div>
+                                        <article class="no-separator"><div class="small methodo d_graph_credit">
+                                                <p class="bullet methodo-link" title="blabla-id" v-html="gameTable.title"></p></div>
+                                                <div class="small methodo-explanation" id="blabla-id">
+                                                    <table id="games_table" class="display">
+                                                        <thead>
+                                                            <tr>
+                                                                <th v-for='col in gameTable.columns'>{{ col }}</th>
+                                                            </tr>
+                                                        </thead>
+                                                    </table>
+                                                </div>
+                                        </article>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -239,6 +258,6 @@
         <script src="static/js/piechart.js"></script>
         <script type="text/javascript" src="static/js/libs/juxtapose.js"></script>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 </body>
 </html>
