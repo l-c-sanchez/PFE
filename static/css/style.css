@@ -1158,7 +1158,7 @@ button:active {
 }
 
 
-#laracroft {
+#laracroft, #misspacman {
   width: 100%;
   border: 1px solid #E2E4E9;
   padding: 10px;
@@ -1181,12 +1181,16 @@ button:active {
 #laracroft figcaption {
   text-align: center;
 }
-@media only screen and (min-width:992px) {
 
-  #laracroft {
+#misspacman iframe {
+  margin-top: 10px !important;
+}
+@media only screen and (min-width:600px) {
+
+  #laracroft, #misspacman  {
     width: 100%;
     border: 1px solid #E2E4E9;
-    padding: 20px;
+    padding: 25px;
     color: #5b6473;
   }
   .juxtapose {
@@ -1203,3 +1207,32 @@ button:active {
   text-align: center;
   padding: 5px;
 }
+
+.video-container {
+  margin-top:15px;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.players figcaption {
+  text-align: center;
+}
+
+.toCenter {
+  margin: 0 auto;
+  margin-top:20px;
+}
+

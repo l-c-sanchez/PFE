@@ -9,9 +9,17 @@ function isSmallDevice(){
 var instruction = "Chaque bulle représente un jeu présenté à l'E3. Survolez chacune d'entre elle avec votre souris pour obtenir plus d'informations.";
 var copyright_mobile = "";
 var heavens_vault_mobile = "";
+var width_tweet = 550;
+var height_tweet = 550;
 //Version simplifiée regroupant les principaux périphériques et systèmes mobiles
+if (window.innerWidth < 650){
+  width_tweet = window.innerWidth / 2;
+  height_tweet = window.innerHeight / 1.8;
+}
 if(isMobile())
 {
+  width_tweet = window.innerWidth / 1.3;
+  height_tweet = window.innerHeight / 1.8;
   copyright_mobile += " (Léa Sanchez / France Info)"
   heavens_vault_mobile += " (Heaven's Vault / Inklestudios)"
   instruction = "Chaque bulle représente un jeu présenté à l'E3. Cliquez sur chacune d'entre elle pour obtenir plus d'informations.";
@@ -22,6 +30,7 @@ instruction += '  Les catégories affichées correspondent au genre du personnag
 var example1 = new Vue({
     el: '#example-1',
     data: {
+      isMobile: isMobile(),
       chapo: 'L’E3, le plus important salon de jeu vidéo au monde, se tiendra le 6 juin. L’année dernière, de nombreuses créations mettant en avant des personnages féminins forts et peu stéréotypés y ont été présentées. Un changement notable, même si l’amélioration de la représentation des femmes reste encore mesurée.',
       parasfirstpart: [
         { message: 'Une femme en armure, un arc accroché dans le dos, apparaît sur l’écran de l’ordinateur. <i>"C’est l’un de mes personnages de jeu vidéo préférés"</i>, confie Laurette en faisant pivoter, d\’un geste sur son clavier, la guerrière juchée sur un promontoire rocheux. Etudiante en informatique de 20 ans, Laurette est passionnée par la populaire série de jeux vidéo d\'action et d\’aventure Assassin’s Creed. Dans son dernier opus, les joueurs ont pour la première fois la possibilité d\’incarner une héroïne - Kassandra.',
@@ -91,15 +100,18 @@ var example1 = new Vue({
         { message: 'Résultat : en 2018, la majorité des jeux répertoriés propose désormais de choisir le genre de son avatar, ou d’alterner entre des avatars féminins et masculins. Les créations centrées sur un personnage masculin sont trois fois plus nombreuses que celles qui mettent à l’affiche des femmes exclusivement. Ces dernières atteignent 7% du total. Soit le même pourcentage qu’en 2016, trois ans plus tôt.'},
         { inter: 'Une évolution "à petits pas"',
           message: 'Une stabilité qui ne surprend pas Fanny Lignon. Pour cette chercheuse de l’université Lyon 1, directrice de l’ouvrage <i>Genre et jeux vidéo</i>, l’industrie du jeu vidéo est en train de bouger - mais <i>"à petits pas"</i>.' },
-        { message: 'Pendant de longues années, la représentation des femmes dans les jeux vidéo a été limitée au <i>"principe de la Schtroumpfette"</i>. Autrement dit : <i>"une femme ultra stéréotypée, au milieu de nombreux protagonistes masculins"</i>. C’était, par exemple, les figures de princesses à sauver comme Peach que Super Mario devait venir secourir dans les années 90. Ou encore des représentations féminines très sexualisées, comme les prostituées de <i>Grand Theft Auto (GTA)</i>, série de jeu très célèbre née dans les années 2000. '},
-        { message: '<i>"Plusieurs héroïnes fortes sont apparues depuis"</i>, salue Fanny Lignon. Comptez, par exemple, sur l\'héroïne de la série de jeux vidéo Uncharted, Elena Fisher, qui aide par ses qualités intellectuelle un chasseur de trésors. Dans <i>Horizon : Zero Dawn</i>, sorti en 2017, on peut désormais incarner Aloy, une jeune femme devenue chasseuse de machines pour sa tribu, dans un univers post-apocalyptique.'},
+        { message: 'Pendant de longues années, la représentation des femmes dans les jeux vidéo a été limitée au <i>"principe de la Schtroumpfette"</i>. Autrement dit : <i>"une femme ultra stéréotypée, au milieu de nombreux protagonistes masculins"</i>. C’était, par exemple, les figures de princesses à sauver comme Peach que Super Mario devait venir secourir dans les années 90. Ou encore des représentations féminines très sexualisées, comme les combattantes de <i>Mortal Kombat</i>, série de jeu très célèbre née dans les années 90. ',
+          tweet: '<blockquote class="twitter-tweet" data-lang="en" data-dnt="true" data-theme="light"><p lang="da" dir="ltr">Top 10 Femme Fatales of Mortal Kombat <a href="http://t.co/K67mW7m1Ev">http://t.co/K67mW7m1Ev</a> via <a href="https://twitter.com/gamesthatiplay1?ref_src=twsrc%5Etfw">@gamesthatiplay1</a> <a href="https://twitter.com/hashtag/MK?src=hash&amp;ref_src=twsrc%5Etfw">#MK</a> <a href="https://twitter.com/hashtag/MortalKombat?src=hash&amp;ref_src=twsrc%5Etfw">#MortalKombat</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="http://t.co/KdFEAS0UBB">pic.twitter.com/KdFEAS0UBB</a></p>&mdash; Games that I Play (@gamesthatiplay1) <a href="https://twitter.com/gamesthatiplay1/status/587708335794823168?ref_src=twsrc%5Etfw">April 13, 2015</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+          // tweet: '<iframe id="tweet_587708335794823168" border=0 frameborder=0 height="' + height_tweet + '" width="' + width_tweet + '" src="https://twitframe.com/show?url=https%3A%2F%2Ftwitter.com%2Fgamesthatiplay1%2Fstatus%2F587708335794823168"></iframe>'
+        },
+        { message: 'Depuis, plusieurs studios à l’origine de ces jeux très stéréotypés ont annoncé leur décision de <a target="_blank" href="http://www.gameblog.fr/news/48792-mortal-kombat-x-des-mensurations-plus-realistes-pour-les-fem">"réduire les mensurations"</a> de leurs protagonistes féminines. <i>"Plusieurs héroïnes fortes ont également fait leur apparition"</i>, salue Fanny Lignon. Comptez, par exemple, sur l\'héroïne de la série de jeux vidéo Uncharted, Elena Fisher, qui aide par ses qualités intellectuelle un chasseur de trésors. Dans <i>Horizon : Zero Dawn</i>, sorti en 2017, on peut désormais incarner Aloy, une jeune femme devenue chasseuse de machines pour sa tribu, dans un univers post-apocalyptique. '},
 
       ],
       learn_more: [
         {
           title: "Et Lara Croft dans tout ça ?",
           id:"laracroft",
-          message: "En 2017, Lara Croft a été sacrée <a href='http://www.guinnessworldrecords.com/world-records/best-selling-videogame-heroine' target='_blank'”>héroïne la plus vendue</a> de l’histoire du jeu vidéo. La jeune archéologue, athlétique et très féminine, a été créée dans les années 90. Son designer, le britannique Toby Gard, s’inspire d’abord d’Indiana Jones. <i>\"Lara était supposée être quelqu’un qui était fort, et sexy mais juste à cause de son pouvoir\"</i>, raconte-t-il <a href='http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.gamedaily.com%2Farticles%2Ffeatures%2Fthe-man-behind-lara%2F' target=’_blank’>dans une interview publiée en 2007</a>. Pourtant, la célébrité de Lara Croft viendra aussi de son imposante poitrine, dont l’origine reposerait - <a href='https://www.ign.com/articles/2008/03/01/ign-presents-the-history-of-tomb-raider?page=1' target=’_blank’>selon la légende </a> - sur une simple erreur de programmation. <br><br>Depuis, l’'héroïne en mini-short et débardeur a évolué. Elle a laissé place à une aventurière à la plastique plus raisonnable.  <i>\"Son histoire et sa psychologie ont aussi été étoffés\" </i>, salue la chercheuse Fanny Lignon.",
+          message: "En 2017, Lara Croft a été sacrée <a href='http://www.guinnessworldrecords.com/world-records/best-selling-videogame-heroine' target='_blank'”>héroïne la plus vendue</a> de l’histoire du jeu vidéo. La jeune archéologue, athlétique et très féminine, a été créée dans les années 90. Son designer, le britannique Toby Gard, s’inspire d’abord d’Indiana Jones. <i>\"Lara était supposée être quelqu’un qui était fort, et sexy mais juste à cause de son pouvoir\"</i>, raconte-t-il <a href='http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.gamedaily.com%2Farticles%2Ffeatures%2Fthe-man-behind-lara%2F' target=’_blank’>dans une interview publiée en 2007</a>. Pourtant, la célébrité de Lara Croft viendra aussi de son imposante poitrine, dont l’origine reposerait - <a href='https://www.ign.com/articles/2008/03/01/ign-presents-the-history-of-tomb-raider?page=1' target=’_blank’>selon la légende </a> - sur une simple erreur de programmation. <br><br>Depuis, l’héroïne en mini-short et débardeur a évolué. Elle a laissé place à une aventurière à la plastique plus raisonnable.  <i>\"Son histoire et sa psychologie ont aussi été étoffés\" </i>, salue la chercheuse Fanny Lignon.",
           juxtapose: {
             first_img: "static/img/laracroft_1996.png",
             second_img:"static/img/laracroft_2013.jpg"
@@ -108,7 +120,7 @@ var example1 = new Vue({
         {
           title: "Vous connaissiez Miss Pacman ?",
           id:"misspacman",
-          message: "A rédiger Miss Pacman"
+          message: 'Qui ne connaît pas Pac-Man ? Le jeu japonais, sorti dans les années 80, consiste à faire manger le plus de pac-gommes possibles à son personnage - une simple boule jaune - tout en évitant les fantômes. <br><br>Succès planétaire, le jeu d’arcade est aussi l’un des premiers à intégrer une "héroïne". En 1981, Ms. Pac-Man fait son apparition. <i>"La seule manière qui a été trouvé pour transformer Pac-Man en fille, c’est de lui mettre un noeud et du rouge à lèvres"</i>, soupire la chercheuse Fanny Lignon.<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/HQv0zAXDCo8?start=483" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
         }
       ],
       parasthirdpart: [
@@ -209,6 +221,7 @@ var example1 = new Vue({
   })
 
 window.onresize = function(event) {
+  
   if(isSmallDevice() )
   {
     console.log($("#rapeday2"))
@@ -296,3 +309,23 @@ if(isMobile()) {
 }
 
 
+// $(document).ready(function() {
+
+//   /* find all iframes with ids starting with "tweet_" */
+//   $("iframe[id^='tweet_']").load(function() {
+//       this.contentWindow.postMessage({ element: this.id, query: "height" },
+//           "https://twitframe.com");
+//   });
+
+// });
+
+// /* listen for the return message once the tweet has been loaded */
+// $(window).bind("message", function(e) {
+//   var oe = e.originalEvent;
+//   if (oe.origin != "https://twitframe.com")
+//       return;
+
+//   if (oe.data.height && oe.data.element.match(/^tweet_/))
+//       $("#" + oe.data.element).css("height", parseInt(oe.data.height) + "px");
+//   $("#brand").hide();
+// });

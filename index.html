@@ -89,6 +89,7 @@
                                 <blockquote v-if="para.quote"><p v-html="para.quote.text"></p><span v-html="para.quote.author"></span></blockquote>
                                 <div class="small">
                                     <p v-html="para.message"></p>
+                                    <div v-if="para.tweet" v-html="para.tweet" class="toCenter"></div>
                                 </div>
                                 
                             </article>
@@ -142,7 +143,10 @@
 
 
                     <div class="container players">
+                            <figcaption v-if="isMobile" >Cliquez sur chaque carte pour en savoir plus.</figcaption>
+                            <figcaption v-if="!isMobile" >Survolez chaque carte avec votre souris pour en savoir plus.</figcaption>
                         <div class="row d-flex justify-content-center">
+                            
                             <div class="flip-card">
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
