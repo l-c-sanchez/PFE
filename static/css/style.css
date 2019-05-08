@@ -10,7 +10,7 @@ header[role=navigation] {
     padding: 10px;
     width: 100%;
     height: 45px;
-    z-index: 4;
+    z-index: 9999 !important;
 }
 
 header {
@@ -1155,4 +1155,51 @@ button:active {
 .methodo-title{
   text-align: center;
   text-transform: uppercase;
+}
+
+
+#laracroft {
+  width: 100%;
+  border: 1px solid #E2E4E9;
+  padding: 10px;
+  color: #5b6473;
+  margin: 0 auto;
+}
+
+.juxtapose {
+
+  height: 14.95em !important;
+  width: 13em !important;
+  /* max-width: 80% !important; */
+  margin-top: 5px !important;
+  margin: 0 auto;
+}
+.jx-knightlab {
+  display: none !important;
+}
+
+#laracroft figcaption {
+  text-align: center;
+}
+@media only screen and (min-width:992px) {
+
+  #laracroft {
+    width: 100%;
+    border: 1px solid #E2E4E9;
+    padding: 20px;
+    color: #5b6473;
+  }
+  .juxtapose {
+
+    height: 26.45em !important;
+    width: 23em !important;
+    max-width: 100% !important;
+
+  }
+}
+
+.juxta-explain {
+  margin-top: 15px !important;
+  text-align: center;
+  padding: 5px;
 }
