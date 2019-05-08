@@ -37,11 +37,13 @@ var global = new Vue({
     mounted() {
       let _this = this;
       window.addEventListener('resize', function () {
-        _this.isMobile = isMobile();        
+        _this.isMobile = isMobile();   
+        _this.isSmallDevice= isSmallDevice()       
       });
     },
     data: {
       isMobile: isMobile(),
+      isSmallDevice: isSmallDevice(),
       chapo: 'L’E3, le plus important salon de jeu vidéo au monde, se tiendra le 6 juin. L’année dernière, de nombreuses créations mettant en avant des personnages féminins forts et peu stéréotypés y ont été présentées. Un changement notable, même si l’amélioration de la représentation des femmes reste encore mesurée.',
       parasfirstpart: [
         { message: 'Une femme en armure, un arc accroché dans le dos, apparaît sur l’écran de l’ordinateur. <i>"C’est l’un de mes personnages de jeu vidéo préférés"</i>, confie Laurette en faisant pivoter, d\’un geste sur son clavier, la guerrière juchée sur un promontoire rocheux. Etudiante en informatique, Laurette est passionnée par la série de jeux vidéo d\’aventure Assassin’s Creed. Dans son dernier opus, les joueurs ont pour la première fois la possibilité d\’incarner une héroïne - Kassandra.',
@@ -333,6 +335,7 @@ $( ".btn-link" ).click(function() {
 
 
 if(isMobile()) {
+  // $( "#blabla-id" ).hide();
   $( ".flip-card" ).click(function() {
     var classToAdd = "reverseCard";
     var child = $(this).children("div:first")[0];
