@@ -165,63 +165,24 @@
                             <figcaption v-if="!isMobile" >Survolez chaque carte avec votre souris pour en savoir plus.</figcaption>
                         <div class="row d-flex justify-content-center">
                             
-                            <div class="flip-card">
+                            <div class="flip-card" v-for="(player, ct) in players">
                                     <div class="flip-card-inner">
                                       <div class="flip-card-front">
                                           <div class="text-card">
-                                            <img class="card-img" src="static/img/temoignage-mido.jpg">
-                                            <h2 class="card-name">Coralie, 31 ans</h2>                                                    
-                                            <p>Streameuse de jeu vidéo.</p> 
-                                            <p>Spécialité : jeux de combat</p> 
-                                            <p class="card-quote">“Dès que j’ai le choix, je joue avec un personnage féminin”.</p>
+                                            <img class="card-img" :src="player.img">
+                                            <h2 class="card-name" v-html="player.name"></h2>                                                    
+                                            <p v-html="player.description"></p> 
+                                            <p v-html="player.skill"></p> 
+                                            <p v-html="player.quote" class="card-quote"></p>
                                         </div>
                                       </div>
                                       <div class="flip-card-back">
-                                        <p class="text-card">"Pouvoir jouer une femme, c’est important pour moi. Par exemple, dans le jeu de combat <i>Streetfighter</i>, je vais toujours incarner Ornika, une catcheuse. Dès que j’ai le choix, je prends un personnage féminin. Ça m’aide à me mettre dans sa peau. Du coup, la qualité de jeu n’est pas la même".</p> 
+                                        <p class="text-card" v-html="player.full_quote"></p> 
                                       </div>
                                     </div>
-                            </div>
-
-                            <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                            
-                                      <div class="flip-card-front">
-                                          <div class="text-card">
-                                            <img class="card-img" src="static/img/temoignage-violette.jpg">
-                                            <h2 class="card-name">Violette, 25 ans</h2>      
-                                            <p>Joueuse régulière</p> 
-                                            <p>Spécialité : jeux d'aventure</p> 
-                                            <p class="card-quote">“Ecouter Lara Croft gémir, ça m’a fait sortir du jeu”</p></div>
-                                      </div>
-                                      <div class="flip-card-back">
-                                        <p class="text-card">"Quand j’étais enfant, Lara Croft c’était un vrai modèle. 
-                                                Mais maintenant, quand une femme est trop sexualisée, ça me gêne. 
-                                                
-                                                Dans une des refontes de Lara Croft, à laquelle je jouais en même temps que mon ex, elle était moins sexualisée qu’avant. Mais son petit déhanchement, le fait qu’on l’entende gémir, ça m’a fait sortir du jeu".
-                                            </p> 
-                                      </div>
-                                    </div>
-                            </div>
-
-
-                            <div class="flip-card">
-                                    <div class="flip-card-inner">
-                                      <div class="flip-card-front">
-                                            <div class="text-card">
-                                                <img class="card-img" src="static/img/temoignage-helicia.jpg">
-                                                <h2 class="card-name">Hélicia, 23 ans</h2> 
-                                                <p>Joueuse occasionnelle</p> 
-                                                <p>Spécialité : jeux de combat</p>
-                                                <p class="card-quote">“Je n’achète pas les jeux stéréotypés”</p>
-                                            </div>
-                                      </div>
-                                      <div class="flip-card-back">
-                                        <p class="text-card">"J’admire les personnages féminins forts, qui vont se battre. J’ai beaucoup vécu le racisme, et ça me sert de catharsis. Mais, du coup, j’ai du mal à me reconnaître dans les figures féminines ultra stéréotypées. J’adore le jeu narratif <i>Life is strange</i>, mais ses héroïnes restent des Américaines blanches, jeunes et jolies".</p> 
-                                      </div>
-                                    </div>
-                             </div>
-
+                                </div>
                         </div>
+                    </div>
 
                         <div v-for="(para, ct) in parasfourthpart" class="container">
                                 <article class="no-separator row d-flex justify-content-center">

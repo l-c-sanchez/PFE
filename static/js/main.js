@@ -132,7 +132,7 @@ var global = new Vue({
           }
         },
         {
-          title: "Vous connaissiez Miss Pacman ?",
+          title: "Vous connaissiez Miss Pac-Man ?",
           id:"misspacman",
           message: 'Qui ne connaît pas Pac-Man ? Le jeu japonais, sorti dans les années 80, consiste à faire manger le plus de pac-gommes possibles à son personnage - une simple boule jaune - tout en évitant les fantômes. <br><br>Succès planétaire, le jeu d’arcade est aussi l’un des premiers à intégrer une "héroïne". En 1981, Ms. Pac-Man fait son apparition. <i>"La seule manière qui a été trouvée pour transformer Pac-Man en fille, c’est de lui mettre un noeud et du rouge à lèvres"</i>, soupire la chercheuse Fanny Lignon.<div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/HQv0zAXDCo8?start=483" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
         }
@@ -145,6 +145,29 @@ var global = new Vue({
           text: "Je suis en sécurité. Les autorités ont été averties. Je reste avec des amis ce soir. Je n’abandonne pas. Mais le harcèlement des femmes dans les milieux high-tech doit cesser !"
         },
           message: 'En parallèle, <i>"les entreprises ont commencé à percevoir que le marché est demandeur de plus de mixité"</i>, estime Fanny Lignon. Sur les forums, nombreuses sont les joueuses à s’interroger, lors de l’annonce d’un jeu, sur la possibilité de choisir le sexe de leur avatar.' }
+      ],
+      players:[
+        { name: 'Coralie, 31 ans',
+          img: 'static/img/temoignage-mido.jpg',
+          description: 'Streameuse de jeu vidéo.',
+          skill: 'Spécialité : jeux de combat',
+          quote: '“Dès que j’ai le choix, je joue avec un personnage féminin”',
+          full_quote: '"Pouvoir jouer une femme, c’est important pour moi. Par exemple, dans le jeu de combat <i>Streetfighter</i>, je vais toujours incarner Ornika, une catcheuse. Dès que j’ai le choix, je prends un personnage féminin. Ça m’aide à me mettre dans sa peau. Du coup, la qualité de jeu n’est pas la même".'
+        },
+        { name: 'Violette, 25 ans',
+          img: 'static/img/temoignage-violette.jpg',
+          description: 'Joueuse régulière',
+          skill: 'Spécialité : jeux d\'aventure',
+          quote: '“Ecouter Lara Croft gémir, ça m’a fait sortir du jeu”',
+          full_quote: '"Quand j’étais enfant, Lara Croft c’était un vrai modèle. Mais maintenant, quand une femme est trop sexualisée, ça me gêne. Dans une des refontes de Lara Croft, à laquelle je jouais en même temps que mon ex, elle était moins sexualisée qu’avant. Mais son petit déhanchement, le fait qu’on l’entende gémir, ça m’a fait sortir du jeu".'
+        },
+        { name: 'Hélicia, 23 ans',
+          img: 'static/img/temoignage-helicia.jpg',
+          description: 'Joueuse occasionnelle',
+          skill: 'Spécialité : jeux de combat',
+          quote: '“Je n’achète pas les jeux stéréotypés”',
+          full_quote: '"J’admire les personnages féminins forts, qui vont se battre. J’ai beaucoup vécu le racisme, et ça me sert de catharsis. Mais, du coup, j’ai du mal à me reconnaître dans les figures féminines ultra stéréotypées. J’adore le jeu narratif <i>Life is strange</i>, mais ses héroïnes restent des Américaines blanches, jeunes et jolies".'
+        },
       ],
 
       parasfourthpart: [
