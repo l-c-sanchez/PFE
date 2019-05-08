@@ -32,8 +32,8 @@ var header = new Vue({
   }
 })
 
-var example1 = new Vue({
-    el: '#example-1',
+var global = new Vue({
+    el: '#global',
     mounted() {
       let _this = this;
       window.addEventListener('resize', function () {
