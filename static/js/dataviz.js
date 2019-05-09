@@ -108,8 +108,8 @@ function draw(year) {
   let internalWidth = width/2;
   let titleHeight = 40;
   let pad = 0.2;
-  let ncol = 10;
-  let r = getRadius(internalWidth, pad, ncol);
+  let ncolDefault = 10;
+  let r = getRadius(internalWidth, pad, ncolDefault);
 
   labels(groups, refPoints, internalWidth, titleHeight);
 
@@ -117,6 +117,9 @@ function draw(year) {
     let group = groups[i];
     let data = group.values;
     let name = group.key;
+
+    let nbGames = data.length;
+    let ncol = (nbGames >= 10) ? ncolDefault : 3; 
 
     var nodes = svg.selectAll("circle." + name).data(data);
     
