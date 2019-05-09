@@ -146,7 +146,7 @@ var global = new Vue({
           author:"Anita Sarkeesian, vidéoblogueuse féministe, 2014. Twitter.",
           text: "Je suis en sécurité. Les autorités ont été averties. Je reste avec des amis ce soir. Je n’abandonne pas. Mais le harcèlement des femmes dans les milieux high-tech doit cesser !"
         },
-          message: 'En parallèle, les femmes ont commencé à devenir un marché potentiel pour l’industrie du jeu vidéo : à partir des années 2000, plusieurs studios produisent plusieurs <a href="https://www.lsa-conso.fr/le-jeu-video-seduit-ajeux mark" target="_blank" >jeux marketés pour les femmes</a> : c’est le cas, notamment, de la série <i>Léa Passion</i> qui propose aux femmes d’incarner une vétérinaire ou encore une maîtresse d’école. <i>Mais le marché demandeur de plus de mixité"</i>, souligne Fanny Lignon. Sur les forums, nombreuses sont les joueuses à s’interroger, lors de l’annonce d’un jeu, sur la possibilité de choisir le sexe de leur avatar.' }
+          message: 'En parallèle, les femmes ont commencé à devenir un marché potentiel pour l’industrie du jeu vidéo : à partir des années 2000, plusieurs studios produisent des <a href="https://www.lsa-conso.fr/le-jeu-video-seduit-ajeux mark" target="_blank" >jeux marketés pour les femmes</a> : c’est le cas, notamment, de la série <i>Léa Passion</i> qui propose aux femmes d’incarner une vétérinaire ou encore une maîtresse d’école. <i>Mais le marché demandeur de plus de mixité"</i>, souligne Fanny Lignon. Sur les forums, nombreuses sont les joueuses à s’interroger, lors de l’annonce d’un jeu, sur la possibilité de choisir le sexe de leur avatar.' }
       ],
       players:[
         { name: 'Coralie, 31 ans',
