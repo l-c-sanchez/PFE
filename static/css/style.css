@@ -1263,3 +1263,109 @@ footer.v2:before {
 #global {
   margin-bottom: 8vh;
 }
+
+#d_container_1557420005 {
+	padding:5px 5px 0px 10px;
+	width:100%;
+}
+
+#d_container_1557420005 .d_graph_title {
+    font-family: "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+    font-size: 17px;
+    color: #2A303B;
+    letter-spacing: 0;
+    text-align: left;
+    line-height: 26px;
+    padding-bottom: 10px;
+}
+
+#d_container_1557420005 .d_graph_subtitle{
+	display:block;
+	margin: 10px 0;
+	font-size: 15px;
+	font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
+	color: #717B8E;
+	letter-spacing: 0;
+	text-align: left;
+	line-height: 23px;
+}
+
+#d_container_1557420005  hr {
+	height: 1px;
+	color: #E2E4E9;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 1px solid #eee;
+}
+
+#d_container_1557420005 .d_graph_grumpy .highcharts-yaxis .highcharts-tick {
+	shape-rendering: crispEdges;
+	stroke: #e6e6e6;
+	stroke-width: 1;
+}
+
+#d_container_1557420005 .d_graph_subtitle hr {
+	margin-bottom:0px;
+}
+
+#d_container_1557420005 .d_graph_credit {
+	font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
+	font-size: 15px;
+	color: #717B8E;
+	letter-spacing: 0;
+	text-align: left;
+	line-height: 23px;
+}
+
+#d_container_1557420005 .d_graph_credit a:link {
+	color:#026B9C;
+}
+
+#d_container_1557420005 .d_graph_grumpy .tooltipdiv {
+	margin:0px;
+	z-index: 9999 !important;
+	background-color:#ffffff;
+	font-family:  "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+	font-size: 12px;
+	color: #2A303B;
+	letter-spacing: 0.5px;
+	text-align: left;
+	line-height: 23px;
+	box-sizing: border-box;
+	padding: 5px;
+	border: 1px solid rgb(226, 228, 233);
+}
+
+#d_container_1557420005 .d_graph_grumpy .highcharts-axis-labels {
+	font-family: "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+	letter-spacing: 0.5px;
+	color: #2A303B;
+	z-index: -1;
+}
+
+#d_container_1557420005 .d_graph_grumpy .highcharts-axis-title, .d_graph_grumpy  .highcharts-text-outline {
+	font-family: "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+}
+
+#d_container_1557420005 .d_graph_grumpy .highcharts-tooltip-box {
+        display:none;
+}
+
+
+#d_container_1557420005 .d_graph_grumpy .highcharts-plot-line-label {
+	font-family:  "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+}
+
+#d_container_1557420005 .d_graph_grumpy .highcharts-xaxis .highcharts-axis-line,
+#d_container_1557420005 .d_graph_lasttick .highcharts-yaxis .highcharts-tick:last-child,
+#d_container_1557420005 .d_graph_firsttick .highcharts-yaxis .highcharts-tick:first-child {
+	fill: #fff;
+	stroke: #2E3942;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+#d_graph_1557420005{
+	height:450px;
+}
