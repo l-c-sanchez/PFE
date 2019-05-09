@@ -263,10 +263,16 @@ var chart = new Highcharts.Chart( {
         53
       ],
       [
-        "Autres (genre ambigu, pas de personnage sp\u00e9cifique incarn\u00e9...)",
+        "Autres",
         12,
         23,
         15
+      ],
+      [
+        "nb_jeux",
+        97,
+        137,
+        119
       ]
     ],
     "useHTML": true,
@@ -284,13 +290,13 @@ var chart = new Highcharts.Chart( {
     "headerFormat": "<span style='text-align:left;letter-spacing:0;color:#2A303B;font-size:13px'><b>{point.key}</b></span><br/>",
     "pointFormat": "<span style='text-align:left;letter-spacing:0.5px;font-size:12px;color:{point.color};'>\u25cf </span>{series.name} : {point.y}<br>",
     "formatter":  function(tooltip) {
-
-
- str = tooltip.defaultFormatter.call(this, tooltip)
-   var new_str = "";
-   for (let i = 0; i < str.length; i++)
-       new_str += str[i];
-  return ("<div class='tooltipdiv'>" + new_str + (tooltip.chart.userOptions.tooltip.annot === "undefined" ? "" : tooltip.chart.userOptions.tooltip.annot) + "</div>")
+    var index = this.points[0].point.x;
+    var annot_spe = "Nombre de jeux comptabilisés dans notre base de données : " + tooltip.chart.userOptions.tooltip.strColumns[5][index + 1];
+    var str = tooltip.defaultFormatter.call(this, tooltip)
+    var new_str = "";
+    for (let i = 0; i < str.length; i++)
+        new_str += str[i];
+    return ("<div class='tooltipdiv'>" + new_str + (tooltip.chart.userOptions.tooltip.annot === "undefined" ? "" : tooltip.chart.userOptions.tooltip.annot) + annot_spe +  "</div>")
   }
 
   },
@@ -430,7 +436,7 @@ var chart = new Highcharts.Chart( {
    
     {
       "stack": "null",
-      "name": "Autres (genre ambigu, pas de personnage sp\u00e9cifique incarn\u00e9...)",
+      "name": "Autres",
       "lineWidth": 2,
       "color": "#382c2c",
       "type": "",

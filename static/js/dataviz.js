@@ -119,7 +119,7 @@ function draw(year) {
     let name = group.key;
 
     let nbGames = data.length;
-    let ncol = (nbGames >= 10) ? ncolDefault : 3; 
+    let ncol = (nbGames >= 10) ? ncolDefault : 10; 
 
     var nodes = svg.selectAll("circle." + name).data(data);
     
@@ -181,9 +181,9 @@ function showPopover (d) {
     container: 'body',
     trigger: 'manual',
     html : true,
-    content: "<strong>" + d.game + "</strong> (" + d.platforms + ")<br/><br/>Personnage incarné : " + genderLabel(d.gender) +
-              "<br/>Editeur : " + d.editor + "<br/>Studio de développement : " + d.developer +
-              "<br/>Année : " + d.year
+    content: "<strong>" + d.game + "</strong> (" + d.platforms + ")<br/><br/>Personnage incarné : " + genderLabel(d.gender).toLowerCase() +
+              "<br/>Editeur : " + d.editor + "<br/>Studio : " + d.developer +
+              "<br/>E3 : " + d.year
   }
   $(this).popover(popoverData);
 

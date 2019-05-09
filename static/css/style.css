@@ -1275,16 +1275,6 @@ footer.v2:before {
 	width:100%;
 }
 
-/* #d_container_1557420005 .d_graph_title {
-    /* font-family: "Marr Sans", "Helvetica Neue", Helvetica, Arial; */
-    font-size: 17px;
-    color: #2A303B;
-    letter-spacing: 0;
-    text-align: left;
-    line-height: 26px;
-    padding-bottom: 10px;
-} */
-
 #d_container_1557420005 .d_graph_subtitle{
 	display:block;
 	margin: 10px 0;
@@ -1371,4 +1361,24 @@ footer.v2:before {
 
 #d_graph_1557420005{
 	height:450px;
+}
+
+#credits {
+  margin-top: 2.5em;
+  margin-bottom: 4.5em;
+}
+
+#credits figcaption {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 570px;
+  width: 100%;
+}
+
+#chart_button {
+  display: block;
+  width: 40%;
+  /* padding: 10px; */
+  min-width: 250px;
+  margin-top:3em;
 }

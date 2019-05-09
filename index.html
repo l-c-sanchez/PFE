@@ -69,22 +69,39 @@
                     <div id="dataviz" class="points-before">
 
                         <div id="inner-dataviz">
-                        <h2 class="d_graph_title"><p v-html="dataviz.title"></p></h2>
-                        <article class="no-separator">
-                            <div class="small">
-                                <p v-html="dataviz.description.beginning_desktop + dataviz.description.end" v-if="!isMobile" class="description"></p>
-                                <p v-html="dataviz.description.beginning_mobile + dataviz.description.end" v-if="isMobile" class="description"></p>
+                        <h2 class="d_graph_title"><b>La part de jeux centrés sur un personnage principal féminin reste faible</b></h2>
+                        <!-- <h2 class="d_graph_title"><p v-html="dataviz.title"></p></h2> -->
 
-                                <div class="seeAnimation">
-                                    <div><input id="yearRange" type="range" min="2016" max="2018" value="2018" step="1" /><span id="yearSpan">2018</span></div>
-                                    <button name="play" id="playButton">Voir les années précédentes</button> 
+                        <!-- <div v-for="(btn, ct) in learn_more" class="btn btn-primary btn-link" :title="btn.id"><p v-html="btn.title"></p></div> -->
+
+
+                        <div id="bubble_chart">
+                            <article class="no-separator">
+                                <div class="small">
+                                    <p v-html="dataviz.description.beginning_desktop + dataviz.description.end" v-if="!isMobile" class="description"></p>
+                                    <p v-html="dataviz.description.beginning_mobile + dataviz.description.end" v-if="isMobile" class="description"></p>
+
+                                    <div class="seeAnimation">
+                                        <div><input id="yearRange" type="range" min="2016" max="2018" value="2018" step="1" /><span id="yearSpan">2018</span></div>
+                                        <button name="play" id="playButton">Voir les années précédentes</button> 
+                                    </div>
                                 </div>
-                                
-                            </div>
-                        </article>
-                        <div id="dataviz-data">
-
+                            </article>
+                            <div id="dataviz-data"></div>
                         </div>
+
+                        <div id=bar_chart>
+                            <div id="d_container_1557420005" class="d_container_grumpy">
+                                <div class="d_graph_subtitle">Selon nos calculs, la part de femmes identifiables comme le personnage principal des jeux présentés à l'E3 a oscillé entre 7% et 9% depuis 2016.<hr></div>
+                                <div id="d_graph_1557420005" class="d_graph_grumpy d_graph_firsttick"></div>
+                                <!-- <div class="d_graph_credit"></div> -->
+                            </div>
+                        </div>
+                        
+                        <div class="toCenter">
+                                <div id="chart_button" class="btn btn-primary toCenter"><p>Voir ces données jeu par jeu</p></div>
+                        </div>
+                        <hr>
 
                         <div class="container">
                                 <div class="methodo-border">
@@ -133,12 +150,6 @@
                                 </div>
                                 
                             </article>
-                            <div v-if="ct == 0" id="d_container_1557420005" class="d_container_grumpy">
-                                <h2 class="d_graph_title"><b>La part de jeux centrés sur un personnage principal féminin reste faible</b></h2>
-                                <div class="d_graph_subtitle">Selon nos calculs, la part de femmes identifiables comme le personnage principal d'un jeu présenté à l'E3 a oscillé entre 7% et 9% depuis 2016.<hr></div>
-                                <div id="d_graph_1557420005" class="d_graph_grumpy d_graph_firsttick"></div>
-                                <!-- <div class="d_graph_credit" ></div> -->
-                            </div>
                             <div class="row" v-if="para.img">
                                 <div class="col-lg-6 col-md-10 col-sm-12 div-img" v-for="(img, ct) in para.img"> 
                                      <figure  :id="img.id"><img :src="img.src" :alt="img.alt" :title="img.title" class="b-lazy b-loaded" :width="img.width" :height="img.height"><figcaption>{{ img.legend }}</figcaption></figure>
@@ -243,9 +254,10 @@
                         <div id="credits" class="container">
                                 <article class="no-separator row d-flex justify-content-center">
                                     <div class="small">
+                                        
                                         <p>Textes et photos : Léa Sanchez</p>
-                                        <p>Montage de couverture : Léa Sanchez avec les visuels presse de Square Enix / Crystal Dynamics</p>
-                                        <p>Utilisation des libraries D3.js, Highcharts.js et Juxtapose.js</p>
+                                        <figcaption>Montage de couverture : Léa Sanchez avec les visuels de Square Enix / Crystal Dynamics</figcaption>
+                                        <figcaption>Utilisation des libraries D3.js, Highcharts.js et Juxtapose.js</figcaption>
                                     </div>
                                 </article>
 

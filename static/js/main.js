@@ -38,7 +38,7 @@ var global = new Vue({
       let _this = this;
       window.addEventListener('resize', function () {
         _this.isMobile = isMobile();   
-        _this.isSmallDevice= isSmallDevice()       
+        // _this.isSmallDevice= isSmallDevice()       
       });
     },
     data: {
@@ -140,12 +140,13 @@ var global = new Vue({
         }
       ],
       parasthirdpart: [
-        { message: 'Les raisons de de changement ? Fanny Lignon veut croire en une prise de conscience de l’industrie. Le secteur a connu ses propres polémiques, plusieurs années avant #MeToo. En 2012, Anita Sarkeesian, militante féministe à la tête de Feminist Frequency, reçoit de multiples menaces de mort et de viol. En cause :  un appel aux dons pour produire des vidéos sur la représentation des femmes dans les jeux vidéo. Deux ans plus tard, en 2014, c’est <a target="_blank" href="https://www.lemonde.fr/pixels/article/2014/09/15/derriere-le-gamersgate-un-groupe-antifeministe_4485191_4408996.html">le "GamerGate"</a>. Une nébuleuse de joueurs "ultra" se met à harceler une développeuse américaine - et tous ceux qui la soutiennent. Ils accusent la jeune femme d’avoir accordé ses faveurs sexuelles à un journaliste contre de bonnes critiques de son dernier jeu.'},
+        { message: 'Les raisons de de changement ? Fanny Lignon veut croire en une prise de conscience de l’industrie. Le secteur a connu ses propres polémiques, plusieurs années avant #MeToo. En 2012, Anita Sarkeesian, militante féministe à la tête de Feminist Frequency, commence à recevoir de multiples menaces de mort et de viol. En cause :  un appel aux dons pour produire des vidéos sur la représentation des femmes dans les jeux vidéo.'},
         { quote: {
           author:"Anita Sarkeesian, vidéoblogueuse féministe, 2014. Twitter.",
           text: "Je suis en sécurité. Les autorités ont été averties. Je reste avec des amis ce soir. Je n’abandonne pas. Mais le harcèlement des femmes dans les milieux high-tech doit cesser !"
         },
-          message: 'Leur acharnement  rend visible les femmes du milieu du jeu vidéo et pointe, une nouvelle fois, la misogynie du secteur. Plusieurs acteurs de l’industrie se rendent compte de la nécessité d’agir. Dans <a href="https://www.gamasutra.com/view/news/224400/Gamers_dont_have_to_be_your_audience_Gamers_are_over.php"target="_blank" >une tribune</a>, la journaliste spécialisée Leigh Alexander s’attaque à l’immaturité de certains joueurs et appelle l’industrie du jeu vidéo à se diversifier.'},
+        message: 'Deux ans plus tard, en 2014, c’est <a target="_blank" href="https://www.lemonde.fr/pixels/article/2014/09/15/derriere-le-gamersgate-un-groupe-antifeministe_4485191_4408996.html">le "GamerGate"</a>. Une nébuleuse de joueurs "ultra" se met à harceler une développeuse américaine - et tous ceux qui la soutiennent. Ils accusent la jeune femme d’avoir accordé ses faveurs sexuelles à un journaliste contre de bonnes critiques de son dernier jeu.'},
+        {  message: 'Leur acharnement  rend visible les femmes du milieu du jeu vidéo et pointe, une nouvelle fois, la misogynie du secteur. Plusieurs acteurs de l’industrie se rendent compte de la nécessité d’agir. Dans <a href="https://www.gamasutra.com/view/news/224400/Gamers_dont_have_to_be_your_audience_Gamers_are_over.php"target="_blank" >une tribune</a>, la journaliste spécialisée Leigh Alexander s’attaque à l’immaturité de certains joueurs et appelle l’industrie du jeu vidéo à se diversifier.'},
         { 
           message: 'En parallèle, les femmes ont commencé à devenir une cible sur le marché du jeu vidéo : à partir des années 2000, plusieurs studios produisent des <a href="https://www.lsa-conso.fr/le-jeu-video-seduit-aussi-les-filles,13899" target="_blank" >jeux marketés pour les femmes</a> : c’est le cas, notamment, de la série <i>Léa Passion</i> qui propose aux femmes d’incarner une vétérinaire ou encore une maîtresse d’école. <i>"Le public est demandeur de plus de mixité"</i>, souligne Fanny Lignon. Sur les forums, nombreuses sont les joueuses à s’interroger, lors de l’annonce d’un jeu, sur la possibilité de choisir le sexe de leur avatar.' }
       ],
@@ -253,11 +254,11 @@ var global = new Vue({
         { message: 'Un peu plus loin, Hannah Flynn présente <i>Sunless Skies</i>, le dernier jeu de rôle de son entreprise londonienne. La trentenaire aux cheveux bleus indique qu’il était <i>"naturel pour le studio de proposer aux joueurs de choisir leur genre, car nous avons une petite équipe mixte et diversifiée"</i>.'},
         { message: 'Sybil Collas considère elle aussi que la féminisation des effectifs est essentielle : <i>"il est plus difficile de se projeter sur ce qu’on n’est pas. Les créateurs de contenu écrivent des personnages pour eux-mêmes, qui leur ressemblent" </i>, explique la créatrice de jeux. Elle a rejoint il y a quelques mois l\’organisation  <i>Women In Games France</i>, qui promeut la mixité dans l\'industrie du jeu vidéo, dont les effectifs sont majoritairement masculins.'},
         { message: 'Même si elles restent peu nombreuses, de plus en plus de femmes se dirigent vers ces filières. Leur proportion dans le cursus jeu vidéo d’Isart digital, formation française spécialisée, a été multipliée par deux en cinq ans. Une féminisation doublée d’une évolution des mentalités : Charlotte Lavergne, directrice pédagogique, constate <i>"une génération beaucoup plus ouverte que les précédentes"</i>.'},
-        { message: 'A l\’Institut de l\'Internet et du Multimédia de La Défense, Thomas Planques fait le même constat. Devant dix-huit étudiants spécialisés dans le jeu vidéo, ce directeur créatif décortique les pratiques du secteur. Narrations sexistes, protagonistes féminines créées comme des copies de leurs homologues masculins… <i>"Jouer un personnage masculin hyper viril qui va sauver une fille, ça ne me fait pas rêver"</i>, soupire Florian, au deuxième rang. L\’enseignant acquiesce : <i>"Vous avez une autoroute pour faire changer les choses"</i>.'}
+        { message: 'A l\’Institut de l\'Internet et du Multimédia de La Défense, Thomas Planques fait le même constat. Devant dix-huit étudiants spécialisés dans le jeu vidéo, ce directeur créatif décortique les pratiques du secteur. Protagonistes féminines créées comme des copies de leurs homologues masculins, narrations sexistes… <i>"Jouer un personnage masculin hyper viril qui va sauver une fille, ça ne me fait pas rêver"</i>, soupire Florian, au deuxième rang. L\’enseignant acquiesce : <i>"Vous avez une autoroute pour faire changer les choses"</i>.'}
       ],
       gameTable: {
-        title: "Voir les données", 
-        columns: ["Jeu","Editeur","Studio","Personnage principal","Ann\u00e9e"]
+        title: "Accéder à notre base de données", 
+        columns: ["Jeu","Editeur","Studio","Personnage principal","E3"]
       } 
     }
   })
@@ -335,6 +336,22 @@ $( ".btn-link" ).click(function() {
     $("#" + this.title).show();
   }
 });
+
+// Button to switch between bar chart and bubble chart
+$('#bubble_chart').hide()
+$("#chart_button").click(function(){
+  let barChart = $('#bar_chart');
+  let bubbleChart = $('#bubble_chart');
+  if (barChart.is(":visible")){
+    barChart.hide();
+    bubbleChart.show();
+    this.textContent = "Voir ces données en pourcentage";
+  } else {
+    barChart.show();
+    bubbleChart.hide();
+    this.textContent = "Voir ces données jeu par jeu";    
+  }
+})
 
 // Cards
 

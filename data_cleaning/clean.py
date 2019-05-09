@@ -12,6 +12,8 @@ def clean_gender(gender):
     else:
         return 'other'
 
+def clean_game(game):
+    return game.replace('†', '')
 
 columns = ['to_keep', 'game', 'platforms', 'editor', 'developer', 'gender', 'type']
 
@@ -29,6 +31,8 @@ df = pd.concat(dfs)
 # For bubble visualisation
 df = df[df['to_keep'] == '1']
 df['gender'] = df['gender'].apply(clean_gender)
+df['game'] = df['game'].apply(clean_game)
+
 df.to_csv('games.tsv', sep='\t', index=False)
 
 # For searchable table
