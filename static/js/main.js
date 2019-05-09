@@ -93,7 +93,7 @@ var global = new Vue({
         description: {
           beginning_desktop:"Chaque bulle symbolise un jeu présenté à l'E3. Survolez chacune d'entre elles avec votre souris pour obtenir plus d'informations.",
           beginning_mobile:"Chaque bulle symbolise un jeu présenté à l'E3. Cliquez sur chacune d'entre elles pour obtenir plus d'informations.",
-          end: '  Les catégories affichées correspondent au genre du personnage principal du jeu, "multi" étant associé aux productions permettant de choisir le genre de celui-ci.'
+          end: ' Les catégories affichées correspondent au genre du personnage principal du jeu, "multi" étant associé aux productions permettant d’incarner un héros masculin et/ou féminin.'
         },
         methodo: [
           {
