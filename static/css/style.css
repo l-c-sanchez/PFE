@@ -990,13 +990,19 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   margin-top: 10px;
 }
 
-#d_container_1556898916{
+#d_container_1556898916 {
   padding:5px 5px 0px 10px;
   width:100%;
   font-family: Sanchez,Times,serif;
   margin-bottom: 3rem;
 }
-#d_container_1556898916 .d_graph_title, #dataviz .d_graph_title {
+
+#d_container_1557420005 {
+  padding:5px 5px 0px 10px;
+  width:100%;
+  font-family: Sanchez,Times,serif;
+}
+#d_container_1556898916 .d_graph_title, #dataviz .d_graph_title, #d_container_1557420005 .d_graph_title  {
   font-size: 17px;
   letter-spacing: 0;
   text-align: left;
@@ -1008,7 +1014,7 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   text-align: center;
   text-transform: uppercase;
  }
- #d_container_1556898916 .d_graph_subtitle{
+ #d_container_1556898916 .d_graph_subtitle, #d_container_1557420005 .d_graph_subtitle {
   display:block;
   margin: 10px 0;
   font-size: 15px;
@@ -1017,7 +1023,7 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   text-align: left;
   line-height: 23px;
 }
-#d_container_1556898916 hr {
+#d_container_1556898916 hr, #d_container_1557420005 hr  {
   height: 1px;
   color: #E2E4E9;
   margin-top: 20px;
@@ -1025,7 +1031,7 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   border: 0;
   border-top: 1px solid #eee;
 }
-#d_container_1556898916 .d_graph_subtitle hr {
+#d_container_1556898916 .d_graph_subtitle hr, #d_container_1557420005 .d_graph_subtitle hr{
     margin-bottom:0px;
 }
 
@@ -1039,7 +1045,7 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
 .d_graph_credit a:link {
     color:#026B9C;
  }
-#d_container_1556898916 .d_graph_grumpy .tooltipdiv {
+#d_container_1556898916 .d_graph_grumpy .tooltipdiv, #d_container_1557420005 .d_graph_grumpy .tooltipdiv  {
   margin:0px;
   z-index: 9999 !important;
   background-color:#ffffff;
@@ -1053,7 +1059,7 @@ blockquote>div>span, blockquote>footer, blockquote>span, cite>footer {
   padding: 5px;
   border: 1px solid rgb(226, 228, 233);
 }
-#d_container_1556898916 .d_graph_grumpy .highcharts-tooltip-box {
+#d_container_1556898916 .d_graph_grumpy .highcharts-tooltip-box, #d_container_1557420005 .d_graph_grumpy .highcharts-tooltip-box  {
     display:none;
 }
 
@@ -1269,21 +1275,21 @@ footer.v2:before {
 	width:100%;
 }
 
-#d_container_1557420005 .d_graph_title {
-    font-family: "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+/* #d_container_1557420005 .d_graph_title {
+    /* font-family: "Marr Sans", "Helvetica Neue", Helvetica, Arial; */
     font-size: 17px;
     color: #2A303B;
     letter-spacing: 0;
     text-align: left;
     line-height: 26px;
     padding-bottom: 10px;
-}
+} */
 
 #d_container_1557420005 .d_graph_subtitle{
 	display:block;
 	margin: 10px 0;
 	font-size: 15px;
-	font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
+	/* font-family: 'The Antiqua B',Georgia,Droid-serif,serif; */
 	color: #717B8E;
 	letter-spacing: 0;
 	text-align: left;
@@ -1310,7 +1316,7 @@ footer.v2:before {
 }
 
 #d_container_1557420005 .d_graph_credit {
-	font-family: 'The Antiqua B',Georgia,Droid-serif,serif;
+	/* font-family: 'The Antiqua B',Georgia,Droid-serif,serif; */
 	font-size: 15px;
 	color: #717B8E;
 	letter-spacing: 0;
@@ -1322,11 +1328,11 @@ footer.v2:before {
 	color:#026B9C;
 }
 
-#d_container_1557420005 .d_graph_grumpy .tooltipdiv {
+/* #d_container_1557420005 .d_graph_grumpy .tooltipdiv {
 	margin:0px;
 	z-index: 9999 !important;
 	background-color:#ffffff;
-	font-family:  "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+	
 	font-size: 12px;
 	color: #2A303B;
 	letter-spacing: 0.5px;
@@ -1335,18 +1341,15 @@ footer.v2:before {
 	box-sizing: border-box;
 	padding: 5px;
 	border: 1px solid rgb(226, 228, 233);
-}
+} */
 
 #d_container_1557420005 .d_graph_grumpy .highcharts-axis-labels {
-	font-family: "Marr Sans", "Helvetica Neue", Helvetica, Arial;
+
 	letter-spacing: 0.5px;
 	color: #2A303B;
 	z-index: -1;
 }
 
-#d_container_1557420005 .d_graph_grumpy .highcharts-axis-title, .d_graph_grumpy  .highcharts-text-outline {
-	font-family: "Marr Sans", "Helvetica Neue", Helvetica, Arial;
-}
 
 #d_container_1557420005 .d_graph_grumpy .highcharts-tooltip-box {
         display:none;

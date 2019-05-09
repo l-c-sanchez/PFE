@@ -13,7 +13,7 @@ var chart = new Highcharts.Chart( {
     "spacingLeft": 10,
     "spacingRight": 10,
     "style": {
-      "fontFamily": "Marr Sans,Helvetica,Arial!important",
+      "fontFamily": "Sanchez,Helvetica,Arial!important",
       "fontSize": "13px"
     },
     "renderTo": "d_graph_1557420005"
@@ -277,7 +277,7 @@ var chart = new Highcharts.Chart( {
     "shadow": false,
     "style": {
       "color": "#16212c",
-      "font-family": "'Marr Sans',Helvetica,Arial!important",
+      "font-family": "'Sanchez',Helvetica,Arial!important",
       "opacity": 1
     },
     "hideDelay": 200,
@@ -305,7 +305,7 @@ var chart = new Highcharts.Chart( {
     "x": 0,
     "itemStyle": {
       "fontSize": 13,
-      "font-family": "'Marr Sans',Helvetica,arial",
+      "font-family": "'Sanchez',Helvetica,arial",
       "fontWeight": "normal",
       "color": "#2A303B"
     },
