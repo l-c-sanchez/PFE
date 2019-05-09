@@ -141,7 +141,7 @@ var height_chart = 375;
     "shared": "",
     "title": "{{Ann\u00e9e}}",
     "content": "{{current}}% contre {{En 2014}}% en 2014.",
-    "annot": "",
+    "annot": "(2013 entreprises répondantes)",
     "strColumns": [
       [
         "Ann\u00e9e",

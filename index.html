@@ -89,9 +89,11 @@
                         <div class="container">
                                 <div class="methodo-border">
                                     <div class="methodo-title">Méthodologie</div>
+
+                                    <figcaption>Cliquez sur chaque point pour savoir comment nous avons procédé.</figcaption>
                                     <div v-for="(methodo, ct) in dataviz.methodo" v-if="(isSmallDevice && ct != (methodo.length - 2)) || !isSmallDevice">
                                         <article class="no-separator"><div class="small methodo d_graph_credit">
-                                                <p class="bullet methodo-link" v-html="methodo.title" :title="methodo.id"></p></div>
+                                                <p class="arrow_bottom bullet methodo-link" v-html="methodo.title" :title="methodo.id"></p></div>
                                                 <div class="small methodo-explanation" :id="methodo.id">
                                                     <p v-html="methodo.explanation"></p>
                                                 </div>
@@ -100,7 +102,7 @@
 
                                     <div v-if="!isSmallDevice">
                                         <article class="no-separator"><div class="small methodo d_graph_credit">
-                                                <p class="bullet methodo-link" title="blabla-id" v-html="gameTable.title"></p></div>
+                                                <p class="bullet methodo-link arrow_bottom" title="blabla-id" v-html="gameTable.title"></p></div>
                                                 <div class="small methodo-explanation" id="blabla-id">
                                                     <table id="games_table" class="display">
                                                         <thead>

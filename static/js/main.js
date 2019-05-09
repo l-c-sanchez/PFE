@@ -312,9 +312,13 @@ if(isSmallDevice() )
 $(".methodo-explanation").hide();
 $( ".methodo-link" ).click(function() {
   if($("#" + this.title).is(":visible")){
+    $( this ).removeClass("arrow_up");
+    $( this ).addClass("arrow_bottom");
     $("#" + this.title).hide();
   }
   else {
+    $( this ).removeClass("arrow_bottom");
+    $( this ).addClass("arrow_up");
     $("#" + this.title).show();
   }
 });
