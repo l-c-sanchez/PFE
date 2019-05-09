@@ -314,6 +314,42 @@ var chart = new Highcharts.Chart( {
   "series": [
     {
       "stack": "null",
+      "name": "Multi (personnage f\u00e9minin et/ou masculin)",
+      "lineWidth": 2,
+      "color": "#c39e86",
+      "type": "",
+      "yAxis": "0",
+      "visible": true,
+      "dataLabels": {
+        "enabled": false,
+        "format": '{y}%'
+      },
+      "step": "",
+      "data": [
+        [
+          55.0,
+          "pt6",
+          true
+        ],
+        [
+          44.0,
+          "pt7",
+          false
+        ],
+        [
+          53.0,
+          "pt8",
+          true
+        ]
+      ],
+      "keys": [
+        "y",
+        "id",
+        "marker.enabled"
+      ]
+    },
+    {
+      "stack": "null",
       "name": "Personnage principal f\u00e9minin",
       "lineWidth": 2,
       "color": "#f76425",
@@ -321,7 +357,8 @@ var chart = new Highcharts.Chart( {
       "yAxis": "0",
       "visible": true,
       "dataLabels": {
-        "enabled": true
+        "enabled": true,
+        "format": '{y}%'
       },
       "step": "",
       "data": [
@@ -329,21 +366,18 @@ var chart = new Highcharts.Chart( {
           7.0,
           "#f76425",
           "pt0",
-          true,
           true
         ],
         [
           9.0,
           "#f76425",
           "pt1",
-          false,
-          true
+          false
         ],
         [
           7.0,
           "#f76425",
           "pt2",
-          true,
           true
         ]
       ],
@@ -351,56 +385,12 @@ var chart = new Highcharts.Chart( {
         "y",
         "color",
         "id",
-        "marker.enabled",
-        "dataLabels.enabled"
+        "marker.enabled"
       ]
     },
     {
       "stack": "null",
       "name": "Personnage principal masculin",
-      "lineWidth": 2,
-      "color": "#c39e86",
-      "type": "",
-      "yAxis": "0",
-      "visible": true,
-      "dataLabels": {
-        "enabled": false
-      },
-      "step": "",
-      "data": [
-        [
-          26.0,
-          "#c39e86",
-          "pt3",
-          true,
-          false
-        ],
-        [
-          24.0,
-          "#c39e86",
-          "pt4",
-          false,
-          false
-        ],
-        [
-          25.0,
-          "#c39e86",
-          "pt5",
-          true,
-          false
-        ]
-      ],
-      "keys": [
-        "y",
-        "color",
-        "id",
-        "marker.enabled",
-        "dataLabels.enabled"
-      ]
-    },
-    {
-      "stack": "null",
-      "name": "Multi (personnage f\u00e9minin et/ou masculin)",
       "lineWidth": 2,
       "color": "#605148",
       "type": "",
@@ -412,35 +402,32 @@ var chart = new Highcharts.Chart( {
       "step": "",
       "data": [
         [
-          55.0,
-          "#605148",
-          "pt6",
+          26.0,
+          "pt3",
           true,
           false
         ],
         [
-          44.0,
-          "#605148",
-          "pt7",
+          24.0,
+          "pt4",
           false,
           false
         ],
         [
-          53.0,
-          "#605148",
-          "pt8",
+          25.0,
+          "pt5",
           true,
           false
         ]
       ],
       "keys": [
         "y",
-        "color",
         "id",
         "marker.enabled",
         "dataLabels.enabled"
       ]
     },
+   
     {
       "stack": "null",
       "name": "Autres (genre ambigu, pas de personnage sp\u00e9cifique incarn\u00e9...)",
