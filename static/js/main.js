@@ -129,7 +129,7 @@ var global = new Vue({
           id:"laracroft",
           message: "En 2017, Lara Croft a été sacrée <a href='http://www.guinnessworldrecords.com/world-records/best-selling-videogame-heroine' target='_blank'”>héroïne la plus vendue</a> de l’histoire du jeu vidéo. La jeune archéologue, athlétique et très féminine, a été créée dans les années 1990. Son designer, le britannique Toby Gard, s’inspire d’abord d’Indiana Jones. <i>\"Lara était supposée être quelqu’un qui était fort, et sexy mais juste à cause de sa puissance\"</i>, raconte-t-il <a href='http://archive.wikiwix.com/cache/?url=http%3A%2F%2Fwww.gamedaily.com%2Farticles%2Ffeatures%2Fthe-man-behind-lara%2F' target=’_blank’>dans une interview publiée en 2007</a>. Pourtant, la célébrité de Lara Croft viendra aussi de son imposante poitrine, dont l’origine reposerait - <a href='https://www.ign.com/articles/2008/03/01/ign-presents-the-history-of-tomb-raider?page=1' target=’_blank’>selon plusieurs médias </a> - sur une simple erreur de programmation. <br><br>Depuis, l’héroïne en mini-short et débardeur a évolué. Elle a laissé place à une aventurière à la plastique plus raisonnable. <i>\"Son histoire et sa psychologie ont aussi été étoffées\"</i>, salue la chercheuse Fanny Lignon.",
           juxtapose: {
-            first_img: "static/img/laracroft_1996.png",
+            first_img: "static/img/laracroft_1996.jpg",
             second_img:"static/img/laracroft_2013.jpg"
           }
         },

@@ -286,8 +286,6 @@ body {
 
 a {
     color: #000;
-    /* border-bottom: 2px solid #195f91;
-    text-decoration: none; */
     border-bottom: 2px solid #195f91;
     text-decoration: none;
     color: #195f91;
@@ -618,18 +616,15 @@ circle {
     margin-left: auto;
     margin-right: auto;
     max-width: 570px;
-    /* margin-bottom: 3em; */
     width: 100%;
     font-size: 15px;
     color: #717B8E;
     letter-spacing: 0;
-    /* text-align: left; */
     line-height: 23px;
   }
 
   #dataviz .d_graph_title{
     max-width: 570px;
-    /* text-align: center; */
     margin: 0 auto;
   }
 
@@ -678,22 +673,6 @@ article p.bullet:before {
   left: 0;
   color: #000;
   vertical-align: middle;
-
-
-
-  /* height: 25px;
-  width: 25px;
-  background: #ffc300;
-  border-radius: 50%;
-  margin: 0 12px 5px 0;
-  position: absolute;
-  left: -12px;
-  color: #000;
-  vertical-align: middle;
-  /* content: " ↓"; 
-  text-align: center;
-  padding: 5px;
-  padding-bottom: 4px; */
 }
 
 .methodo-border figcaption {
@@ -873,10 +852,8 @@ article p.bullet:before {
   text-align: center;
 }
 
-
 .card-img {
   width: 16vh;
-  /* max-width: 100px; */
   max-width: 140px;
   margin: 0 auto;
   display: block;
@@ -898,7 +875,6 @@ article p.bullet:before {
 .text-card {
   position: relative;
   top: 50%;
-  /* -webkit-transform: translateY(-50%); */
   -webkit-transform: -webkit-translateY (-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -924,11 +900,8 @@ article p.bullet:before {
 
   .flip-card-inner p {
     line-height: 1.15;
-    /* font-size: 12px; */
   }
 }
-
-
 
 /* citation */
 
@@ -1279,7 +1252,6 @@ footer.v2:before {
 	display:block;
 	margin: 10px 0;
 	font-size: 15px;
-	/* font-family: 'The Antiqua B',Georgia,Droid-serif,serif; */
 	color: #717B8E;
 	letter-spacing: 0;
 	text-align: left;
@@ -1306,7 +1278,6 @@ footer.v2:before {
 }
 
 #d_container_1557420005 .d_graph_credit {
-	/* font-family: 'The Antiqua B',Georgia,Droid-serif,serif; */
 	font-size: 15px;
 	color: #717B8E;
 	letter-spacing: 0;
@@ -1317,21 +1288,6 @@ footer.v2:before {
 #d_container_1557420005 .d_graph_credit a:link {
 	color:#026B9C;
 }
-
-/* #d_container_1557420005 .d_graph_grumpy .tooltipdiv {
-	margin:0px;
-	z-index: 9999 !important;
-	background-color:#ffffff;
-	
-	font-size: 12px;
-	color: #2A303B;
-	letter-spacing: 0.5px;
-	text-align: left;
-	line-height: 23px;
-	box-sizing: border-box;
-	padding: 5px;
-	border: 1px solid rgb(226, 228, 233);
-} */
 
 #d_container_1557420005 .d_graph_grumpy .highcharts-axis-labels {
 
@@ -1378,7 +1334,6 @@ footer.v2:before {
 #chart_button {
   display: block;
   width: 40%;
-  /* padding: 10px; */
   min-width: 250px;
   margin-top:3em;
 }
